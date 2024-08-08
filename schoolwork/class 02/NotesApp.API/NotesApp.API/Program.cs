@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Server.Kestrel.Core;
+
 namespace NotesApp.API
 {
     public class Program
@@ -9,6 +11,10 @@ namespace NotesApp.API
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.Configure<KestrelServerOptions>(opt =>
+            {
+                opt.AllowSynchronousIO = true;
+            });
 
             var app = builder.Build();
 
@@ -20,6 +26,8 @@ namespace NotesApp.API
 
 
             app.MapControllers();
+
+            app.UseStaticFiles();
 
             app.Run();
         }

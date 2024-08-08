@@ -64,11 +64,11 @@ namespace NotesApp.API.Controllers
                     if (string.IsNullOrEmpty(newNote)) return BadRequest("The request can't be empty!");
 
                     StaticDb.Notes.Add(newNote);
-                    return Ok("The note was added successfully!");
+                    return StatusCode(StatusCodes.Status201Created, "The note was added successfully!");
 
                 }
             }
-            catch
+            catch (Exception ex)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, "An error occured!");
             }
