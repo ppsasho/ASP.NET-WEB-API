@@ -1,3 +1,9 @@
+using DataAccess.Implementations;
+using DataAccess.Interfaces;
+using DomainModels;
+using Services.Implementations;
+using Services.Interfaces;
+
 namespace MovieWorkshopAPI
 {
     public class Program
@@ -12,6 +18,9 @@ namespace MovieWorkshopAPI
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddTransient<IRepository<Movie>, MovieRepository>();
+            builder.Services.AddTransient<IMovieService, MovieService>();
 
             var app = builder.Build();
 

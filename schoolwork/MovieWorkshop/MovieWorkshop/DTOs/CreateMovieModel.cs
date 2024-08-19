@@ -13,5 +13,7 @@ namespace DTOs
         public string Genre { get; set; }
         [MaxLength(250)]
         public string Description { get; set; }
+        [Required]
+        public DateTime ReleaseDate { get; set; }
     }
 }

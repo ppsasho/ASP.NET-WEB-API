@@ -5,42 +5,19 @@ using DTOs;
 
 namespace DataAccess.Implementations
 {
-    public class MovieRepository : IMovieRepository<Movie>
+    public class MovieRepository : IRepository<Movie>
     {
-        public bool Create(Movie entity)
+        public bool Create(Movie movie)
         {
-            throw new NotImplementedException();
-        }
-        public bool Create(CreateMovieModel entity)
-        {
-            Genre parsedGenre;
-            if (entity != null && Enum.TryParse(entity.Genre, out parsedGenre))
-            {
-                int newId;
-                if (StaticDb.Movies.Count < 1) newId = 1;
-                    else newId = StaticDb.Movies.Max(x => x.Id) + 1;
-                
-                Movie newMovie = new()
-                {
-                    Id = newId,
-                    Title = entity.Title,
-                    Year = entity.Year,
-                    Description = entity.Description,
-                    Genre = parsedGenre,
-                };
-
-                StaticDb.Movies.Add(newMovie);
-                return true;
-            }
-            return false;
+            StaticDb.Movies.Add(movie);
+            return true;
         }
 
         public bool DeleteById(int id)
         {
-            var movie = GetById(id);
-            if (movie != null) if(StaticDb.Movies.Remove(movie)) return true;
-            return false;
+            return StaticDb.Movies.Remove(GetById(id));
         }
+
         public List<Movie> GetAll()
         {
             return StaticDb.Movies;
@@ -48,24 +25,16 @@ namespace DataAccess.Implementations
 
         public Movie GetById(int id)
         {
-            if (!StaticDb.Movies.Any(x => x.Id == id)) return new Movie();
-            return StaticDb.Movies.FirstOrDefault(x => x.Id == id);
+            return StaticDb.Movies.FirstOrDefault(x => x.Id.Equals(id));
         }
-        public bool Update(UpdateMovieModel movie)
-        {
-            if(Enum.TryParse(movie.Genre, out Genre parsedGenre))
-            {
-                var foundMovie = StaticDb.Movies.FirstOrDefault(x => x.Id.Equals(movie.Id));
-                if (foundMovie != null)
-                {
-                    foundMovie.Title = movie.Title;
-                    foundMovie.Year = movie.Year;
-                    foundMovie.Description = movie.Description;
-                    foundMovie.Genre = parsedGenre;
 
-                    return true;
-                }
-                return false;
+        public bool Update(Movie movie)
+        {
+            var foundIndex = StaticDb.Movies.FindIndex(x => x.Id.Equals(movie.Id));
+            if (foundIndex >= 0)
+            {
+                StaticDb.Movies[foundIndex] = movie;
+                return true;
             }
             return false;
         }

@@ -1,48 +1,68 @@
 ﻿using DataAccess;
-using DataAccess.Implementations;
+using DataAccess.Interfaces;
 using DomainModels;
 using DomainModels.Enums;
 using DTOs;
+using Mappers;
 using Services.Interfaces;
+using static Mappers.MovieMapper;
 
 namespace Services.Implementations
 {
     public class MovieService : IMovieService
     {
-        private MovieRepository _movieRepository;
-        public List<Movie> GetAll()
+        private readonly IRepository<Movie> _movieRepository;
+        public MovieService(IRepository<Movie> movieRepository) 
         {
-            _movieRepository.GetAll();
+            _movieRepository = movieRepository;
         }
-        public Movie GetById(int id)
+        public List<MovieModel> GetAll() => _movieRepository.GetAll().Select(x => x.ToModel()).ToList();
+        public MovieModel GetById(int id) => _movieRepository.GetById(id).ToModel();
+       
+        public List<MovieModel> FilterByGenreAndYear(string genre, int year)
         {
-            return _movieRepository.GetById(id);
-        }
-        //public List<Movie> FilterByGenreAndYear(string genre, int year)
-        //public List<Movie> FilterByYear(int year)
-        //public List<Movie> FilterByGenre(string genre)
-        public List<Movie> FilterByGenreAndYear(string genre, int year)
-        {
-            //if (genre == null && year == null) return new List<Movie>(); check for controller
             if (Enum.TryParse(genre, out Genre parsedGenre))
-                return StaticDb.Movies.Where(x => x.Genre == parsedGenre && x.Year == year).ToList();
-            return new List<Movie>();
+                return _movieRepository.GetAll()
+                                       .Select(x => x.ToModel())
+                                       .Where(x => x.Genre == parsedGenre.ToString() && x.Year == year).ToList();
+            return new List<MovieModel>();
         }
-        public List<Movie> FilterByYear(int year) => StaticDb.Movies.Where(x => x.Year.Equals(year)).ToList();
-        public List<Movie> FilterByGenre(string genre)
+        public List<MovieModel> FilterByYear(int year) => _movieRepository.GetAll()
+                                                                          .Select(x => x.ToModel())
+                                                                          .Where(x => x.Year.Equals(year)).ToList();
+        public List<MovieModel> FilterByGenre(string genre)
         {
-           if (Enum.TryParse(genre, out Genre parsedGenre)) return StaticDb.Movies.Where(x => x.Genre.Equals(parsedGenre)).ToList();
-           return new List<Movie>();
+           if (Enum.TryParse(genre, out Genre parsedGenre)) return _movieRepository.GetAll()
+                                                                                   .Select(x => x.ToModel())
+                                                                                   .Where(x => x.Genre.Equals(parsedGenre)).ToList();
+           return new List<MovieModel>();
         }
         public bool CreateMovie (CreateMovieModel movie)
         {
-            if(_movieRepository.Create(movie)) return true;
+            var newMovie = movie.ToModel();
+            if(newMovie.Id > 0) return _movieRepository.Create(newMovie);
             return false;
         }
-        public bool Update(UpdateMovieModel movie) 
+        public bool UpdateMovie(UpdateMovieModel movie, int id)
         {
-            if(_movieRepository.Update(movie)) return true;
+            if(Enum.TryParse(movie.Genre, out Genre parsedGenre) && movie != null)
+            {
+                var foundMovie = _movieRepository.GetById(id);
+                if(foundMovie != null)
+                {
+                    foundMovie.Title = movie.Title;
+                    foundMovie.Year = movie.Year;
+                    foundMovie.Description = movie.Description;
+                    foundMovie.Genre = parsedGenre;
+                }
+                return true;
+            }
             return false;
+        }
+
+        public bool DeleteMovie(int id)
+        {
+            return _movieRepository.DeleteById(id);
         }
     }
 }

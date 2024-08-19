@@ -1,15 +1,16 @@
-﻿using DomainModels;
-using DTOs;
+﻿using DTOs;
 
 namespace Services.Interfaces
 {
     public interface IMovieService
     {
-        public List<Movie> GetAll();
-        public Movie GetById(int id);
-        public List<Movie> FilterByGenreAndYear(string genre, int year);
+        public List<MovieModel> GetAll();
+        public MovieModel GetById(int id);
         public bool CreateMovie(CreateMovieModel movie);
-        public List<Movie> FilterByYear(int year);
-        public List<Movie> FilterByGenre(string genre);
+        public bool UpdateMovie(UpdateMovieModel movie, int id);
+        public bool DeleteMovie(int id);
+        public List<MovieModel> FilterByGenreAndYear(string genre, int year);
+        public List<MovieModel> FilterByYear(int year);
+        public List<MovieModel> FilterByGenre(string genre);
     }
 }

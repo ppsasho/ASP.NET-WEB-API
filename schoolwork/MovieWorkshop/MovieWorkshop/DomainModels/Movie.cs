@@ -14,5 +14,6 @@ namespace DomainModels
         public Genre Genre { get; set; }
         [Required]
         public int Year { get; set; }
+        public DateTime ReleaseDate { get; set; }
     }
 }

@@ -3,11 +3,12 @@ using DTOs;
 
 namespace DataAccess.Interfaces
 {
-    public interface IMovieRepository<T> where T : BaseEntity
+    public interface IRepository<T> where T : BaseEntity
     {
-        public bool Create (T entity);
         public List<T> GetAll();
         public T GetById(int id);
+        bool Update(T entity);
+        public bool Create (T entity);
         public bool DeleteById(int id);
     }
 }
