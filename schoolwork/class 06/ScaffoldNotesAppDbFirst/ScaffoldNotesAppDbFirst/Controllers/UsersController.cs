@@ -18,7 +18,7 @@ namespace ScaffoldNotesAppDbFirst.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            var users = _context.Users.Include(x => x.Contacts).ToList();
+            var users = _context.Users.ToList();
             return Ok(users);
         }
     }
