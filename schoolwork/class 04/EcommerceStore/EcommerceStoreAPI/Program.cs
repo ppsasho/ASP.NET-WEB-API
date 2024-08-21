@@ -1,3 +1,5 @@
+using Services.Helpers;
+
 namespace EcommerceStoreAPI
 {
     public class Program
@@ -12,6 +14,9 @@ namespace EcommerceStoreAPI
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+            string connString = "Server=.;Database=EcommerceStoreApiDb;Trusted_Connection=True";
+
+            builder.Services.RegisterDbContext(connString);
 
             var app = builder.Build();
 

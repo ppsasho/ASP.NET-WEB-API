@@ -1,4 +1,4 @@
-﻿namespace EcommerceStoreAPI.Models
+﻿namespace DomainModels
 {
     public class Review : Base
     {
