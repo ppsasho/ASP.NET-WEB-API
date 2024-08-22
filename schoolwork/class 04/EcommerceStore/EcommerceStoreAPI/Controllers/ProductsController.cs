@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using DomainModels;
+using DTOs.Product;
+using Microsoft.AspNetCore.Mvc;
+using Services.Interfaces;
+using Services.Mappers;
 
 namespace EcommerceStoreAPI.Controllers
 {
@@ -6,86 +10,50 @@ namespace EcommerceStoreAPI.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        //[HttpGet]//api/products
-        //public ActionResult<IEnumerable<ProductDto>> GetAll()
-        //{
-        //    var products = StaticDb.Products.Select(x => new ProductDto
-        //    {
-        //        Name = x.Name,
-        //        Description = x.Description,
-        //        Price = x.Price,
-        //        ImageUrl = x.ImageUrl,
-        //    }).ToList();
-        //    return Ok(products);
-        //}
+        private readonly IProductService _service;
+        public ProductsController(IProductService service)
+        {
+            _service = service;
+        }
+        [HttpGet]//api/products
+        public ActionResult<IEnumerable<ProductDto>> GetAll()
+        {
+            return Ok(_service.GetAll());
+        }
 
-        //[HttpGet("{id:int}")] //api/products/id
-        //public ActionResult<ProductDto> GetById(int id)
-        //{
-        //    if (id <= 0) return BadRequest("Product id must be greater than zero");
-        //    if (id > StaticDb.Products.Count) return NotFound("Nonexistent Id");
-        //    var productDto = StaticDb.Products.Where(x => x.Id.Equals(id))
-        //                                      .Select(x => new ProductDto
-        //                                      {
-        //                                          Name = x.Name,
-        //                                          Description = x.Description,
-        //                                          Price = x.Price,
-        //                                          ImageUrl = x.ImageUrl,
-        //                                      })
-        //                                      .SingleOrDefault();
-        //    return productDto;
-        //}
+        [HttpGet("{id:int}")] //api/products/id
+        public ActionResult<Product> GetById(int id)
+        {
+            if (id <= 0) return BadRequest("Product id must be greater than zero");
+            return Ok(_service.GetById(id));
+        }
 
-        //[HttpPost]
-        //public ActionResult<ProductDto> Post([FromBody] CreateProductDto createProductDto)
-        //{
-        //    if(createProductDto == null) return BadRequest("Please fill all properties!");
-        //    int maxId = StaticDb.Products.Max(x => x.Id + 1);
-        //    var category = StaticDb.Categories.SingleOrDefault(x => x.Id.Equals(createProductDto.CategoryId));
-        //    if (category == null) return BadRequest("Category not found!");
-        //    var product = new Product
-        //    {
-        //        Id = maxId,
-        //        Name = createProductDto.Name,
-        //        Description = createProductDto.Description,
-        //        Price = createProductDto.Price,
-        //        ImageUrl = createProductDto.ImageUrl,
-        //        StockQuantity = createProductDto.StockQuantity,
-        //        CategoryId = createProductDto.CategoryId,
-        //        Category = category
-        //    };
+        [HttpPost]
+        public ActionResult<ProductDto> Post([FromBody] CreateProductDto createProductDto)
+        {
+            if (createProductDto.CategoryId < 1) return BadRequest("Please make sure the id isn't a negative or zero-value entry!");
+            if(_service.Add(createProductDto)) return CreatedAtAction("Successfully created the product!", createProductDto);
+            return StatusCode(StatusCodes.Status500InternalServerError, "Something unexpected happened!");
+        }
 
-        //    StaticDb.Products.Add(product);
+        [HttpDelete("{id:int}")] //api/products/id
+        public IActionResult Delete(int id)
+        {
+            var product = _service.GetById(id);
+            if (product == null) return StatusCode(StatusCodes.Status404NotFound, $"Product with id{id} was not found!");
+            _service.DeleteById(product.Id);
+            return Ok("Product deleted successfully!");
+        }
 
-        //    return CreatedAtAction(nameof(GetById), new { id = product.Id }, createProductDto);
-        //}
+        [HttpPut("{id:int}")]
+        public IActionResult Put([FromRoute] int id, [FromBody] CreateProductDto updatedProduct)
+        {
+            var existingProduct = _service.GetById(id);
 
-        //[HttpDelete("{id:int}")] //api/products/id
-        //public IActionResult Delete(int id)
-        //{
-        //    var product = StaticDb.Products.SingleOrDefault(x => x.Id == id);
-        //    if (product == null) return StatusCode(StatusCodes.Status404NotFound, $"Product with id{id} was not found!");
-        //    StaticDb.Products.Remove(product);
-        //    return Ok("Product deleted successfully!");
-        //}
+            if (existingProduct == null) return NotFound("Not found an existing product with the id");
+            if (_service.Update(updatedProduct)) return Ok("Successfully updated the product!");
+            return StatusCode(StatusCodes.Status500InternalServerError, "The update failed for an unexpected reason!");
 
-        //[HttpPut("id:int")]
-        //public IActionResult Put(int id, [FromBody] CreateProductDto updatedProduct)
-        //{
-
-        //    var existingProduct = StaticDb.Products.SingleOrDefault(x => x.Id.Equals(id));
-        //    var category = StaticDb.Categories.SingleOrDefault(x => x.Id.Equals(updatedProduct.CategoryId));
-
-        //    if (existingProduct == null) return NotFound("Not found an existing product with the id");
-        //    existingProduct.Name = updatedProduct.Name;
-        //    existingProduct.Description = updatedProduct.Description;
-        //    existingProduct.Price = updatedProduct.Price;
-        //    existingProduct.StockQuantity = updatedProduct.StockQuantity;
-        //    existingProduct.ImageUrl = updatedProduct.ImageUrl;
-
-        //    StaticDb.Products.Add(existingProduct);
-
-
-        
+        }
     }
 }

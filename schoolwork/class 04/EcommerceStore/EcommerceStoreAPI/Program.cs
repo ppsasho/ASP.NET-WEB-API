@@ -16,7 +16,7 @@ namespace EcommerceStoreAPI
             builder.Services.AddSwaggerGen();
             string connString = "Server=.;Database=EcommerceStoreApiDb;Trusted_Connection=True";
 
-            builder.Services.RegisterDbContext(connString);
+            builder.Services.RegisterDbContextAndServices(connString);
 
             var app = builder.Build();
 

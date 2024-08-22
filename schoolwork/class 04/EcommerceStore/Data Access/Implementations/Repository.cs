@@ -14,20 +14,31 @@ namespace Data_Access.Implementations
             table = _context.Set<T>();
         }
 
-        public void Add(T entity)
+        public bool Add(T entity)
         {
             table.Add(entity);
             _context.SaveChanges();
+            return true;
         }
 
-        public void Delete(T entity)
+        public void AddList(List<T> entities)
         {
-            var found = GetById(entity.Id);
+            table.AddRange(entities);
+            _context.SaveChanges();
+        }
+
+        public bool Any(int id) => table.Any(x => x.Id.Equals(id));
+
+        public bool DeleteById(int id)
+        {
+            var found = GetById(id);
             if (found != null)
             {
                 table.Remove(found);
                 _context.SaveChanges();
+                return true;
             }
+            return false;
         }
 
         public List<T> GetAll()
@@ -35,16 +46,15 @@ namespace Data_Access.Implementations
             return table.AsNoTracking().ToList();
         }
 
-        public T GetById(int id)
+        public T? GetById(int id)
         {
             return table.AsNoTracking().FirstOrDefault(x => x.Id.Equals(id));
         }
 
-        public void Update(T entity)
+        public bool Update(T entity)
         {
-            var found = GetById(entity.Id);
-            table.Update(found);
-            _context.SaveChanges();
+            table.Update(entity);
+            return _context.SaveChanges() >= 1;
         }
     }
 }
