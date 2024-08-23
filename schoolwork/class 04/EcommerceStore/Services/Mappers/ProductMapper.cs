@@ -27,5 +27,15 @@ namespace Services.Mappers
                 CategoryId = createDto.CategoryId,
             };
         }
+        public static Product ToModel(this CreateProductDto createDto, Product found)
+        {
+            found.Name = createDto.Name;
+            found.Description = createDto.Description;
+            found.Price = createDto.Price;
+            found.StockQuantity = createDto.StockQuantity;
+            found.ImageUrl = createDto.ImageUrl;
+            found.CategoryId = createDto.CategoryId;
+            return found;
+        }
     }
 }

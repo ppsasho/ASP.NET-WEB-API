@@ -14,6 +14,6 @@ namespace Services.Interfaces
 
         public Category GetById(int id);
 
-        public bool Update(CreateCategoryDto entity);
+        public bool Update(CreateCategoryDto entity, Category found);
     }
 }

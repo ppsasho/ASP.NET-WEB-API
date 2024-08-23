@@ -13,6 +13,6 @@ namespace Services.Interfaces
 
         public Product GetById(int id);
 
-        public bool Update(CreateProductDto entity);
+        public bool Update(CreateProductDto entity, Product found);
     }
 }

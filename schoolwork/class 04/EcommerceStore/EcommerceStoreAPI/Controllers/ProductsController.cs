@@ -2,7 +2,6 @@
 using DTOs.Product;
 using Microsoft.AspNetCore.Mvc;
 using Services.Interfaces;
-using Services.Mappers;
 
 namespace EcommerceStoreAPI.Controllers
 {
@@ -24,15 +23,21 @@ namespace EcommerceStoreAPI.Controllers
         [HttpGet("{id:int}")] //api/products/id
         public ActionResult<Product> GetById(int id)
         {
-            if (id <= 0) return BadRequest("Product id must be greater than zero");
+            if (id <= 0) 
+                return BadRequest("Product id must be greater than zero");
+
             return Ok(_service.GetById(id));
         }
 
         [HttpPost]
         public ActionResult<ProductDto> Post([FromBody] CreateProductDto createProductDto)
         {
-            if (createProductDto.CategoryId < 1) return BadRequest("Please make sure the id isn't a negative or zero-value entry!");
-            if(_service.Add(createProductDto)) return CreatedAtAction("Successfully created the product!", createProductDto);
+            if (createProductDto.CategoryId < 1) 
+                return BadRequest("Please make sure the id isn't a negative or zero-value entry!");
+
+            if(_service.Add(createProductDto)) 
+                return CreatedAtAction("Successfully created the product!", createProductDto);
+
             return StatusCode(StatusCodes.Status500InternalServerError, "Something unexpected happened!");
         }
 
@@ -40,7 +45,9 @@ namespace EcommerceStoreAPI.Controllers
         public IActionResult Delete(int id)
         {
             var product = _service.GetById(id);
-            if (product == null) return StatusCode(StatusCodes.Status404NotFound, $"Product with id{id} was not found!");
+            if (product == null) 
+                return StatusCode(StatusCodes.Status404NotFound, $"Product with id{id} was not found!");
+
             _service.DeleteById(product.Id);
             return Ok("Product deleted successfully!");
         }
@@ -50,10 +57,13 @@ namespace EcommerceStoreAPI.Controllers
         {
             var existingProduct = _service.GetById(id);
 
-            if (existingProduct == null) return NotFound("Not found an existing product with the id");
-            if (_service.Update(updatedProduct)) return Ok("Successfully updated the product!");
-            return StatusCode(StatusCodes.Status500InternalServerError, "The update failed for an unexpected reason!");
+            if (existingProduct == null) 
+                return NotFound("Not found an existing product with the id");
 
+            if (_service.Update(updatedProduct, existingProduct)) 
+                return Ok("Successfully updated the product!");
+
+            return StatusCode(StatusCodes.Status500InternalServerError, "The update failed for an unexpected reason!");
         }
     }
 }

@@ -13,6 +13,6 @@ namespace Services.Interfaces
 
         public Review GetById(int id);
 
-        public bool Update(CreateReviewDto entity);
+        public bool Update(CreateReviewDto entity, Review found);
     }
 }

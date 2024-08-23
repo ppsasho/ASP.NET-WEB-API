@@ -20,6 +20,6 @@ namespace Services.Implementations
 
         public Review GetById(int id) => _repository.GetById(id);
 
-        public bool Update(CreateReviewDto entity) => entity != null && _repository.Update(entity.ToModel());
+        public bool Update(CreateReviewDto entity, Review found) => entity != null && _repository.Update(entity.ToModel(found));
     }
 }

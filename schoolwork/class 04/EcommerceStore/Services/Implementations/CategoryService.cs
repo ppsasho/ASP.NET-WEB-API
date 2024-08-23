@@ -22,6 +22,6 @@ namespace Services.Implementations
 
         public Category GetById(int id) => _repository.GetById(id);
 
-        public bool Update(CreateCategoryDto entity) => entity != null && _repository.Update(entity.ToModel());
+        public bool Update(CreateCategoryDto entity, Category found) => entity != null && _repository.Update(entity.ToModel(found));
     }
 }

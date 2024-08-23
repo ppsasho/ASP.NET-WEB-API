@@ -16,6 +16,15 @@ namespace Services.Mappers
                 ProductId = review.ProductId,
             };
         }
+        public static Review ToModel(this CreateReviewDto review, Review found)
+        {
+            found.ReviewerName = review.ReviewerName;
+            found.Rating = review.Rating;
+            found.ImageUrl = review.ImageUrl;
+            found.Comment = review.Comment;
+            found.ProductId = review.ProductId;
+            return found;
+        }
         public static ReviewDto ToModel(this Review review)
         {
             return new ReviewDto()

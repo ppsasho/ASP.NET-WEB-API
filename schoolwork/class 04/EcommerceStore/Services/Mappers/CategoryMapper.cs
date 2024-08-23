@@ -20,5 +20,11 @@ namespace Services.Mappers
                 Description = category.Description,
             };
         }
+        public static Category ToModel(this CreateCategoryDto category, Category found) 
+        {
+            found.Name = category.Name;
+            found.Description = category.Description;
+            return found;
+        }
     }
 }
