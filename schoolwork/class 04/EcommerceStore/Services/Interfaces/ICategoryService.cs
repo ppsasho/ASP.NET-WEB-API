@@ -10,7 +10,7 @@ namespace Services.Interfaces
         public bool Add(CreateCategoryDto entity);
         public bool DeleteById(int id);
             
-        public List<CategoryDto> GetAll();
+        public IEnumerable<CategoryDto> GetAll();
 
         public Category GetById(int id);
 

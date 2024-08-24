@@ -21,7 +21,7 @@ namespace Data_Access.Implementations
             return true;
         }
 
-        public void AddList(List<T> entities)
+        public void AddList(IEnumerable<T> entities)
         {
             table.AddRange(entities);
             _context.SaveChanges();
@@ -41,7 +41,7 @@ namespace Data_Access.Implementations
             return false;
         }
 
-        public List<T> GetAll()
+        public IEnumerable<T> GetAll()
         {
             return table.AsNoTracking().ToList();
         }

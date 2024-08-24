@@ -14,9 +14,10 @@ namespace Services.Implementations
             _repository = repo;
         }
         public bool Add(CreateReviewDto entity) => entity != null && _repository.Add(entity.ToModel());
+
         public bool DeleteById(int id) => _repository.Any(id) && _repository.DeleteById(id);
 
-        public List<ReviewDto> GetAll() => _repository.GetAll().Select(x => x.ToModel()).ToList();
+        public IEnumerable<ReviewDto> GetAll() => _repository.GetAll().Select(x => x.ToModel()).ToList();
 
         public Review GetById(int id) => _repository.GetById(id);
 

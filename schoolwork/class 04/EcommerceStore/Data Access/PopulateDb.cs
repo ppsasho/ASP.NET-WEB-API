@@ -11,7 +11,7 @@ namespace Data_Access
         {
             modelBuilder.Entity<Category>()
                 .HasData(new List<Category>
-                        {
+                        { 
                             new Category { Id = 1, Name = "Smartwatch", Description = "A wearable device that combines fitness tracking, smartphone notifications, and various apps in a compact form." },
                             new Category { Id = 2, Name = "Wireless Earbuds", Description = "Compact, wireless in-ear headphones offering high-quality audio and noise cancellation features." },
                             new Category { Id = 3, Name = "Gaming Laptop", Description = "High-performance portable computer optimized for gaming, featuring powerful processors, GPUs, and high refresh rate displays." },

@@ -3,7 +3,6 @@ using DomainModels;
 using DTOs.Product;
 using Services.Interfaces;
 using Services.Mappers;
-using System;
 
 namespace Services.Implementations
 {
@@ -19,7 +18,7 @@ namespace Services.Implementations
 
         public bool DeleteById (int id) => _repository.Any(id) && _repository.DeleteById(id);
 
-        public List<ProductDto> GetAll() => _repository.GetAll().Select(x => x.ToModel()).ToList();
+        public IEnumerable<ProductDto> GetAll() => _repository.GetAll().Select(x => x.ToModel()).ToList();
 
         public Product GetById(int id) => _repository.GetById(id);
 

@@ -9,7 +9,7 @@ namespace Services.Interfaces
 
         public bool DeleteById(int id);
 
-        public List<ProductDto> GetAll();
+        public IEnumerable<ProductDto> GetAll();
 
         public Product GetById(int id);
 
