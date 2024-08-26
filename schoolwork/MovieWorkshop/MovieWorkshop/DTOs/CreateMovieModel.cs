@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DTOs
 {
-    public class CreateMovieModel : BaseEntity
+    public class CreateMovieModel
     {
         [Required]
         public string Title { get; set; }

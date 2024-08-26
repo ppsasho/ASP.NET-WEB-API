@@ -1,6 +1,4 @@
-﻿using DataAccess;
-using DataAccess.Interfaces;
-using DomainModels;
+﻿using DataAccess.Interfaces;
 using DomainModels.Enums;
 using DTOs;
 using Mappers;
@@ -11,37 +9,37 @@ namespace Services.Implementations
 {
     public class MovieService : IMovieService
     {
-        private readonly IRepository<Movie> _movieRepository;
-        public MovieService(IRepository<Movie> movieRepository) 
+        private readonly IMovieDbRepository _movieRepository;
+        public MovieService(IMovieDbRepository movieRepository) 
         {
             _movieRepository = movieRepository;
         }
         public List<MovieModel> GetAll() => _movieRepository.GetAll().Select(x => x.ToModel()).ToList();
         public MovieModel GetById(int id) => _movieRepository.GetById(id).ToModel();
        
-        public List<MovieModel> FilterByGenreAndYear(string genre, int year)
+        public List<MovieModel> FilterByGenreAndYear(string? genre, int? year)
         {
             if (Enum.TryParse(genre, out Genre parsedGenre))
                 return _movieRepository.GetAll()
-                                       .Select(x => x.ToModel())
-                                       .Where(x => x.Genre == parsedGenre.ToString() && x.Year == year).ToList();
+                                       .Where(x => x.Genre == parsedGenre && x.Year == year)
+                                       .Select(x => x.ToModel()).ToList();
+
             return new List<MovieModel>();
         }
-        public List<MovieModel> FilterByYear(int year) => _movieRepository.GetAll()
-                                                                          .Select(x => x.ToModel())
-                                                                          .Where(x => x.Year.Equals(year)).ToList();
-        public List<MovieModel> FilterByGenre(string genre)
+        public List<MovieModel> FilterByYear(int? year) => _movieRepository.GetAll()
+                                                                          .Where(x => x.Year.Equals(year))
+                                                                          .Select(x => x.ToModel()).ToList();
+        public List<MovieModel> FilterByGenre(string? genre)
         {
            if (Enum.TryParse(genre, out Genre parsedGenre)) return _movieRepository.GetAll()
-                                                                                   .Select(x => x.ToModel())
-                                                                                   .Where(x => x.Genre.Equals(parsedGenre)).ToList();
-           return new List<MovieModel>();
+                                                                                   .Where(x => x.Genre.Equals(parsedGenre))
+                                                                                   .Select(x => x.ToModel()).ToList();
+            return new List<MovieModel>();
         }
         public bool CreateMovie (CreateMovieModel movie)
         {
             var newMovie = movie.ToModel();
-            if(newMovie.Id > 0) return _movieRepository.Create(newMovie);
-            return false;
+            return _movieRepository.Add(newMovie);
         }
         public bool UpdateMovie(UpdateMovieModel movie, int id)
         {

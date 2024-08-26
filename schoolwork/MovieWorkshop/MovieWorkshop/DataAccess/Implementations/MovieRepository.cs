@@ -7,6 +7,11 @@ namespace DataAccess.Implementations
 {
     public class MovieRepository : IRepository<Movie>
     {
+        public bool Add(Movie entity)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool Create(Movie movie)
         {
             StaticDb.Movies.Add(movie);
@@ -37,6 +42,11 @@ namespace DataAccess.Implementations
                 return true;
             }
             return false;
+        }
+
+        IEnumerable<Movie> IRepository<Movie>.GetAll()
+        {
+            throw new NotImplementedException();
         }
     }
 }

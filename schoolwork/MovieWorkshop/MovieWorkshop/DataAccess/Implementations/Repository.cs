@@ -10,6 +10,12 @@ namespace DataAccess.Implementations
         {
             _entities = entities;
         }
+
+        public bool Add(T entity)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool Create(T entity)
         {
             _entities.Add(entity);
@@ -40,6 +46,11 @@ namespace DataAccess.Implementations
                 return true;
             }
             return false;
+        }
+
+        IEnumerable<T> IRepository<T>.GetAll()
+        {
+            throw new NotImplementedException();
         }
     }
 }

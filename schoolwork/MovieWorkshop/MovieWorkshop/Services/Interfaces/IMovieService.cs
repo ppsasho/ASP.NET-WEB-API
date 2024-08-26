@@ -9,8 +9,8 @@ namespace Services.Interfaces
         public bool CreateMovie(CreateMovieModel movie);
         public bool UpdateMovie(UpdateMovieModel movie, int id);
         public bool DeleteMovie(int id);
-        public List<MovieModel> FilterByGenreAndYear(string genre, int year);
-        public List<MovieModel> FilterByYear(int year);
-        public List<MovieModel> FilterByGenre(string genre);
+        public List<MovieModel> FilterByGenreAndYear(string? genre, int? year);
+        public List<MovieModel> FilterByYear(int? year);
+        public List<MovieModel> FilterByGenre(string? genre);
     }
 }

@@ -1,6 +1,7 @@
 using DataAccess.Implementations;
 using DataAccess.Interfaces;
 using DomainModels;
+using Services.DIModule;
 using Services.Implementations;
 using Services.Interfaces;
 
@@ -19,8 +20,7 @@ namespace MovieWorkshopAPI
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddTransient<IRepository<Movie>, MovieRepository>();
-            builder.Services.AddTransient<IMovieService, MovieService>();
+            builder.Services.Register(builder.Configuration.GetConnectionString("DefaultConnectionString"));
 
             var app = builder.Build();
 
