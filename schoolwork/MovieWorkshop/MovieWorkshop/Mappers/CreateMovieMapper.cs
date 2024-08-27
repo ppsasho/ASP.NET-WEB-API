@@ -2,11 +2,6 @@
 using DomainModels;
 using DomainModels.Enums;
 using DTOs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Mappers
 {
@@ -18,10 +13,9 @@ namespace Mappers
             {
                 Movie movie = new()
                 {
-                    Id = StaticDb.Id,
                     Title = movieModel.Title,
+                    Year = movieModel.Year,
                     Description = movieModel.Description,
-                    ReleaseDate = movieModel.ReleaseDate,
                     Genre = parsedGenre
                 };
                 return movie;

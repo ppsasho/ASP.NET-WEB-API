@@ -27,8 +27,8 @@ namespace Services.Implementations
             return new List<MovieModel>();
         }
         public List<MovieModel> FilterByYear(int? year) => _movieRepository.GetAll()
-                                                                          .Where(x => x.Year.Equals(year))
-                                                                          .Select(x => x.ToModel()).ToList();
+                                                                           .Where(x => x.Year.Equals(year))
+                                                                           .Select(x => x.ToModel()).ToList();
         public List<MovieModel> FilterByGenre(string? genre)
         {
            if (Enum.TryParse(genre, out Genre parsedGenre)) return _movieRepository.GetAll()
@@ -36,11 +36,12 @@ namespace Services.Implementations
                                                                                    .Select(x => x.ToModel()).ToList();
             return new List<MovieModel>();
         }
-        public bool CreateMovie (CreateMovieModel movie)
+        public bool CreateMovie(CreateMovieModel movie)
         {
             var newMovie = movie.ToModel();
             return _movieRepository.Add(newMovie);
         }
+
         public bool UpdateMovie(UpdateMovieModel movie, int id)
         {
             if(Enum.TryParse(movie.Genre, out Genre parsedGenre) && movie != null)
@@ -52,15 +53,13 @@ namespace Services.Implementations
                     foundMovie.Year = movie.Year;
                     foundMovie.Description = movie.Description;
                     foundMovie.Genre = parsedGenre;
+                    return _movieRepository.Update(foundMovie);
                 }
-                return true;
             }
             return false;
         }
 
-        public bool DeleteMovie(int id)
-        {
-            return _movieRepository.DeleteById(id);
-        }
+        public bool DeleteMovie(int id) => _movieRepository.DeleteById(id);
+        
     }
 }

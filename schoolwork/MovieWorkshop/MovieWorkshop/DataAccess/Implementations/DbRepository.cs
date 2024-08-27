@@ -7,7 +7,7 @@ namespace DataAccess.Implementations
     public class DbRepository<T> : IRepository<T> where T : BaseEntity
     {
         private readonly MovieWorskshopDbContext _context;
-        private readonly DbSet<T> table = null;
+        private readonly DbSet<T> table;
         public DbRepository(MovieWorskshopDbContext context)
         {
             _context = context;
@@ -35,8 +35,7 @@ namespace DataAccess.Implementations
             if (found != null)
             {
                 table.Remove(found);
-                _context.SaveChanges();
-                return true;
+                return _context.SaveChanges() > 0;
             }
             return false;
         }
@@ -46,15 +45,11 @@ namespace DataAccess.Implementations
             return table.AsNoTracking().ToList();
         }
 
-        public T? GetById(int id)
-        {
-            return table.AsNoTracking().FirstOrDefault(x => x.Id.Equals(id));
-        }
-
+        public T? GetById(int id) => table.AsNoTracking().FirstOrDefault(x => x.Id.Equals(id));
         public bool Update(T entity)
         {
             table.Update(entity);
-            return _context.SaveChanges() >= 1;
+            return _context.SaveChanges() > 0;
         }
     }
 }

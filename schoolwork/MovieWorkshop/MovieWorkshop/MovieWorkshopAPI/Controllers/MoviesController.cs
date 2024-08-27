@@ -13,7 +13,7 @@ namespace MovieWorkshopAPI.Controllers
         {
             _movieService = service;
         }
-        [HttpGet("/all")]
+        [HttpGet]
         public ActionResult<IEnumerable<MovieModel>> GetAll() 
         {
             return Ok(_movieService.GetAll());
@@ -26,7 +26,7 @@ namespace MovieWorkshopAPI.Controllers
 
             return Ok(_movieService.GetById(id));
         }
-        [HttpGet("/fromQuery")]
+        [HttpGet("fromQuery")]
         public ActionResult<MovieModel> GetByIdFromQuery([FromQuery]int id) 
         {
             if (id <= 0)
@@ -35,7 +35,7 @@ namespace MovieWorkshopAPI.Controllers
             return Ok(_movieService.GetById(id));
         }
 
-        [HttpGet("/byYearAndGenre")]
+        [HttpGet("byYearAndGenre")]
         public ActionResult<IEnumerable<MovieModel>> GetMoviesByYearAndGenre([FromQuery]int? year,[FromQuery] string? genre)
         {
             if (year == null && string.IsNullOrEmpty(genre))
@@ -50,16 +50,17 @@ namespace MovieWorkshopAPI.Controllers
             if (year == null && !string.IsNullOrEmpty(genre))
                 return Ok(_movieService.FilterByGenre(genre));
 
-            return StatusCode(StatusCodes.Status200OK, "This is the default case where the list isn't filtered because it didn't fall into any of the cases above. Please try again!");
+            return StatusCode(StatusCodes.Status200OK, "This is the default case where the list isn't filtered because it didn't fall into any of the cases. Please try again!");
         }
-        [HttpPost("/new")]
+        [HttpPost("new")]
         public ActionResult Create([FromBody]CreateMovieModel movie)
         {
             if(movie != null)
             {
                 if (_movieService.CreateMovie(movie))
-                    return CreatedAtAction("Successfully created the movie!", movie);
-
+                {
+                    return Ok("Successfully created the movie!");
+                }
                 return StatusCode(StatusCodes.Status500InternalServerError, "The movie wasn't created successfully.");
             }
             return BadRequest("The movie isn't valid! Please check that all properties are entered with the correct values!");
@@ -88,7 +89,7 @@ namespace MovieWorkshopAPI.Controllers
                 
             return BadRequest("Movie id must be greater than zero!");
         }
-        [HttpDelete("/fromBody")]
+        [HttpDelete("fromBody")]
         public ActionResult DeleteFromBody([FromBody]int id)
         {
             if (id > 0)
