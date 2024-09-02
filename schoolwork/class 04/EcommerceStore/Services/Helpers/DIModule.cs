@@ -20,10 +20,13 @@ namespace Services.Helpers
             services.AddTransient<ICategoryRepository, CategoryRepository>();
             services.AddTransient<IProductRepository, ProductRepository>();
             services.AddTransient<IReviewRepository, ReviewRepository>();
+            services.AddTransient<IUserRepository, UserRepository>();
 
             services.AddTransient<IReviewService, ReviewService>();
             services.AddTransient<ICategoryService, CategoryService>();
             services.AddTransient<IProductService, ProductService>();
+            services.AddTransient<IUserService, UserService>();
+
 
             return services;
         }

@@ -1,4 +1,7 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
 using Services.Helpers;
+using System.Text;
 
 namespace EcommerceStoreAPI
 {
@@ -18,6 +21,26 @@ namespace EcommerceStoreAPI
             builder.Services.RegisterDbContextAndServices
                 (builder.Configuration.GetConnectionString("DefaultConnectionString"));
 
+            builder.Services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+                .AddJwtBearer(x =>
+                {
+                    x.RequireHttpsMetadata = false;
+                    x.SaveToken = true;
+
+                    x.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidateAudience = false,
+                        ValidateIssuer = false,
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes("Our very custom and very secure secret key that is used for authentication"))
+                    };
+                });
+                
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -28,6 +51,8 @@ namespace EcommerceStoreAPI
             }
 
             app.UseHttpsRedirection();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

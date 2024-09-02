@@ -1,11 +1,13 @@
 ﻿using DomainModels;
 using DTOs.Category;
 using DTOs.Product;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Services.Interfaces;
 
 namespace EcommerceStoreAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CategoriesController : ControllerBase

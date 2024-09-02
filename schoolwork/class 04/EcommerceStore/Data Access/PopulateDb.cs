@@ -16,16 +16,16 @@ namespace Data_Access
                             new Category { Id = 3, Name = "Gaming Laptop", Description = "High-performance portable computer optimized for gaming, featuring powerful processors, GPUs, and high refresh rate displays." },
                             new Category { Id = 4, Name = "4K Monitor", Description = "A display screen offering ultra-high-definition resolution for sharper, more detailed visuals in gaming, work, or media." },
                             new Category { Id = 5, Name = "Virtual Reality Headset", Description = "A head-mounted device that immerses users in a 3D virtual environment for gaming, simulations, and entertainment." },
-                            new Category { Id = 6, Name = "External SSD", Description = "A portable solid-state drive offering fast data transfer speeds and robust storage for files, games, and media." },
+                            new Category { Id = 6, Name = "External SSD", Description = "A portable solId-state drive offering fast data transfer speeds and robust storage for files, games, and media." },
                             new Category { Id = 7, Name = "Smart Home Hub", Description = "A central device that connects and controls various smart home products like lights, thermostats, and security systems." },
-                            new Category { Id = 8, Name = "Bluetooth Speaker", Description = "A wireless speaker that connects to devices via Bluetooth, providing portable, high-quality sound for music and calls." },
-                            new Category { Id = 9, Name = "Drone with Camera", Description = "An unmanned aerial vehicle equipped with a high-resolution camera for capturing aerial photos and videos." },
+                            new Category { Id = 8, Name = "Bluetooth Speaker", Description = "A wireless speaker that connects to devices via Bluetooth, provIding portable, high-quality sound for music and calls." },
+                            new Category { Id = 9, Name = "Drone with Camera", Description = "An unmanned aerial vehicle equipped with a high-resolution camera for capturing aerial photos and vIdeos." },
                             new Category { Id = 10, Name = "Smart Thermostat", Description = "A programmable thermostat that adjusts heating and cooling based on user preferences and can be controlled remotely." },
                             new Category { Id = 11, Name = "E-Reader", Description = "A portable device designed for reading digital books and magazines, featuring a paper-like display and long battery life." },
                             new Category { Id = 12, Name = "Wireless Charging Pad", Description = "A device that charges smartphones and other gadgets wirelessly through inductive charging technology." },
                             new Category { Id = 13, Name = "Fitness Tracker", Description = "A wearable device that monitors physical activity, heart rate, sleep patterns, and other health metrics." },
-                            new Category { Id = 14, Name = "Home Security Camera", Description = "A surveillance camera system that provides real-time monitoring and alerts to enhance home security." },
-                            new Category { Id = 15, Name = "Noise-Cancelling Headphones", Description = "Headphones that reduce ambient noise, providing an immersive audio experience for music and calls." },
+                            new Category { Id = 14, Name = "Home Security Camera", Description = "A surveillance camera system that provIdes real-time monitoring and alerts to enhance home security." },
+                            new Category { Id = 15, Name = "Noise-Cancelling Headphones", Description = "Headphones that reduce ambient noise, provIding an immersive audio experience for music and calls." },
                             new Category { Id = 16, Name = "Smart Light Bulb", Description = "An energy-efficient light bulb that can be controlled remotely, with options for color and brightness adjustments." },
                             new Category { Id = 17, Name = "Portable Power Bank", Description = "A compact, rechargeable battery pack used to charge smartphones, tablets, and other devices on the go." },
                             new Category { Id = 18, Name = "Robot Vacuum Cleaner", Description = "An autonomous vacuum cleaner that navigates and cleans floors with minimal user input." },
@@ -49,13 +49,13 @@ namespace Data_Access
                     new Product { Id = 11, Name = "Kindle Paperwhite", Description = "An e-reader with a high-resolution display and built-in adjustable light.", Price = 129.99M, StockQuantity = random.Next(1, 101), ImageUrl = "", CategoryId = 11 },
                     new Product { Id = 12, Name = "Anker Wireless Charging Pad", Description = "A sleek and efficient wireless charger compatible with Qi-enabled devices.", Price = 29.99M, StockQuantity = random.Next(1, 101), ImageUrl = "", CategoryId = 12 },
                     new Product { Id = 13, Name = "Fitbit Charge 5", Description = "An advanced fitness tracker with built-in GPS, heart rate monitoring, and stress management tools.", Price = 179.99M, StockQuantity = random.Next(1, 101), ImageUrl = "", CategoryId = 13 },
-                    new Product { Id = 14, Name = "Arlo Pro 4 Security Camera", Description = "A wire-free security camera with 2K video resolution and color night vision.", Price = 199.99M, StockQuantity = random.Next(1, 101), ImageUrl = "", CategoryId = 14 },
+                    new Product { Id = 14, Name = "Arlo Pro 4 Security Camera", Description = "A wire-free security camera with 2K vIdeo resolution and color night vision.", Price = 199.99M, StockQuantity = random.Next(1, 101), ImageUrl = "", CategoryId = 14 },
                     new Product { Id = 15, Name = "Bose QuietComfort 45", Description = "Over-ear headphones with exceptional noise cancellation and premium sound quality.", Price = 329.99M, StockQuantity = random.Next(1, 101), ImageUrl = "", CategoryId = 15 },
                     new Product { Id = 16, Name = "Philips Hue Smart Bulb", Description = "A color-changing smart light bulb that can be controlled via app or voice commands.", Price = 49.99M, StockQuantity = random.Next(1, 101), ImageUrl = "", CategoryId = 16 },
                     new Product { Id = 17, Name = "Anker PowerCore 10000", Description = "A compact and powerful power bank capable of charging your devices multiple times.", Price = 39.99M, StockQuantity = random.Next(1, 101), ImageUrl = "", CategoryId = 17 },
                     new Product { Id = 18, Name = "iRobot Roomba i7+", Description = "A smart vacuum cleaner that empties itself and can be scheduled for automatic cleaning.", Price = 599.99M, StockQuantity = random.Next(1, 101), ImageUrl = "", CategoryId = 18 },
                     new Product { Id = 19, Name = "Creality Ender 3 V2", Description = "An affordable and reliable 3D printer for beginners and hobbyists.", Price = 259.99M, StockQuantity = random.Next(1, 101), ImageUrl = "", CategoryId = 19 },
-                    new Product { Id = 20, Name = "Ring Video Doorbell Pro 2", Description = "A video doorbell with 3D motion detection and enhanced video quality.", Price = 249.99M, StockQuantity = random.Next(1, 101), ImageUrl = "", CategoryId = 20 }
+                    new Product { Id = 20, Name = "Ring VIdeo Doorbell Pro 2", Description = "A vIdeo doorbell with 3D motion detection and enhanced vIdeo quality.", Price = 249.99M, StockQuantity = random.Next(1, 101), ImageUrl = "", CategoryId = 20 }
                 });
             modelBuilder.Entity<Review>()
                 .HasData(new List<Review>
@@ -70,7 +70,7 @@ namespace Data_Access
                             new Review { Id = 8, ReviewerName = "Jessica Taylor", Comment = "The JBL Flip 5 delivers excellent sound quality, especially for its size.", Rating = random.Next(1, 6), ImageUrl = "", ProductId = 8 },
                             new Review { Id = 9, ReviewerName = "Daniel Anderson", Comment = "The DJI Mavic Air 2 captures stunning aerial footage. Easy to fly as well.", Rating = random.Next(1, 6), ImageUrl = "", ProductId = 9 },
                             new Review { Id = 10, ReviewerName = "Sophia Thomas", Comment = "The Nest Learning Thermostat saved me on energy bills. Love the automation features.", Rating = random.Next(1, 6), ImageUrl = "", ProductId = 10 },
-                            new Review { Id = 11, ReviewerName = "David Jackson", Comment = "The Kindle Paperwhite is perfect for reading on the go. The screen is very clear.", Rating = random.Next(1, 6), ImageUrl = "", ProductId = 11 },
+                            new Review { Id = 11, ReviewerName = "DavId Jackson", Comment = "The Kindle Paperwhite is perfect for reading on the go. The screen is very clear.", Rating = random.Next(1, 6), ImageUrl = "", ProductId = 11 },
                             new Review { Id = 12, ReviewerName = "Olivia Moore", Comment = "The Anker Wireless Charging Pad is a convenient way to charge my phone. Works great.", Rating = random.Next(1, 6), ImageUrl = "", ProductId = 12 },
                             new Review { Id = 13, ReviewerName = "Liam Harris", Comment = "The Fitbit Charge 5 has helped me stay on top of my fitness goals. Love the new features.", Rating = random.Next(1, 6), ImageUrl = "", ProductId = 13 },
                             new Review { Id = 14, ReviewerName = "Ava Martinez", Comment = "The Arlo Pro 4 Security Camera gives me peace of mind. Easy to set up and use.", Rating = random.Next(1, 6), ImageUrl = "", ProductId = 14 },
@@ -79,8 +79,22 @@ namespace Data_Access
                             new Review { Id = 17, ReviewerName = "Mason Rodriguez", Comment = "The Anker PowerCore 10000 is a lifesaver on long trips. Charges my devices multiple times.", Rating = random.Next(1, 6), ImageUrl = "", ProductId = 17 },
                             new Review { Id = 18, ReviewerName = "Mia Lewis", Comment = "The iRobot Roomba i7+ keeps my floors clean without any effort. I love the self-emptying feature.", Rating = random.Next(1, 6), ImageUrl = "", ProductId = 18 },
                             new Review { Id = 19, ReviewerName = "Ethan Walker", Comment = "The Creality Ender 3 V2 is perfect for my 3D printing projects. Easy to assemble and use.", Rating = random.Next(1, 6), ImageUrl = "", ProductId = 19 },
-                            new Review { Id = 20, ReviewerName = "Charlotte Hill", Comment = "The Ring Video Doorbell Pro 2 offers clear video and great motion detection. A must-have for home security.", Rating = random.Next(1, 6), ImageUrl = "", ProductId = 20 }
+                            new Review { Id = 20, ReviewerName = "Charlotte Hill", Comment = "The Ring VIdeo Doorbell Pro 2 offers clear vIdeo and great motion detection. A must-have for home security.", Rating = random.Next(1, 6), ImageUrl = "", ProductId = 20 }
                         });
+            modelBuilder.Entity<User>()
+                .HasData(new List<User>
+                {
+                     new User { Id = 1, FirstName = "John", LastName = "Doe", Username = "jdoe123", Password = "Passw0rd!" },
+                new User { Id = 2, FirstName = "Jane", LastName = "Smith", Username = "jsmith456", Password = "Qwerty1!" },
+                new User { Id = 3, FirstName = "Michael", LastName = "Johnson", Username = "mjohnson789", Password = "Password123!" },
+                new User { Id = 4, FirstName = "Emily", LastName = "Davis", Username = "edavis101", Password = "Passw0rd!2" },
+                new User { Id = 5, FirstName = "David", LastName = "Williams", Username = "dwilliams202", Password = "Password2023!" },
+                new User { Id = 6, FirstName = "Sarah", LastName = "Brown", Username = "sbrown303", Password = "SecurePass1!" },
+                new User { Id = 7, FirstName = "James", LastName = "Jones", Username = "jjones404", Password = "J@mes2024" },
+                new User { Id = 8, FirstName = "Laura", LastName = "Garcia", Username = "lgarcia505", Password = "P@ssw0rd!" },
+                new User { Id = 9, FirstName = "Daniel", LastName = "Martinez", Username = "dmartinez606", Password = "MyP@ssw0rd" },
+                new User { Id = 10, FirstName = "Jessica", LastName = "Hernandez", Username = "jhernandez707", Password = "1234Password!" }
+                });
         }
     }
 }
