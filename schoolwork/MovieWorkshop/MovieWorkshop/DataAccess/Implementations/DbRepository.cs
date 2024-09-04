@@ -7,7 +7,7 @@ namespace DataAccess.Implementations
     public class DbRepository<T> : IRepository<T> where T : BaseEntity
     {
         private readonly MovieWorskshopDbContext _context;
-        private readonly DbSet<T> table;
+        private  readonly DbSet<T> table;
         public DbRepository(MovieWorskshopDbContext context)
         {
             _context = context;

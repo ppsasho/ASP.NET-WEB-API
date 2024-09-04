@@ -17,7 +17,10 @@ namespace Services.DIModule
                 (opts => opts.UseSqlServer(connectionString));
 
             services.AddTransient<IMovieDbRepository, MovieDbRepository>();
+            services.AddTransient<IUserDbRepository, UserDbRepository>();
+
             services.AddTransient<IMovieService, MovieService>();
+            services.AddTransient<IUserService, UserService>();
 
             return services;
         }
