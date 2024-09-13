@@ -1,6 +1,6 @@
 ﻿namespace Domain_Models.Enums
 {
-    public enum Type
+    public enum BeverageType
     {
         Alcohol = 1,
         Soft_Drink,
