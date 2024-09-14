@@ -22,6 +22,7 @@ namespace Services.DIModule
             services.AddTransient<IOrderRepository, OrderRepository>();
 
             services.AddTransient<IUserService, UserService>();
+            services.AddTransient<IBeverageService, BeverageService>();
 
             return services;
         }

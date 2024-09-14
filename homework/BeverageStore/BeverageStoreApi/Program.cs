@@ -44,6 +44,8 @@ namespace BeverageStoreApi
                         new string[]{}
                     }
                 });
+
+               
             });
 
             builder.Services.RegisterDependencies

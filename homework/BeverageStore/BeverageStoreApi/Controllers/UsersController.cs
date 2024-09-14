@@ -25,9 +25,12 @@ namespace BeverageStoreApi.Controllers
         [HttpGet("{id:int}")]
         public IActionResult GetById (int id) 
         {
+            if (id < 1)
+                return BadRequest("Please make sure the id is greater than zero!");
+
             var found = _userService.GetById(id);
 
-            if(found == null)
+            if(found.Fullname is null)
                 return NotFound("User wasn't found with the specified Id!");
 
             return Ok(found);

@@ -1,5 +1,7 @@
-﻿using Data_Access.Interfaces;
+﻿using Data_Access.Implementations;
+using Data_Access.Interfaces;
 using Domain_Models;
+using DTOs.Beverage;
 using DTOs.User;
 using Mappers;
 using Microsoft.Extensions.Configuration;
@@ -68,8 +70,14 @@ namespace Services.Implementations
 
         public List<UserDto> GetAll() => 
               _userRepository.GetAll().Select(x => x.ToModel()).ToList();
+        public UserDto GetById(int id) 
+        {
+            var found = _userRepository.GetById(id);
 
-        public UserDto GetById(int id) => _userRepository.GetById(id).ToModel();
+            if (found is not null) return found.ToModel();
+
+            return new UserDto();
+        }
 
         public UserLoginResponseDto Login(UserLoginDto entity)
         {

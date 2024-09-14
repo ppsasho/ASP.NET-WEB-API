@@ -4,5 +4,6 @@ namespace Data_Access.Interfaces
 {
     public interface IBeverageRepository : IRepository<Beverage>
     {
+        bool Any(string name);
     }
 }
