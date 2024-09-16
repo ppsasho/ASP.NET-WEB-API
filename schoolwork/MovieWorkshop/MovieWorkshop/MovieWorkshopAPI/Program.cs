@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Serilog;
 using Services.DIModule;
 using System.Text;
 
@@ -15,6 +16,13 @@ namespace MovieWorkshopAPI
             // Add services to the container.
 
             builder.Services.AddControllers();
+
+            builder.Host.UseSerilog((ctx, lc) =>
+            {
+                lc.WriteTo.File($"logs.txt");
+                lc.MinimumLevel.Information();
+            });
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(opt =>

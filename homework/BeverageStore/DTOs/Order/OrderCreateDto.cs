@@ -8,6 +8,6 @@ namespace DTOs.Order
         [Required]
         public int UserId { get; set; }
         [Required]
-        public List<OrderItemDto> orderItems { get; set; }
+        public List<OrderItemCreateDto> orderItems { get; set; }
     }
 }

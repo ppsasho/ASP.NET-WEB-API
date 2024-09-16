@@ -1,0 +1,141 @@
+2024-09-16 18:30:32.360 +02:00 [INF] User profile is available. Using 'C:\Users\Code\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-16 18:30:32.662 +02:00 [INF] Now listening on: https://localhost:7265
+2024-09-16 18:30:32.662 +02:00 [INF] Now listening on: http://localhost:5166
+2024-09-16 18:30:32.898 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-16 18:30:32.899 +02:00 [INF] Hosting environment: Development
+2024-09-16 18:30:32.899 +02:00 [INF] Content root path: C:\Users\Code\Desktop\G3\Sasho\ASP.NET-WEB-API\schoolwork\MovieWorkshop\MovieWorkshop\MovieWorkshopAPI\
+2024-09-16 18:30:33.376 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/index.html - -
+2024-09-16 18:30:33.664 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/index.html - - - 200 - text/html;charset=utf-8 292.9754ms
+2024-09-16 18:30:33.760 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - -
+2024-09-16 18:30:33.760 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - -
+2024-09-16 18:30:33.764 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - - - 200 12364 application/javascript;+charset=utf-8 4.4601ms
+2024-09-16 18:30:33.835 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 75.3509ms
+2024-09-16 18:30:33.877 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - -
+2024-09-16 18:30:34.011 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 134.4209ms
+2024-09-16 18:31:07.944 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/api/Movies - -
+2024-09-16 18:31:08.049 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-16 18:31:08.056 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-09-16 18:31:08.056 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/api/Movies - - - 401 0 - 111.9445ms
+2024-09-16 20:06:08.307 +02:00 [INF] User profile is available. Using 'C:\Users\Code\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-16 20:06:08.548 +02:00 [INF] Now listening on: https://localhost:7265
+2024-09-16 20:06:08.548 +02:00 [INF] Now listening on: http://localhost:5166
+2024-09-16 20:06:08.753 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-16 20:06:08.754 +02:00 [INF] Hosting environment: Development
+2024-09-16 20:06:08.754 +02:00 [INF] Content root path: C:\Users\Code\Desktop\G3\Sasho\ASP.NET-WEB-API\schoolwork\MovieWorkshop\MovieWorkshop\MovieWorkshopAPI\
+2024-09-16 20:06:08.861 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/index.html - -
+2024-09-16 20:06:09.186 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/index.html - - - 200 - text/html;charset=utf-8 331.0990ms
+2024-09-16 20:06:09.213 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - -
+2024-09-16 20:06:09.213 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - -
+2024-09-16 20:06:09.217 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - - - 200 12364 application/javascript;+charset=utf-8 3.6933ms
+2024-09-16 20:06:09.292 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 79.6389ms
+2024-09-16 20:06:09.338 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - -
+2024-09-16 20:06:09.489 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 150.4341ms
+2024-09-16 20:07:20.927 +02:00 [INF] User profile is available. Using 'C:\Users\Code\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-16 20:07:21.324 +02:00 [INF] Now listening on: https://localhost:7265
+2024-09-16 20:07:21.324 +02:00 [INF] Now listening on: http://localhost:5166
+2024-09-16 20:07:21.467 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-16 20:07:21.468 +02:00 [INF] Hosting environment: Development
+2024-09-16 20:07:21.468 +02:00 [INF] Content root path: C:\Users\Code\Desktop\G3\Sasho\ASP.NET-WEB-API\schoolwork\MovieWorkshop\MovieWorkshop\MovieWorkshopAPI\
+2024-09-16 20:07:21.939 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/index.html - -
+2024-09-16 20:07:22.271 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/index.html - - - 200 - text/html;charset=utf-8 338.3416ms
+2024-09-16 20:07:22.296 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - -
+2024-09-16 20:07:22.296 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - -
+2024-09-16 20:07:22.300 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - - - 200 12364 application/javascript;+charset=utf-8 4.1459ms
+2024-09-16 20:07:22.376 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 80.1984ms
+2024-09-16 20:07:22.427 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - -
+2024-09-16 20:07:22.565 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 137.7059ms
+2024-09-16 20:07:56.145 +02:00 [INF] User profile is available. Using 'C:\Users\Code\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-16 20:07:56.374 +02:00 [INF] Now listening on: https://localhost:7265
+2024-09-16 20:07:56.374 +02:00 [INF] Now listening on: http://localhost:5166
+2024-09-16 20:07:56.511 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-16 20:07:56.512 +02:00 [INF] Hosting environment: Development
+2024-09-16 20:07:56.512 +02:00 [INF] Content root path: C:\Users\Code\Desktop\G3\Sasho\ASP.NET-WEB-API\schoolwork\MovieWorkshop\MovieWorkshop\MovieWorkshopAPI\
+2024-09-16 20:07:57.061 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/index.html - -
+2024-09-16 20:07:57.370 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/index.html - - - 200 - text/html;charset=utf-8 311.8410ms
+2024-09-16 20:07:57.391 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - -
+2024-09-16 20:07:57.396 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - - - 200 12364 application/javascript;+charset=utf-8 5.0311ms
+2024-09-16 20:07:57.403 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - -
+2024-09-16 20:07:57.497 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 93.2849ms
+2024-09-16 20:07:57.533 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - -
+2024-09-16 20:07:57.670 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 136.7024ms
+2024-09-16 20:36:37.693 +02:00 [INF] User profile is available. Using 'C:\Users\Code\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-16 20:36:37.922 +02:00 [INF] Now listening on: https://localhost:7265
+2024-09-16 20:36:37.922 +02:00 [INF] Now listening on: http://localhost:5166
+2024-09-16 20:36:37.992 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-16 20:36:37.992 +02:00 [INF] Hosting environment: Development
+2024-09-16 20:36:37.992 +02:00 [INF] Content root path: C:\Users\Code\Desktop\G3\Sasho\ASP.NET-WEB-API\schoolwork\MovieWorkshop\MovieWorkshop\MovieWorkshopAPI\
+2024-09-16 20:36:38.587 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/index.html - -
+2024-09-16 20:36:38.892 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/index.html - - - 200 - text/html;charset=utf-8 308.1119ms
+2024-09-16 20:36:38.934 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - -
+2024-09-16 20:36:38.941 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - -
+2024-09-16 20:36:38.944 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - - - 200 12364 application/javascript;+charset=utf-8 9.7668ms
+2024-09-16 20:36:39.021 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 80.8546ms
+2024-09-16 20:36:39.060 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - -
+2024-09-16 20:36:39.196 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 136.2824ms
+2024-09-16 20:36:50.531 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/api/Movies - -
+2024-09-16 20:36:50.614 +02:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2024-09-16 20:36:50.620 +02:00 [INF] AuthenticationScheme: Bearer was challenged.
+2024-09-16 20:36:50.620 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/api/Movies - - - 401 0 - 89.2773ms
+2024-09-16 20:38:01.571 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/index.html - -
+2024-09-16 20:38:01.594 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/index.html - - - 200 - text/html;charset=utf-8 22.7618ms
+2024-09-16 20:38:01.619 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - -
+2024-09-16 20:38:01.620 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - - - 200 12364 application/javascript;+charset=utf-8 0.5360ms
+2024-09-16 20:38:01.622 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - -
+2024-09-16 20:38:01.648 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 25.5330ms
+2024-09-16 20:38:01.715 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - -
+2024-09-16 20:38:01.719 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 4.0414ms
+2024-09-16 20:38:07.616 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/index.html - -
+2024-09-16 20:38:07.618 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/index.html - - - 200 - text/html;charset=utf-8 2.0099ms
+2024-09-16 20:38:07.638 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - -
+2024-09-16 20:38:07.641 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - - - 200 12364 application/javascript;+charset=utf-8 3.2480ms
+2024-09-16 20:38:07.643 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - -
+2024-09-16 20:38:07.646 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 3.4545ms
+2024-09-16 20:38:07.690 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - -
+2024-09-16 20:38:07.693 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 2.7420ms
+2024-09-16 20:38:18.782 +02:00 [INF] User profile is available. Using 'C:\Users\Code\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-16 20:38:18.988 +02:00 [INF] Now listening on: https://localhost:7265
+2024-09-16 20:38:18.988 +02:00 [INF] Now listening on: http://localhost:5166
+2024-09-16 20:38:19.065 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-16 20:38:19.066 +02:00 [INF] Hosting environment: Development
+2024-09-16 20:38:19.066 +02:00 [INF] Content root path: C:\Users\Code\Desktop\G3\Sasho\ASP.NET-WEB-API\schoolwork\MovieWorkshop\MovieWorkshop\MovieWorkshopAPI\
+2024-09-16 20:38:19.608 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/index.html - -
+2024-09-16 20:38:19.914 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/index.html - - - 200 - text/html;charset=utf-8 308.2993ms
+2024-09-16 20:38:19.933 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - -
+2024-09-16 20:38:19.933 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - -
+2024-09-16 20:38:19.938 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - - - 200 12364 application/javascript;+charset=utf-8 4.6765ms
+2024-09-16 20:38:20.000 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 66.9347ms
+2024-09-16 20:38:20.050 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - -
+2024-09-16 20:38:20.176 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 126.3265ms
+2024-09-16 20:41:24.360 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7265/api/Users/register application/json 113
+2024-09-16 20:41:24.438 +02:00 [INF] Executing endpoint 'MovieWorkshopAPI.Controllers.UsersController.RegisterUser (MovieWorkshopAPI)'
+2024-09-16 20:41:24.469 +02:00 [INF] Route matched with {action = "RegisterUser", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult RegisterUser(DTOs.User.RegisterUserDto) on controller MovieWorkshopAPI.Controllers.UsersController (MovieWorkshopAPI).
+2024-09-16 20:41:25.292 +02:00 [INF] Entity Framework Core 6.0.33 initialized 'MovieWorskshopDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.33' with options: None
+2024-09-16 20:41:26.146 +02:00 [INF] Executed DbCommand (62ms) [Parameters=[@__username_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Username] = @__username_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-09-16 20:41:26.333 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (Size = 4000), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([CreatedOn], [FirstName], [LastName], [Password], [Username])
+VALUES (@p0, @p1, @p2, @p3, @p4);
+SELECT [Id]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-09-16 20:41:26.380 +02:00 [INF] Executing ObjectResult, writing value of type 'System.String'.
+2024-09-16 20:41:26.388 +02:00 [INF] Executed action MovieWorkshopAPI.Controllers.UsersController.RegisterUser (MovieWorkshopAPI) in 1911.2954ms
+2024-09-16 20:41:26.389 +02:00 [INF] Executed endpoint 'MovieWorkshopAPI.Controllers.UsersController.RegisterUser (MovieWorkshopAPI)'
+2024-09-16 20:41:26.396 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7265/api/Users/register application/json 113 - 201 - text/plain;+charset=utf-8 2036.4534ms
+2024-09-16 20:48:06.759 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/index.html - -
+2024-09-16 20:48:06.771 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/index.html - - - 200 - text/html;charset=utf-8 12.2974ms
+2024-09-16 20:48:06.800 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - -
+2024-09-16 20:48:06.800 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_framework/aspnetcore-browser-refresh.js - - - 200 12364 application/javascript;+charset=utf-8 0.4265ms
+2024-09-16 20:48:06.809 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/_vs/browserLink - -
+2024-09-16 20:48:06.821 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 12.2982ms
+2024-09-16 20:48:06.944 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - -
+2024-09-16 20:48:06.948 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7265/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 3.5702ms
