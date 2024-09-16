@@ -88,6 +88,13 @@ namespace Services.Implementations
                                                           .Select(x => x.ToModel())
                                                           .ToList();
 
-        public OrderDto GetById(int id) => _orderRepository.GetById(id).ToModel();
+        public OrderDto GetById(int id) {
+            var found = _orderRepository.GetByIdIncludingUserAndItems(id);
+            
+            if (found is not null)
+                return found.ToModel();
+
+            return new OrderDto();
+        }
     }
 }

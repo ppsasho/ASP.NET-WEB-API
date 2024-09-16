@@ -5,5 +5,6 @@ namespace Data_Access.Interfaces
     public interface IOrderRepository : IRepository<Order>
     {
         List<Order> GetAllIncludingUserAndItems();
+        Order GetByIdIncludingUserAndItems(int id);
     }
 }

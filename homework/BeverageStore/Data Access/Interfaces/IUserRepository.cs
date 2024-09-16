@@ -6,5 +6,8 @@ namespace Data_Access.Interfaces
     {
         public bool Any(string email);
         public User Login(string email, string password);
+        //public List<User> GetAllWithOrders();
+        //public User GetWithOrdersById(int id);
+
     }
 }

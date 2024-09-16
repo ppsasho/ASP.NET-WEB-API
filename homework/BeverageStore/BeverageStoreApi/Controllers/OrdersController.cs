@@ -27,7 +27,7 @@ namespace BeverageStoreApi.Controllers
                 return BadRequest("Please ensure the id is greater than zero!");
 
             var found = _orderService.GetById(id);
-            if (found == null) 
+            if (found.OrderId == 0) 
                 return NotFound("Order wasn't found with the specified id!");
 
             return Ok(found);

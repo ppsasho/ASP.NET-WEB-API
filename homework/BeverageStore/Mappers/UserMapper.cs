@@ -1,4 +1,5 @@
 ﻿using Domain_Models;
+using DTOs.Order;
 using DTOs.User;
 
 namespace Mappers
@@ -9,6 +10,7 @@ namespace Mappers
         {
             Fullname = model.FullName,
             Email = model.Email,
+            //Orders = model.Orders.Select(x => x.ToModel()).ToList() ?? new List<OrderDto>(),
         };
 
         public static UserLoginResponseDto ToModel(this User user, string token)

@@ -327,7 +327,7 @@ namespace Data_Access.Migrations
             modelBuilder.Entity("Domain_Models.Order", b =>
                 {
                     b.HasOne("Domain_Models.User", "User")
-                        .WithMany()
+                        .WithMany("Orders")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -357,6 +357,11 @@ namespace Data_Access.Migrations
             modelBuilder.Entity("Domain_Models.Order", b =>
                 {
                     b.Navigation("OrderItems");
+                });
+
+            modelBuilder.Entity("Domain_Models.User", b =>
+                {
+                    b.Navigation("Orders");
                 });
 #pragma warning restore 612, 618
         }

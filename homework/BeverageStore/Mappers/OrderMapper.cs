@@ -13,7 +13,7 @@ namespace Mappers
                 OrderId = model.Id,
                 UserId = model.UserId,
                 User = model.User.ToModel(),
-                OrderItems = model.OrderItems.Select(x => x.ToModel()).ToList()
+                OrderItems = model.OrderItems.Select(x => x.ToModel()).ToList() ?? new List<OrderItemDto>()
             };
         }
         public static OrderItemDto ToModel(this OrderItem model)
@@ -21,6 +21,7 @@ namespace Mappers
             return new OrderItemDto
             {
                 BeverageId = model.BeverageId,
+                Beverage = model.Beverage.ToModel(),
                 Quantity = model.Quantity,
             };
         }
