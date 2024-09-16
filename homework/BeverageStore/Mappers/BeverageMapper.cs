@@ -6,7 +6,7 @@ namespace Mappers
 {
     public static class BeverageMapper
     {
-        public static Beverage ToModel(this CreateBeverageDto model)
+        public static Beverage ToModel(this BeverageCreateDto model)
         {
             BeverageType parsedType;
             if (Enum.TryParse(model.Type, out parsedType))

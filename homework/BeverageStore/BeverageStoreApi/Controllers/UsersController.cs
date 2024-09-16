@@ -43,7 +43,7 @@ namespace BeverageStoreApi.Controllers
                     return BadRequest("Please make sure the passwords are matching!");
 
                 if (_userService.Register(model))
-                    return CreatedAtAction("Successfully registered!", model);
+                    return CreatedAtAction("Register", model);
 
                 return BadRequest("User wasn't successfully registered!");
         }

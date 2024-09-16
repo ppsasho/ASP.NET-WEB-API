@@ -36,7 +36,7 @@ namespace BeverageStoreApi.Controllers
         [Authorize]
 
         [HttpPost("create")]
-        public IActionResult CreateBeverage([FromBody] CreateBeverageDto model) 
+        public IActionResult CreateBeverage([FromBody] BeverageCreateDto model) 
         {
             if (_service.Add(model))
                 return CreatedAtAction("Successfully created the beverage!", model);
@@ -45,7 +45,7 @@ namespace BeverageStoreApi.Controllers
         }
         [Authorize]
         [HttpPut("update")]
-        public IActionResult UpdateBeverage([FromBody] CreateBeverageDto toUpdate, [FromRoute] int id)
+        public IActionResult UpdateBeverage([FromBody] BeverageCreateDto toUpdate, [FromRoute] int id)
         {
             var found = GetById(id);
             if (found == null)

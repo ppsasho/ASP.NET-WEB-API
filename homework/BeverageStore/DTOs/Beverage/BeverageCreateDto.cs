@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DTOs.Beverage
 {
-    public class CreateBeverageDto
+    public class BeverageCreateDto
     {
         [Required]
         [MinLength(2, ErrorMessage = "Please make sure the name is at least 2 characters long!")]

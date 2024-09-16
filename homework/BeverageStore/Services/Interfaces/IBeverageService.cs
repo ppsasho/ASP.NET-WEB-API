@@ -9,8 +9,8 @@ namespace Services.Interfaces
         public List<BeverageDto> GetAll();
         public BeverageDto GetById(int id);
         public bool Any(int id);
-        public bool Add(CreateBeverageDto entity);
-        public bool Update(CreateBeverageDto entity, int id);
+        public bool Add(BeverageCreateDto entity);
+        public bool Update(BeverageCreateDto entity, int id);
         public bool Delete(int id);
 
         public List<BeverageDto> FilterByName(string name);

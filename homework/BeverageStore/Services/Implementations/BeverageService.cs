@@ -13,7 +13,7 @@ namespace Services.Implementations
         {
             _repository = repo;
         }
-        public bool Add(CreateBeverageDto entity)
+        public bool Add(BeverageCreateDto entity)
         {
             if (_repository.Any(entity.Name))
                 return false;
@@ -55,7 +55,7 @@ namespace Services.Implementations
             return new BeverageDto();
         }
 
-        public bool Update(CreateBeverageDto entity, int id)
+        public bool Update(BeverageCreateDto entity, int id)
         {
             var found = _repository.GetById(id);
             if (found != null) 
