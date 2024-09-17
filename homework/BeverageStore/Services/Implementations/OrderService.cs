@@ -84,12 +84,12 @@ namespace Services.Implementations
             }
         }
 
-        public List<OrderDto> GetAll() => _orderRepository.GetAllIncludingUserAndItems()
+        public List<OrderDto> GetAll() => _orderRepository.GetAllIncludingItems()
                                                           .Select(x => x.ToModel())
                                                           .ToList();
 
         public OrderDto GetById(int id) {
-            var found = _orderRepository.GetByIdIncludingUserAndItems(id);
+            var found = _orderRepository.GetByIdIncludingItems(id);
             
             if (found is not null)
                 return found.ToModel();

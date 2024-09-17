@@ -8,12 +8,17 @@ namespace Mappers
     {
         public static OrderDto ToModel(this Order model)
         {
+            var orderItems = new List<OrderItemDto>();
+            if (model.OrderItems != null)
+            {
+                orderItems = model.OrderItems.Select(x => x.ToModel()).ToList();
+            }
             return new OrderDto
             {
                 OrderId = model.Id,
                 UserId = model.UserId,
-                User = model.User.ToModel(),
-                OrderItems = model.OrderItems.Select(x => x.ToModel()).ToList() ?? new List<OrderItemDto>()
+                //User = model.User.ToModel(),
+                OrderItems = orderItems
             };
         }
         public static OrderItemDto ToModel(this OrderItem model)

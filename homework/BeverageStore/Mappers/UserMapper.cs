@@ -10,7 +10,7 @@ namespace Mappers
         {
             Fullname = model.FullName,
             Email = model.Email,
-            //Orders = model.Orders.Select(x => x.ToModel()).ToList() ?? new List<OrderDto>(),
+            Orders = model.Orders.Select(x => x.ToModel()).ToList() ?? new List<OrderDto>(),
         };
 
         public static UserLoginResponseDto ToModel(this User user, string token)

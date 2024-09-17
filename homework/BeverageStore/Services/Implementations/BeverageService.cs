@@ -50,7 +50,7 @@ namespace Services.Implementations
         public BeverageDto GetById(int id) {
             var found = _repository.GetById(id);
 
-            if (found is not null) return found.ToModel();
+            if (found != null) return found.ToModel();
 
             return new BeverageDto();
         }

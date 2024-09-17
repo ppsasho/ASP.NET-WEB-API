@@ -13,9 +13,18 @@ namespace Data_Access.Implementations
             _context = context;
             _users = _context.Set<User>();
         }
+        public List<User> GetAllIncludingOrders() => _users.AsNoTracking().Include(x => x.Orders)
+                                                                           .ThenInclude(x => x.OrderItems)
+                                                                           .ThenInclude(x => x.Beverage)
+                                                                           .ToList();
 
         public bool Any(string email) => _users.Any(x => x.Email == email);
 
-        public User Login(string email, string password) => _users.FirstOrDefault(x => x.Email == email && x.Password == password);
+        public User? Login(string email, string password) => _users.FirstOrDefault(x => x.Email == email && x.Password == password);
+
+        public User? GetWithOrdersById(int id) => _users.Include(x => x.Orders)
+                                                        .ThenInclude(x => x.OrderItems)
+                                                        .ThenInclude(x => x.Beverage)
+                                                        .FirstOrDefault(x => x.Id == id);
     }
 }

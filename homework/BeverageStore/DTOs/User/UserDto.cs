@@ -6,6 +6,6 @@ namespace DTOs.User
     {
         public string Fullname { get; set; }
         public string Email { get; set; }
-        //public List<OrderDto> Orders { get; set; }
+        public List<OrderDto> Orders { get; set; }
     }
 }

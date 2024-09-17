@@ -14,13 +14,11 @@ namespace Data_Access.Implementations
             _table = context.Set<Order>();
         }
 
-        public List<Order> GetAllIncludingUserAndItems() => _table.AsNoTracking().Include(x => x.OrderItems)
-                                                                                 .ThenInclude(x => x.Beverage)
-                                                                                 .Include(x => x.User)
-                                                                                 .ToList();
-        public Order? GetByIdIncludingUserAndItems(int id) => _table.AsNoTracking().Include(x => x.OrderItems)
-                                                                                   .ThenInclude(x => x.Beverage)
-                                                                                   .Include(x => x.User)
-                                                                                   .FirstOrDefault(x => x.Id == id);
+        public List<Order> GetAllIncludingItems() => _table.AsNoTracking().Include(x => x.OrderItems)
+                                                                          .ThenInclude(x => x.Beverage)
+                                                                          .ToList();
+        public Order? GetByIdIncludingItems(int id) => _table.AsNoTracking().Include(x => x.OrderItems)
+                                                                            .ThenInclude(x => x.Beverage)
+                                                                            .FirstOrDefault(x => x.Id == id);
     } 
 }

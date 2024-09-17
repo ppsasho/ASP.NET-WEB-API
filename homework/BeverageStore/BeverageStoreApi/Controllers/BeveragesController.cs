@@ -39,15 +39,15 @@ namespace BeverageStoreApi.Controllers
         public IActionResult CreateBeverage([FromBody] BeverageCreateDto model) 
         {
             if (_service.Add(model))
-                return CreatedAtAction("Successfully created the beverage!", model);
+                return CreatedAtAction("CreateBeverage", model);
 
             return BadRequest("The beverage wasn't created successfully!");
         }
         [Authorize]
-        [HttpPut("update")]
+        [HttpPut("update/{id:int}")]
         public IActionResult UpdateBeverage([FromBody] BeverageCreateDto toUpdate, [FromRoute] int id)
         {
-            var found = GetById(id);
+            var found = _service.GetById(id);
             if (found == null)
                 return NotFound("Beverage wasn't found with the specified id!");
 
@@ -57,11 +57,11 @@ namespace BeverageStoreApi.Controllers
             return BadRequest("The beverage wasn't successfully updated!");
         }
         [Authorize]
-        [HttpDelete("delete")]
+        [HttpDelete("delete/{id:int}")]
         public IActionResult DeleteBeverage([FromRoute] int id)
         {
-            var found = GetById(id);
-            if (found == null)
+            var found = _service.GetById(id);
+            if (found.Name == null)
                 return NotFound("Beverage wasn't found with the specified id!");
 
             if (_service.Delete(id))

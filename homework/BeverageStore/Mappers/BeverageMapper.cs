@@ -1,6 +1,8 @@
 ﻿using Domain_Models;
 using Domain_Models.Enums;
 using DTOs.Beverage;
+using System.Diagnostics;
+using System.Xml.Linq;
 
 namespace Mappers
 {
@@ -26,13 +28,15 @@ namespace Mappers
         }
         public static BeverageDto ToModel(this Beverage model)
         {
-            return new BeverageDto
+            var BeverageDto = new BeverageDto();
+            if (model != null)
             {
-                Name = model.Name,
-                Type = model.Type.ToString(),
-                Quantity = model.Quantity,
-                Price = model.Price
-            };
+                BeverageDto.Name = model.Name;
+                BeverageDto.Type = model.Type.ToString();
+                BeverageDto.Quantity = model.Quantity;
+                BeverageDto.Price = model.Price;
+            }
+            return BeverageDto;
         }
     }
 }

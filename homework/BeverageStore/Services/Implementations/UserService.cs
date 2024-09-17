@@ -42,7 +42,7 @@ namespace Services.Implementations
 
             SecurityTokenDescriptor tokenDescriptor = new()
             {
-                Expires = DateTime.UtcNow.AddMinutes(5),
+                Expires = DateTime.UtcNow.AddMinutes(30),
 
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(secretKeyBytes),
                                             SecurityAlgorithms.HmacSha256Signature),
@@ -69,10 +69,10 @@ namespace Services.Implementations
         }
 
         public List<UserDto> GetAll() => 
-              _userRepository.GetAll().Select(x => x.ToModel()).ToList();
+              _userRepository.GetAllIncludingOrders().Select(x => x.ToModel()).ToList();
         public UserDto GetById(int id) 
         {
-            var found = _userRepository.GetById(id);
+            var found = _userRepository.GetWithOrdersById(id);
 
             if (found is not null) return found.ToModel();
 
