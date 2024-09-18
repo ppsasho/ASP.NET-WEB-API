@@ -1,0 +1,185 @@
+2024-09-18 20:12:58.183 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-09-18 20:12:58.253 +02:00 [DBG] Hosting starting
+2024-09-18 20:12:58.293 +02:00 [INF] User profile is available. Using 'C:\Users\Code\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-18 20:12:58.296 +02:00 [DBG] Reading data from file 'C:\Users\Code\AppData\Local\ASP.NET\DataProtection-Keys\key-00689790-9171-43be-a234-1542a9498367.xml'.
+2024-09-18 20:12:58.299 +02:00 [DBG] Reading data from file 'C:\Users\Code\AppData\Local\ASP.NET\DataProtection-Keys\key-dc7a9427-ae43-409a-ad6e-19839c82aeab.xml'.
+2024-09-18 20:12:58.305 +02:00 [DBG] Found key {00689790-9171-43be-a234-1542a9498367}.
+2024-09-18 20:12:58.307 +02:00 [DBG] Found key {dc7a9427-ae43-409a-ad6e-19839c82aeab}.
+2024-09-18 20:12:58.315 +02:00 [DBG] Considering key {dc7a9427-ae43-409a-ad6e-19839c82aeab} with expiration date 2024-12-01 18:33:55Z as default key.
+2024-09-18 20:12:58.316 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-09-18 20:12:58.320 +02:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-09-18 20:12:58.321 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-09-18 20:12:58.326 +02:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-09-18 20:12:58.327 +02:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-09-18 20:12:58.329 +02:00 [DBG] Using key {dc7a9427-ae43-409a-ad6e-19839c82aeab} as the default key.
+2024-09-18 20:12:58.330 +02:00 [DBG] Key ring with default key {dc7a9427-ae43-409a-ad6e-19839c82aeab} was loaded during application startup.
+2024-09-18 20:12:58.531 +02:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 3D8FEFEBBA4E33EF94A00082EF9DFEBD7C529705)
+2024-09-18 20:12:58.587 +02:00 [DBG] Connection id "0HN6O1M3B7ITL" received FIN.
+2024-09-18 20:12:58.591 +02:00 [INF] Now listening on: https://localhost:7162
+2024-09-18 20:12:58.591 +02:00 [INF] Now listening on: http://localhost:5056
+2024-09-18 20:12:58.591 +02:00 [DBG] Connection id "0HN6O1M3B7ITM" received FIN.
+2024-09-18 20:12:58.591 +02:00 [DBG] Loaded hosting startup assembly BeverageStoreApi
+2024-09-18 20:12:58.592 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2024-09-18 20:12:58.592 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-09-18 20:12:58.592 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-09-18 20:12:58.592 +02:00 [DBG] Connection id "0HN6O1M3B7ITM" accepted.
+2024-09-18 20:12:58.592 +02:00 [DBG] Connection id "0HN6O1M3B7ITL" accepted.
+2024-09-18 20:12:58.593 +02:00 [DBG] Connection id "0HN6O1M3B7ITL" started.
+2024-09-18 20:12:58.593 +02:00 [DBG] Connection id "0HN6O1M3B7ITM" started.
+2024-09-18 20:12:58.608 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, Boolean isApm, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-09-18 20:12:58.608 +02:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, Boolean isApm, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-09-18 20:12:58.645 +02:00 [DBG] Connection id "0HN6O1M3B7ITL" stopped.
+2024-09-18 20:12:58.645 +02:00 [DBG] Connection id "0HN6O1M3B7ITM" stopped.
+2024-09-18 20:12:58.647 +02:00 [DBG] Connection id "0HN6O1M3B7ITM" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-09-18 20:12:58.647 +02:00 [DBG] Connection id "0HN6O1M3B7ITL" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-09-18 20:12:58.756 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-18 20:12:58.756 +02:00 [INF] Hosting environment: Development
+2024-09-18 20:12:58.756 +02:00 [INF] Content root path: C:\Users\Code\Desktop\G3\Sasho\ASP.NET-WEB-API\homework\BeverageStore\BeverageStoreApi\
+2024-09-18 20:12:58.756 +02:00 [DBG] Hosting started
+2024-09-18 20:12:58.929 +02:00 [DBG] Connection id "0HN6O1M3B7ITN" accepted.
+2024-09-18 20:12:58.932 +02:00 [DBG] Connection id "0HN6O1M3B7ITN" started.
+2024-09-18 20:12:58.979 +02:00 [DBG] Connection 0HN6O1M3B7ITN established using the following protocol: "Tls12"
+2024-09-18 20:12:59.045 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/swagger/index.html - -
+2024-09-18 20:12:59.232 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-09-18 20:12:59.250 +02:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-09-18 20:12:59.250 +02:00 [DBG] Request did not match any endpoints
+2024-09-18 20:12:59.357 +02:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-09-18 20:12:59.359 +02:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-09-18 20:12:59.379 +02:00 [DBG] Response markup was updated to include Browser Link script injection.
+2024-09-18 20:12:59.381 +02:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-09-18 20:12:59.390 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/swagger/index.html - - - 200 - text/html;charset=utf-8 351.3221ms
+2024-09-18 20:12:59.423 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/_framework/aspnetcore-browser-refresh.js - -
+2024-09-18 20:12:59.426 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/_vs/browserLink - -
+2024-09-18 20:12:59.429 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/_framework/aspnetcore-browser-refresh.js - - - 200 12364 application/javascript;+charset=utf-8 6.2833ms
+2024-09-18 20:12:59.514 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 87.7078ms
+2024-09-18 20:12:59.545 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/swagger/v1/swagger.json - -
+2024-09-18 20:12:59.545 +02:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-09-18 20:12:59.545 +02:00 [DBG] Request did not match any endpoints
+2024-09-18 20:12:59.738 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 193.2834ms
+2024-09-18 20:13:19.624 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7162/api/Users/login application/json 290
+2024-09-18 20:13:19.633 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Users/login'
+2024-09-18 20:13:19.643 +02:00 [DBG] Endpoint 'BeverageStoreApi.Controllers.UsersController.Login (BeverageStoreApi)' with route pattern 'api/Users/login' is valid for the request path '/api/Users/login'
+2024-09-18 20:13:19.644 +02:00 [DBG] Request matched endpoint 'BeverageStoreApi.Controllers.UsersController.Login (BeverageStoreApi)'
+2024-09-18 20:13:19.645 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-09-18 20:13:19.731 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-09-18 20:13:19.733 +02:00 [INF] Executing endpoint 'BeverageStoreApi.Controllers.UsersController.Login (BeverageStoreApi)'
+2024-09-18 20:13:19.773 +02:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DTOs.User.UserLoginDto) on controller BeverageStoreApi.Controllers.UsersController (BeverageStoreApi).
+2024-09-18 20:13:19.774 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-09-18 20:13:19.774 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-09-18 20:13:19.774 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-09-18 20:13:19.774 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-09-18 20:13:19.775 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-09-18 20:13:19.775 +02:00 [DBG] Executing controller factory for controller BeverageStoreApi.Controllers.UsersController (BeverageStoreApi)
+2024-09-18 20:13:19.921 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-09-18 20:13:20.757 +02:00 [INF] Entity Framework Core 6.0.33 initialized 'BeverageStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.33' with options: None
+2024-09-18 20:13:20.758 +02:00 [DBG] Executed controller factory for controller BeverageStoreApi.Controllers.UsersController (BeverageStoreApi)
+2024-09-18 20:13:20.768 +02:00 [DBG] Attempting to bind parameter 'model' of type 'DTOs.User.UserLoginDto' ...
+2024-09-18 20:13:20.770 +02:00 [DBG] Attempting to bind parameter 'model' of type 'DTOs.User.UserLoginDto' using the name '' in request data ...
+2024-09-18 20:13:20.771 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-09-18 20:13:20.781 +02:00 [DBG] Connection id "0HN6O1M3B7ITN", Request id "0HN6O1M3B7ITN:00000009": started reading request body.
+2024-09-18 20:13:20.781 +02:00 [DBG] Connection id "0HN6O1M3B7ITN", Request id "0HN6O1M3B7ITN:00000009": done reading request body.
+2024-09-18 20:13:20.804 +02:00 [DBG] JSON input formatter succeeded, deserializing to type 'DTOs.User.UserLoginDto'
+2024-09-18 20:13:20.804 +02:00 [DBG] Done attempting to bind parameter 'model' of type 'DTOs.User.UserLoginDto'.
+2024-09-18 20:13:20.804 +02:00 [DBG] Done attempting to bind parameter 'model' of type 'DTOs.User.UserLoginDto'.
+2024-09-18 20:13:20.804 +02:00 [DBG] Attempting to validate the bound parameter 'model' of type 'DTOs.User.UserLoginDto' ...
+2024-09-18 20:13:20.810 +02:00 [DBG] Done attempting to validate the bound parameter 'model' of type 'DTOs.User.UserLoginDto'.
+2024-09-18 20:13:20.900 +02:00 [DBG] Compiling query expression: 
+'DbSet<User>()
+    .Any(x => x.Email == __email_0)'
+2024-09-18 20:13:21.207 +02:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<bool>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> 0
+        SELECT EXISTS (
+            SELECT 1
+            FROM Users AS u
+            WHERE u.Email == @__email_0)), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+    Data_Access.BeverageStoreDbContext, 
+    False, 
+    False, 
+    True
+)
+    .Single()'
+2024-09-18 20:13:21.261 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-18 20:13:21.303 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (37ms).
+2024-09-18 20:13:21.316 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-18 20:13:21.576 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-18 20:13:21.590 +02:00 [DBG] Executing DbCommand [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-09-18 20:13:21.652 +02:00 [INF] Executed DbCommand (67ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-09-18 20:13:21.669 +02:00 [DBG] A data reader was disposed.
+2024-09-18 20:13:21.672 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-18 20:13:21.680 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-18 20:13:21.686 +02:00 [DBG] Compiling query expression: 
+'DbSet<User>()
+    .FirstOrDefault(x => x.Email == __email_0 && x.Password == __password_1)'
+2024-09-18 20:13:21.723 +02:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.Email (string) Required, 1], [Property: User.FirstName (string) Required MaxLength(50), 2], [Property: User.LastName (string) Required MaxLength(50), 3], [Property: User.Password (string) Required, 4] }
+        SELECT TOP(1) u.Id, u.Email, u.FirstName, u.LastName, u.Password
+        FROM Users AS u
+        WHERE (u.Email == @__email_0) && (u.Password == @__password_1)), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, User>, 
+    Data_Access.BeverageStoreDbContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()'
+2024-09-18 20:13:21.726 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-18 20:13:21.727 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-09-18 20:13:21.727 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-18 20:13:21.728 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-18 20:13:21.728 +02:00 [DBG] Executing DbCommand [Parameters=[@__email_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE ([u].[Email] = @__email_0) AND ([u].[Password] = @__password_1)
+2024-09-18 20:13:21.731 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE ([u].[Email] = @__email_0) AND ([u].[Password] = @__password_1)
+2024-09-18 20:13:21.747 +02:00 [DBG] Context 'BeverageStoreDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-09-18 20:13:21.769 +02:00 [DBG] A data reader was disposed.
+2024-09-18 20:13:21.769 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-18 20:13:21.769 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-18 20:13:22.019 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-09-18 20:13:22.022 +02:00 [DBG] No information found on request to perform content negotiation.
+2024-09-18 20:13:22.022 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-09-18 20:13:22.022 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-09-18 20:13:22.022 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-09-18 20:13:22.022 +02:00 [INF] Executing OkObjectResult, writing value of type 'DTOs.User.UserLoginResponseDto'.
+2024-09-18 20:13:22.029 +02:00 [INF] Executed action BeverageStoreApi.Controllers.UsersController.Login (BeverageStoreApi) in 2249.9814ms
+2024-09-18 20:13:22.030 +02:00 [INF] Executed endpoint 'BeverageStoreApi.Controllers.UsersController.Login (BeverageStoreApi)'
+2024-09-18 20:13:22.034 +02:00 [DBG] 'BeverageStoreDbContext' disposed.
+2024-09-18 20:13:22.037 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7162/api/Users/login application/json 290 - 200 - application/json;+charset=utf-8 2413.2717ms
+2024-09-18 20:14:43.200 +02:00 [DBG] Config reload token fired. Checking for changes...
+2024-09-18 20:14:43.452 +02:00 [DBG] Config reload token fired. Checking for changes...

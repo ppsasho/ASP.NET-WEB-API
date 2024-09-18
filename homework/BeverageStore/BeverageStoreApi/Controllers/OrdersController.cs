@@ -1,6 +1,7 @@
 ﻿using DTOs.Order;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Serilog;
 using Services.Interfaces;
 
 namespace BeverageStoreApi.Controllers
@@ -23,14 +24,21 @@ namespace BeverageStoreApi.Controllers
         [HttpGet("{id:int}")]
         public IActionResult GetById(int id) 
         {
-            if (id < 1)
-                return BadRequest("Please ensure the id is greater than zero!");
+            try
+            {
+                if (id < 1)
+                    return BadRequest("Please ensure the id is greater than zero!");
 
-            var found = _orderService.GetById(id);
-            if (found.OrderId == 0) 
-                return NotFound("Order wasn't found with the specified id!");
+                var found = _orderService.GetById(id);
+                if (found.OrderId == 0) 
+                    return NotFound("Order wasn't found with the specified id!");
 
-            return Ok(found);
+                return Ok(found);
+            }catch(Exception ex)
+            {
+                Log.Error(ex, $"An error occured while attempting to fetch an order with id: [{id}]");
+                return NotFound("The order wasn't found with the specified id!");
+            }
         }
 
         [Authorize]

@@ -3,6 +3,8 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Services.DIModule;
 using Microsoft.OpenApi.Models;
+using Serilog;
+using Services.Helpers;
 
 namespace BeverageStoreApi
 {
@@ -13,6 +15,13 @@ namespace BeverageStoreApi
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+
+            builder.Host.UseSerilog((ctx, lc) =>
+            {
+                lc.WriteTo.File($"logs.txt",
+                    outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}");
+                lc.MinimumLevel.Debug();
+            });
 
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -47,6 +56,11 @@ namespace BeverageStoreApi
 
                
             });
+
+            var appConfig = builder.Configuration.GetSection("AppSettings");
+            builder.Services.Configure<AppSettings>(appConfig);
+
+            var appSettings = appConfig.Get<AppSettings>();
 
             builder.Services.RegisterDependencies
                 (builder.Configuration.GetConnectionString("DefaultConnectionString"));

@@ -5,7 +5,9 @@ using DTOs.Beverage;
 using DTOs.User;
 using Mappers;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Services.Helpers;
 using Services.Interfaces;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -18,10 +20,12 @@ namespace Services.Implementations
     {
         private readonly IUserRepository _userRepository;
         private readonly IConfiguration _config;
-        public UserService(IUserRepository repo, IConfiguration config)
+        private readonly IOptions<AppSettings> _settings;
+        public UserService(IUserRepository repo, IConfiguration config, IOptions<AppSettings> settings)
         {
             _userRepository = repo;
             _config = config;
+            _settings = settings;
 
         }
         public bool Any(int id) => _userRepository.Any(id);
@@ -38,7 +42,14 @@ namespace Services.Implementations
         private string GenerateToken(User user)
         {
             JwtSecurityTokenHandler tokenHandler = new();
-            byte[] secretKeyBytes = Encoding.ASCII.GetBytes(_config["SecretKey:Key"]);
+
+            //  Retrieve values from appsettings.json using an instance of IConfiguration
+            //  and sending the path to the specific value that you need
+
+            //byte[] secretKeyBytes = Encoding.ASCII.GetBytes(_config["SecretKey:Key"]);
+
+            //  Retrieve values from appsettings.json using the options pattern
+            byte[] secretKeyBytes = Encoding.ASCII.GetBytes(_settings.Value.SecretKey);
 
             SecurityTokenDescriptor tokenDescriptor = new()
             {

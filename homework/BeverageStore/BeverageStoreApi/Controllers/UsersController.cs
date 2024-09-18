@@ -2,7 +2,10 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.OpenApi.Expressions;
+using Serilog;
 using Services.Interfaces;
+using BeverageStore.Shared.Exceptions.UserExceptions;
 
 namespace BeverageStoreApi.Controllers
 {
@@ -25,41 +28,63 @@ namespace BeverageStoreApi.Controllers
         [HttpGet("{id:int}")]
         public IActionResult GetById (int id) 
         {
-            if (id < 1)
-                return BadRequest("Please make sure the id is greater than zero!");
+            try
+            {
+                if (id < 1)
+                    return BadRequest("Please make sure the id is greater than zero!");
 
-            var found = _userService.GetById(id);
+                var found = _userService.GetById(id);
 
-            if(found.Fullname is null)
-                return NotFound("User wasn't found with the specified Id!");
+                if (found.Fullname is null)
+                    throw new UserNotFoundException("User wasn't found with the specified Id!");
 
-            return Ok(found);
+                return Ok(found);
+            }
+            catch (Exception ex)
+            {
+                Log.Error(ex, $"There was an error while attempting to retrieve user with id: [{id}]");
+                return BadRequest($"User wasn't found with the Id [{id}]!\n{ex.Message}");
+            }
         }
 
         [HttpPost("register")]
         public IActionResult Register([FromBody]UserCreateDto model)
         {
+            try
+            {
                 if (model.Password != model.ConfirmPassword)
                     return BadRequest("Please make sure the passwords are matching!");
 
                 if (_userService.Register(model))
                     return CreatedAtAction("Register", model);
 
-                return BadRequest("User wasn't successfully registered!");
+                throw new UserNotCreatedException("The user wasn't registered successfully!");
+            }catch(Exception ex) 
+            {
+                Log.Error(ex, "There was an error while attempting to register a user!");
+                return BadRequest("The user wasn't successfully registed!");
+            }
         }
 
         [HttpPost("login")]
         public IActionResult Login(UserLoginDto model)
         {
-            if (model.Password != model.ConfirmPassword)
-                return BadRequest("Please make sure the passwords are matching!");
+            try
+            {
+                if (model.Password != model.ConfirmPassword)
+                    return BadRequest("Please make sure the passwords are matching!");
 
-            var response = _userService.Login(model);
+                var response = _userService.Login(model);
 
-            if (response.Email == null)
-                return NotFound("The user wasn't found with the entered credentials");
+                if (response.Email == null)
+                    return NotFound("The user wasn't found with the entered credentials");
 
-            return Ok(response);
+                return Ok(response);
+            }catch(Exception ex)
+            {
+                Log.Error(ex, "An error occured while attempting to log in a user!");
+                return BadRequest("The login request wasn't successfully!");
+            }
         }
         
     }
