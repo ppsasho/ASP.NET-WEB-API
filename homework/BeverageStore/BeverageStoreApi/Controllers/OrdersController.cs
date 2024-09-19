@@ -1,4 +1,6 @@
-﻿using DTOs.Order;
+﻿using BeverageStore.Shared.Exceptions.OrderExceptions;
+using DTOs.Order;
+using DTOs.Response;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
@@ -31,13 +33,14 @@ namespace BeverageStoreApi.Controllers
 
                 var found = _orderService.GetById(id);
                 if (found.OrderId == 0) 
-                    return NotFound("Order wasn't found with the specified id!");
+                    throw new OrderNotFoundException("Order wasn't found with the specified id!");
 
                 return Ok(found);
             }catch(Exception ex)
             {
+                
                 Log.Error(ex, $"An error occured while attempting to fetch an order with id: [{id}]");
-                return NotFound("The order wasn't found with the specified id!");
+                return (IActionResult)new ExceptionResultDto() { ErrorMessage = ex.Message };
             }
         }
 
@@ -45,22 +48,28 @@ namespace BeverageStoreApi.Controllers
         [HttpPost("create")]
         public IActionResult CreateOrder(OrderCreateDto orderCreateDto) 
         {
-            var result = _orderService.CreateOrder(orderCreateDto);
-            if (!result.Success)
+            try
             {
-                switch (result.ErrorMessage)
+                var result = _orderService.CreateOrder(orderCreateDto);
+                if (!result.Success)
                 {
-                    case "User not found!":
-                        return NotFound(result.ErrorMessage);
+                    switch (result.ErrorMessage)
+                    {
+                        case "User not found!":
+                            return NotFound(result.ErrorMessage);
 
-                    case "Invalid beverages or quantities!":
-                        return BadRequest(result.ErrorMessage);
+                        case "Invalid beverages or quantities!":
+                            return BadRequest(result.ErrorMessage);
 
-                    default:
-                        return StatusCode(StatusCodes.Status500InternalServerError, result.ErrorMessage);
-                };
+                        default:
+                            throw new OrderNotCreatedException("The beverage wasn't created successfully!");
+                    };
+                }
+                return CreatedAtAction("CreateOrder", orderCreateDto);
+            } catch(Exception ex)
+            {
+                Log.Error(ex, $"The order wasn't created successfully containing:\n{orderCreateDto.}")
             }
-            return CreatedAtAction("CreateOrder", orderCreateDto);
         }
 
     }

@@ -6,6 +6,7 @@ using Microsoft.OpenApi.Expressions;
 using Serilog;
 using Services.Interfaces;
 using BeverageStore.Shared.Exceptions.UserExceptions;
+using DTOs.Response;
 
 namespace BeverageStoreApi.Controllers
 {
@@ -35,15 +36,15 @@ namespace BeverageStoreApi.Controllers
 
                 var found = _userService.GetById(id);
 
-                if (found.Fullname is null)
+                if (found.Fullname == null)
                     throw new UserNotFoundException("User wasn't found with the specified Id!");
 
                 return Ok(found);
             }
             catch (Exception ex)
             {
-                Log.Error(ex, $"There was an error while attempting to retrieve user with id: [{id}]");
-                return BadRequest($"User wasn't found with the Id [{id}]!\n{ex.Message}");
+                Log.Error(ex, $"An error occured while attempting to retrieve user with id: [{id}]");
+                return (IActionResult)new ExceptionResultDto(){ ErrorMessage = ex.Message };
             }
         }
 
@@ -61,8 +62,9 @@ namespace BeverageStoreApi.Controllers
                 throw new UserNotCreatedException("The user wasn't registered successfully!");
             }catch(Exception ex) 
             {
-                Log.Error(ex, "There was an error while attempting to register a user!");
-                return BadRequest("The user wasn't successfully registed!");
+                Log.Error(ex, $"There was an error while attempting to register a user!\n" +
+                    $"FirstName[{model.FirstName}]\tLastName[{model.LastName}]\tEmail[{model.Email}]");
+                return (IActionResult)new ExceptionResultDto() { ErrorMessage = ex.Message }; ;
             }
         }
 
@@ -83,7 +85,7 @@ namespace BeverageStoreApi.Controllers
             }catch(Exception ex)
             {
                 Log.Error(ex, "An error occured while attempting to log in a user!");
-                return BadRequest("The login request wasn't successfully!");
+                return (IActionResult)new ExceptionResultDto(){ ErrorMessage = ex.Message };
             }
         }
         
