@@ -68,7 +68,8 @@ namespace BeverageStoreApi.Controllers
                 return CreatedAtAction("CreateOrder", orderCreateDto);
             } catch(Exception ex)
             {
-                Log.Error(ex, $"The order wasn't created successfully containing:\n{orderCreateDto.}")
+                Log.Error(ex, $"The order wasn't created successfully containing: [{orderCreateDto.UserId}] [{orderCreateDto.orderItems}]\n");
+                return (IActionResult)new ExceptionResultDto() { ErrorMessage = ex.Message };
             }
         }
 
