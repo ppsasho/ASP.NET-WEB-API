@@ -2,6 +2,7 @@
 using DTOs.Category;
 using DTOs.Product;
 using DTOs.Review;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Services.Interfaces;
@@ -28,7 +29,7 @@ namespace EcommerceStoreAPI.Controllers
 
             return Ok(_service.GetById(id));
         }
-
+        [Authorize]
         [HttpPost]
         public ActionResult<ReviewDto> Post([FromBody] CreateReviewDto createReview)
         {
@@ -37,7 +38,7 @@ namespace EcommerceStoreAPI.Controllers
 
             return StatusCode(StatusCodes.Status500InternalServerError, "Something unexpected happened!");
         }
-
+        [Authorize]
         [HttpDelete("{id:int}")]
         public IActionResult Delete(int id)
         {
@@ -51,7 +52,7 @@ namespace EcommerceStoreAPI.Controllers
 
             return StatusCode(StatusCodes.Status500InternalServerError, "Unexpected server error!");
         }
-
+        [Authorize]
         [HttpPut("{id:int}")]
         public IActionResult Put([FromRoute] int id, [FromBody] CreateReviewDto updatedReview)
         {

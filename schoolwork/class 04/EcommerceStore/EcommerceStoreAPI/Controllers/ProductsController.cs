@@ -1,5 +1,6 @@
 ﻿using DomainModels;
 using DTOs.Product;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Services.Interfaces;
 
@@ -28,7 +29,7 @@ namespace EcommerceStoreAPI.Controllers
 
             return Ok(_service.GetById(id));
         }
-
+        [Authorize]
         [HttpPost]
         public ActionResult<ProductDto> Post([FromBody] CreateProductDto createProductDto)
         {
@@ -40,7 +41,7 @@ namespace EcommerceStoreAPI.Controllers
 
             return StatusCode(StatusCodes.Status500InternalServerError, "Something unexpected happened!");
         }
-
+        [Authorize]
         [HttpDelete("{id:int}")] //api/products/id
         public IActionResult Delete(int id)
         {
@@ -51,7 +52,7 @@ namespace EcommerceStoreAPI.Controllers
             _service.DeleteById(product.Id);
             return Ok("Product deleted successfully!");
         }
-
+        [Authorize]
         [HttpPut("{id:int}")]
         public IActionResult Put([FromRoute] int id, [FromBody] CreateProductDto updatedProduct)
         {

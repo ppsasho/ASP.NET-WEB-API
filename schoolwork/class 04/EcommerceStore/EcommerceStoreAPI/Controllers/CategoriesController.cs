@@ -7,7 +7,6 @@ using Services.Interfaces;
 
 namespace EcommerceStoreAPI.Controllers
 {
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class CategoriesController : ControllerBase
@@ -28,7 +27,7 @@ namespace EcommerceStoreAPI.Controllers
 
             return Ok(_service.GetById(id));
         }
-
+        [Authorize]
         [HttpPost]
         public ActionResult<CategoryDto> Post([FromBody] CreateCategoryDto createCategory)
         {
@@ -37,7 +36,7 @@ namespace EcommerceStoreAPI.Controllers
 
             return StatusCode(StatusCodes.Status500InternalServerError, "Something unexpected happened!");
         }
-
+        [Authorize]
         [HttpDelete("{id:int}")]
         public IActionResult Delete(int id)
         {
@@ -51,7 +50,7 @@ namespace EcommerceStoreAPI.Controllers
 
             return StatusCode(StatusCodes.Status500InternalServerError, "Unexpected server error!");
         }
-
+        [Authorize]
         [HttpPut("{id:int}")]
         public IActionResult Put([FromRoute] int id, [FromBody] CreateCategoryDto updatedProduct)
         {
