@@ -53,17 +53,13 @@ namespace BeverageStoreApi.Controllers
                 var result = _orderService.CreateOrder(orderCreateDto);
                 if (!result.Success)
                 {
-                    switch (result.ErrorMessage)
+                    return result.ErrorMessage switch
                     {
-                        case "User not found!":
-                            return NotFound(result.ErrorMessage);
-
-                        case "Invalid beverages or quantities!":
-                            return BadRequest(result.ErrorMessage);
-
-                        default:
-                            throw new OrderNotCreatedException("The beverage wasn't created successfully!");
+                        "User not found!" => NotFound(result.ErrorMessage),
+                        "Invalid beverages or quantities!" => BadRequest(result.ErrorMessage),
+                        _ => throw new OrderNotCreatedException("The beverage wasn't created successfully!"),
                     };
+                    ;
                 }
                 return CreatedAtAction("CreateOrder", orderCreateDto);
             } catch(Exception ex)
