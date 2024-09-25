@@ -1,4 +1,6 @@
-﻿namespace DTOs.Response
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace DTOs.Response
 {
     public class ExceptionResultDto
     {
