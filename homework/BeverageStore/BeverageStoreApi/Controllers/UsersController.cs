@@ -44,7 +44,7 @@ namespace BeverageStoreApi.Controllers
             catch (Exception ex)
             {
                 Log.Error(ex, $"An error occured while attempting to retrieve user with id: [{id}]");
-                return (IActionResult)new ExceptionResultDto(){ ErrorMessage = ex.Message };
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
 
@@ -64,7 +64,7 @@ namespace BeverageStoreApi.Controllers
             {
                 Log.Error(ex, $"There was an error while attempting to register a user!\n" +
                     $"FirstName[{model.FirstName}]\tLastName[{model.LastName}]\tEmail[{model.Email}]");
-                return (IActionResult)new ExceptionResultDto() { ErrorMessage = ex.Message }; ;
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message); ;
             }
         }
 
@@ -85,7 +85,7 @@ namespace BeverageStoreApi.Controllers
             }catch(Exception ex)
             {
                 Log.Error(ex, "An error occured while attempting to log in a user!");
-                return (IActionResult)new ExceptionResultDto(){ ErrorMessage = ex.Message };
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
         

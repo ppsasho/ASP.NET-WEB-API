@@ -183,3 +183,1397 @@ WHERE ([u].[Email] = @__email_0) AND ([u].[Password] = @__password_1)
 2024-09-18 20:13:22.037 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7162/api/Users/login application/json 290 - 200 - application/json;+charset=utf-8 2413.2717ms
 2024-09-18 20:14:43.200 +02:00 [DBG] Config reload token fired. Checking for changes...
 2024-09-18 20:14:43.452 +02:00 [DBG] Config reload token fired. Checking for changes...
+2024-09-25 15:54:10.689 +02:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-09-25 15:54:10.884 +02:00 [DBG] Hosting starting
+2024-09-25 15:54:11.072 +02:00 [INF] User profile is available. Using 'C:\Users\Sasho\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-09-25 15:54:11.077 +02:00 [DBG] Reading data from file 'C:\Users\Sasho\AppData\Local\ASP.NET\DataProtection-Keys\key-06e49597-c007-4d61-a9ac-67544e5daae7.xml'.
+2024-09-25 15:54:11.124 +02:00 [DBG] Reading data from file 'C:\Users\Sasho\AppData\Local\ASP.NET\DataProtection-Keys\key-0e5080c1-da80-4e81-aceb-f759f9266b5c.xml'.
+2024-09-25 15:54:11.153 +02:00 [DBG] Found key {06e49597-c007-4d61-a9ac-67544e5daae7}.
+2024-09-25 15:54:11.164 +02:00 [DBG] Found key {0e5080c1-da80-4e81-aceb-f759f9266b5c}.
+2024-09-25 15:54:11.176 +02:00 [DBG] Considering key {06e49597-c007-4d61-a9ac-67544e5daae7} with expiration date 2024-12-12 18:17:16Z as default key.
+2024-09-25 15:54:11.179 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-09-25 15:54:11.184 +02:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-09-25 15:54:11.185 +02:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-09-25 15:54:11.192 +02:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-09-25 15:54:11.194 +02:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-09-25 15:54:11.196 +02:00 [DBG] Using key {06e49597-c007-4d61-a9ac-67544e5daae7} as the default key.
+2024-09-25 15:54:11.197 +02:00 [DBG] Key ring with default key {06e49597-c007-4d61-a9ac-67544e5daae7} was loaded during application startup.
+2024-09-25 15:54:12.006 +02:00 [DBG] Using development certificate: CN=localhost (Thumbprint: 63941FDBD96EF9462752C1894CA509DAB8F800FF)
+2024-09-25 15:54:12.098 +02:00 [INF] Now listening on: https://localhost:7162
+2024-09-25 15:54:12.098 +02:00 [INF] Now listening on: http://localhost:5056
+2024-09-25 15:54:12.098 +02:00 [DBG] Loaded hosting startup assembly BeverageStoreApi
+2024-09-25 15:54:12.098 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2024-09-25 15:54:12.098 +02:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-09-25 15:54:12.098 +02:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-09-25 15:54:12.110 +02:00 [DBG] Connection id "0HN6TD64HE2LM" accepted.
+2024-09-25 15:54:12.110 +02:00 [DBG] Connection id "0HN6TD64HE2LN" accepted.
+2024-09-25 15:54:12.112 +02:00 [DBG] Connection id "0HN6TD64HE2LM" started.
+2024-09-25 15:54:12.112 +02:00 [DBG] Connection id "0HN6TD64HE2LN" started.
+2024-09-25 15:54:12.312 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-09-25 15:54:12.313 +02:00 [INF] Hosting environment: Development
+2024-09-25 15:54:12.313 +02:00 [INF] Content root path: C:\Users\Sasho\Desktop\School\ASP.NET-WEB-API\homework\BeverageStore\BeverageStoreApi\
+2024-09-25 15:54:12.313 +02:00 [DBG] Hosting started
+2024-09-25 15:54:12.645 +02:00 [DBG] Connection id "0HN6TD64HE2LO" accepted.
+2024-09-25 15:54:12.645 +02:00 [DBG] Connection id "0HN6TD64HE2LO" started.
+2024-09-25 15:54:12.726 +02:00 [DBG] Connection 0HN6TD64HE2LO established using the following protocol: "Tls12"
+2024-09-25 15:54:12.818 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/swagger - -
+2024-09-25 15:54:13.081 +02:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-09-25 15:54:13.105 +02:00 [DBG] No candidates found for the request path '/swagger'
+2024-09-25 15:54:13.105 +02:00 [DBG] Request did not match any endpoints
+2024-09-25 15:54:13.190 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/swagger - - - 301 0 - 378.3325ms
+2024-09-25 15:54:13.197 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/swagger/index.html - -
+2024-09-25 15:54:13.202 +02:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-09-25 15:54:13.202 +02:00 [DBG] Request did not match any endpoints
+2024-09-25 15:54:13.298 +02:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-09-25 15:54:13.300 +02:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-09-25 15:54:13.316 +02:00 [DBG] Response markup was updated to include Browser Link script injection.
+2024-09-25 15:54:13.316 +02:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-09-25 15:54:13.316 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/swagger/index.html - - - 200 - text/html;charset=utf-8 118.6252ms
+2024-09-25 15:54:13.389 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/swagger/swagger-ui-standalone-preset.js - -
+2024-09-25 15:54:13.390 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/swagger/swagger-ui.css - -
+2024-09-25 15:54:13.390 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/swagger/swagger-ui-bundle.js - -
+2024-09-25 15:54:13.390 +02:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2024-09-25 15:54:13.394 +02:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2024-09-25 15:54:13.394 +02:00 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2024-09-25 15:54:13.394 +02:00 [DBG] Request did not match any endpoints
+2024-09-25 15:54:13.394 +02:00 [DBG] Request did not match any endpoints
+2024-09-25 15:54:13.394 +02:00 [DBG] Request did not match any endpoints
+2024-09-25 15:54:13.411 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/_vs/browserLink - -
+2024-09-25 15:54:13.420 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/_framework/aspnetcore-browser-refresh.js - -
+2024-09-25 15:54:13.449 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/_framework/aspnetcore-browser-refresh.js - - - 200 12364 application/javascript;+charset=utf-8 28.3342ms
+2024-09-25 15:54:13.449 +02:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-09-25 15:54:13.450 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/swagger/swagger-ui.css - - - 200 144929 text/css 59.3009ms
+2024-09-25 15:54:13.471 +02:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-09-25 15:54:13.475 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/swagger/swagger-ui-standalone-preset.js - - - 200 312163 application/javascript 85.6230ms
+2024-09-25 15:54:13.513 +02:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-09-25 15:54:13.514 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/swagger/swagger-ui-bundle.js - - - 200 1061536 application/javascript 123.2159ms
+2024-09-25 15:54:13.537 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 127.0720ms
+2024-09-25 15:54:13.714 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/swagger/favicon-16x16.png - -
+2024-09-25 15:54:13.714 +02:00 [DBG] No candidates found for the request path '/swagger/favicon-16x16.png'
+2024-09-25 15:54:13.714 +02:00 [DBG] Request did not match any endpoints
+2024-09-25 15:54:13.714 +02:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2024-09-25 15:54:13.715 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/swagger/favicon-16x16.png - - - 200 665 image/png 1.0717ms
+2024-09-25 15:54:13.756 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/swagger/v1/swagger.json - -
+2024-09-25 15:54:13.756 +02:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-09-25 15:54:13.756 +02:00 [DBG] Request did not match any endpoints
+2024-09-25 15:54:13.973 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 217.0704ms
+2024-09-25 15:54:21.263 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/api/Beverages - -
+2024-09-25 15:54:21.272 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Beverages'
+2024-09-25 15:54:21.280 +02:00 [DBG] Endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetAll (BeverageStoreApi)' with route pattern 'api/Beverages' is valid for the request path '/api/Beverages'
+2024-09-25 15:54:21.281 +02:00 [DBG] Request matched endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetAll (BeverageStoreApi)'
+2024-09-25 15:54:21.281 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-09-25 15:54:21.457 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-09-25 15:54:21.464 +02:00 [INF] Executing endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetAll (BeverageStoreApi)'
+2024-09-25 15:54:21.515 +02:00 [INF] Route matched with {action = "GetAll", controller = "Beverages"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi).
+2024-09-25 15:54:21.516 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-09-25 15:54:21.516 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-09-25 15:54:21.516 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-09-25 15:54:21.517 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-09-25 15:54:21.517 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-09-25 15:54:21.518 +02:00 [DBG] Executing controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:54:21.948 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-09-25 15:54:22.145 +02:00 [DBG] Authentication of the HTTPS connection timed out.
+2024-09-25 15:54:22.145 +02:00 [DBG] Authentication of the HTTPS connection timed out.
+2024-09-25 15:54:22.149 +02:00 [DBG] Connection id "0HN6TD64HE2LM" stopped.
+2024-09-25 15:54:22.149 +02:00 [DBG] Connection id "0HN6TD64HE2LN" stopped.
+2024-09-25 15:54:22.151 +02:00 [DBG] Connection id "0HN6TD64HE2LM" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-09-25 15:54:22.151 +02:00 [DBG] Connection id "0HN6TD64HE2LN" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-09-25 15:54:23.178 +02:00 [INF] Entity Framework Core 6.0.33 initialized 'BeverageStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.33' with options: None
+2024-09-25 15:54:23.179 +02:00 [DBG] Executed controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:54:30.621 +02:00 [DBG] Compiling query expression: 
+'DbSet<Beverage>()
+    .AsNoTracking()'
+2024-09-25 15:54:30.983 +02:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Beverage>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Beverage.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Beverage.Name (string) Required, 1], [Property: Beverage.Price (decimal) Required, 2], [Property: Beverage.Quantity (int) Required, 3], [Property: Beverage.Type (BeverageType) Required, 4] }
+        SELECT b.Id, b.Name, b.Price, b.Quantity, b.Type
+        FROM Beverages AS b), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Beverage>, 
+    Data_Access.BeverageStoreDbContext, 
+    False, 
+    False, 
+    True
+)'
+2024-09-25 15:54:31.040 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-25 15:54:31.140 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (96ms).
+2024-09-25 15:54:31.149 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:54:31.749 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:54:31.762 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+2024-09-25 15:54:31.806 +02:00 [INF] Executed DbCommand (46ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+2024-09-25 15:54:31.836 +02:00 [DBG] A data reader was disposed.
+2024-09-25 15:54:31.840 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:54:31.851 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:54:31.892 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-09-25 15:54:31.895 +02:00 [DBG] No information found on request to perform content negotiation.
+2024-09-25 15:54:31.895 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-09-25 15:54:31.895 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-09-25 15:54:31.896 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-09-25 15:54:31.896 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DTOs.Beverage.BeverageDto, DTOs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-25 15:54:31.913 +02:00 [INF] Executed action BeverageStoreApi.Controllers.BeveragesController.GetAll (BeverageStoreApi) in 10390.2015ms
+2024-09-25 15:54:31.914 +02:00 [INF] Executed endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetAll (BeverageStoreApi)'
+2024-09-25 15:54:31.920 +02:00 [DBG] 'BeverageStoreDbContext' disposed.
+2024-09-25 15:54:31.926 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/api/Beverages - - - 200 - application/json;+charset=utf-8 10663.5715ms
+2024-09-25 15:55:03.023 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/api/Beverages/1 - -
+2024-09-25 15:55:03.024 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Beverages/1'
+2024-09-25 15:55:03.025 +02:00 [DBG] Endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)' with route pattern 'api/Beverages/{id:int}' is valid for the request path '/api/Beverages/1'
+2024-09-25 15:55:03.025 +02:00 [DBG] Request matched endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)'
+2024-09-25 15:55:03.025 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-09-25 15:55:03.026 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-09-25 15:55:03.026 +02:00 [INF] Executing endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)'
+2024-09-25 15:55:03.043 +02:00 [INF] Route matched with {action = "GetById", controller = "Beverages"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetById(Int32) on controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi).
+2024-09-25 15:55:03.043 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-09-25 15:55:03.043 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-09-25 15:55:03.043 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-09-25 15:55:03.043 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-09-25 15:55:03.043 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-09-25 15:55:03.043 +02:00 [DBG] Executing controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:55:03.100 +02:00 [INF] Entity Framework Core 6.0.33 initialized 'BeverageStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.33' with options: None
+2024-09-25 15:55:03.100 +02:00 [DBG] Executed controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:55:03.176 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-09-25 15:55:03.178 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-09-25 15:55:03.179 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-09-25 15:55:03.179 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-09-25 15:55:03.180 +02:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-09-25 15:55:03.182 +02:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-09-25 15:55:03.199 +02:00 [DBG] Compiling query expression: 
+'DbSet<Beverage>()
+    .AsNoTracking()
+    .FirstOrDefault(x => x.Id == __id_0)'
+2024-09-25 15:55:03.389 +02:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Beverage>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Beverage.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Beverage.Name (string) Required, 1], [Property: Beverage.Price (decimal) Required, 2], [Property: Beverage.Quantity (int) Required, 3], [Property: Beverage.Type (BeverageType) Required, 4] }
+        SELECT TOP(1) b.Id, b.Name, b.Price, b.Quantity, b.Type
+        FROM Beverages AS b
+        WHERE b.Id == @__id_0), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Beverage>, 
+    Data_Access.BeverageStoreDbContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()'
+2024-09-25 15:55:03.400 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-25 15:55:03.400 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-09-25 15:55:03.404 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:03.405 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:03.416 +02:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+WHERE [b].[Id] = @__id_0
+2024-09-25 15:55:03.457 +02:00 [INF] Executed DbCommand (51ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+WHERE [b].[Id] = @__id_0
+2024-09-25 15:55:03.458 +02:00 [DBG] A data reader was disposed.
+2024-09-25 15:55:03.458 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:03.458 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:03.459 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-09-25 15:55:03.459 +02:00 [DBG] No information found on request to perform content negotiation.
+2024-09-25 15:55:03.459 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-09-25 15:55:03.459 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-09-25 15:55:03.459 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-09-25 15:55:03.459 +02:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2024-09-25 15:55:03.459 +02:00 [INF] Executed action BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi) in 416.2177ms
+2024-09-25 15:55:03.459 +02:00 [INF] Executed endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)'
+2024-09-25 15:55:03.460 +02:00 [DBG] 'BeverageStoreDbContext' disposed.
+2024-09-25 15:55:03.460 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/api/Beverages/1 - - - 404 - text/plain;+charset=utf-8 437.0755ms
+2024-09-25 15:55:10.634 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/api/Beverages/2 - -
+2024-09-25 15:55:10.636 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Beverages/2'
+2024-09-25 15:55:10.636 +02:00 [DBG] Endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)' with route pattern 'api/Beverages/{id:int}' is valid for the request path '/api/Beverages/2'
+2024-09-25 15:55:10.636 +02:00 [DBG] Request matched endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)'
+2024-09-25 15:55:10.636 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-09-25 15:55:10.638 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-09-25 15:55:10.638 +02:00 [INF] Executing endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)'
+2024-09-25 15:55:10.638 +02:00 [INF] Route matched with {action = "GetById", controller = "Beverages"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetById(Int32) on controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi).
+2024-09-25 15:55:10.638 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-09-25 15:55:10.638 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-09-25 15:55:10.638 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-09-25 15:55:10.638 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-09-25 15:55:10.639 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-09-25 15:55:10.639 +02:00 [DBG] Executing controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:55:10.654 +02:00 [INF] Entity Framework Core 6.0.33 initialized 'BeverageStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.33' with options: None
+2024-09-25 15:55:10.654 +02:00 [DBG] Executed controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:55:10.655 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-09-25 15:55:10.655 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-09-25 15:55:10.655 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-09-25 15:55:10.655 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-09-25 15:55:10.655 +02:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-09-25 15:55:10.655 +02:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-09-25 15:55:10.660 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-25 15:55:10.660 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-09-25 15:55:10.660 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:10.661 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:10.661 +02:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+WHERE [b].[Id] = @__id_0
+2024-09-25 15:55:10.661 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+WHERE [b].[Id] = @__id_0
+2024-09-25 15:55:10.661 +02:00 [DBG] A data reader was disposed.
+2024-09-25 15:55:10.662 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:10.662 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:10.662 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-09-25 15:55:10.662 +02:00 [DBG] No information found on request to perform content negotiation.
+2024-09-25 15:55:10.662 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-09-25 15:55:10.662 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-09-25 15:55:10.662 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-09-25 15:55:10.662 +02:00 [INF] Executing OkObjectResult, writing value of type 'DTOs.Beverage.BeverageDto'.
+2024-09-25 15:55:10.662 +02:00 [INF] Executed action BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi) in 23.7908ms
+2024-09-25 15:55:10.663 +02:00 [INF] Executed endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)'
+2024-09-25 15:55:10.663 +02:00 [DBG] 'BeverageStoreDbContext' disposed.
+2024-09-25 15:55:10.663 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/api/Beverages/2 - - - 200 - application/json;+charset=utf-8 29.1144ms
+2024-09-25 15:55:15.004 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/api/Beverages/4 - -
+2024-09-25 15:55:15.004 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Beverages/4'
+2024-09-25 15:55:15.004 +02:00 [DBG] Endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)' with route pattern 'api/Beverages/{id:int}' is valid for the request path '/api/Beverages/4'
+2024-09-25 15:55:15.004 +02:00 [DBG] Request matched endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)'
+2024-09-25 15:55:15.005 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-09-25 15:55:15.005 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-09-25 15:55:15.005 +02:00 [INF] Executing endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)'
+2024-09-25 15:55:15.005 +02:00 [INF] Route matched with {action = "GetById", controller = "Beverages"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetById(Int32) on controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi).
+2024-09-25 15:55:15.005 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-09-25 15:55:15.005 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-09-25 15:55:15.005 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-09-25 15:55:15.005 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-09-25 15:55:15.005 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-09-25 15:55:15.005 +02:00 [DBG] Executing controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:55:15.006 +02:00 [INF] Entity Framework Core 6.0.33 initialized 'BeverageStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.33' with options: None
+2024-09-25 15:55:15.007 +02:00 [DBG] Executed controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:55:15.007 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-09-25 15:55:15.007 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-09-25 15:55:15.007 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-09-25 15:55:15.007 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-09-25 15:55:15.007 +02:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-09-25 15:55:15.007 +02:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-09-25 15:55:15.008 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-25 15:55:15.008 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-09-25 15:55:15.008 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:15.008 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:15.008 +02:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+WHERE [b].[Id] = @__id_0
+2024-09-25 15:55:15.009 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+WHERE [b].[Id] = @__id_0
+2024-09-25 15:55:15.009 +02:00 [DBG] A data reader was disposed.
+2024-09-25 15:55:15.009 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:15.009 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:15.009 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-09-25 15:55:15.009 +02:00 [DBG] No information found on request to perform content negotiation.
+2024-09-25 15:55:15.009 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-09-25 15:55:15.009 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-09-25 15:55:15.009 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-09-25 15:55:15.009 +02:00 [INF] Executing OkObjectResult, writing value of type 'DTOs.Beverage.BeverageDto'.
+2024-09-25 15:55:15.009 +02:00 [INF] Executed action BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi) in 4.0207ms
+2024-09-25 15:55:15.009 +02:00 [INF] Executed endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)'
+2024-09-25 15:55:15.010 +02:00 [DBG] 'BeverageStoreDbContext' disposed.
+2024-09-25 15:55:15.010 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/api/Beverages/4 - - - 200 - application/json;+charset=utf-8 5.7765ms
+2024-09-25 15:55:19.144 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/api/Beverages/27 - -
+2024-09-25 15:55:19.145 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Beverages/27'
+2024-09-25 15:55:19.145 +02:00 [DBG] Endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)' with route pattern 'api/Beverages/{id:int}' is valid for the request path '/api/Beverages/27'
+2024-09-25 15:55:19.145 +02:00 [DBG] Request matched endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)'
+2024-09-25 15:55:19.145 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-09-25 15:55:19.145 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-09-25 15:55:19.145 +02:00 [INF] Executing endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)'
+2024-09-25 15:55:19.145 +02:00 [INF] Route matched with {action = "GetById", controller = "Beverages"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetById(Int32) on controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi).
+2024-09-25 15:55:19.145 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-09-25 15:55:19.145 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-09-25 15:55:19.145 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-09-25 15:55:19.145 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-09-25 15:55:19.145 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-09-25 15:55:19.145 +02:00 [DBG] Executing controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:55:19.146 +02:00 [INF] Entity Framework Core 6.0.33 initialized 'BeverageStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.33' with options: None
+2024-09-25 15:55:19.146 +02:00 [DBG] Executed controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:55:19.146 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-09-25 15:55:19.146 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-09-25 15:55:19.146 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-09-25 15:55:19.146 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-09-25 15:55:19.147 +02:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-09-25 15:55:19.147 +02:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-09-25 15:55:19.147 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-25 15:55:19.147 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-09-25 15:55:19.147 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:19.147 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:19.147 +02:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+WHERE [b].[Id] = @__id_0
+2024-09-25 15:55:19.148 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+WHERE [b].[Id] = @__id_0
+2024-09-25 15:55:19.148 +02:00 [DBG] A data reader was disposed.
+2024-09-25 15:55:19.148 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:19.148 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:19.148 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-09-25 15:55:19.148 +02:00 [DBG] No information found on request to perform content negotiation.
+2024-09-25 15:55:19.148 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-09-25 15:55:19.148 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-09-25 15:55:19.148 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-09-25 15:55:19.148 +02:00 [INF] Executing OkObjectResult, writing value of type 'DTOs.Beverage.BeverageDto'.
+2024-09-25 15:55:19.148 +02:00 [INF] Executed action BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi) in 2.9783ms
+2024-09-25 15:55:19.148 +02:00 [INF] Executed endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)'
+2024-09-25 15:55:19.149 +02:00 [DBG] 'BeverageStoreDbContext' disposed.
+2024-09-25 15:55:19.149 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/api/Beverages/27 - - - 200 - application/json;+charset=utf-8 4.5486ms
+2024-09-25 15:55:25.878 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/api/Beverages/28 - -
+2024-09-25 15:55:25.878 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Beverages/28'
+2024-09-25 15:55:25.878 +02:00 [DBG] Endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)' with route pattern 'api/Beverages/{id:int}' is valid for the request path '/api/Beverages/28'
+2024-09-25 15:55:25.878 +02:00 [DBG] Request matched endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)'
+2024-09-25 15:55:25.878 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-09-25 15:55:25.878 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-09-25 15:55:25.878 +02:00 [INF] Executing endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)'
+2024-09-25 15:55:25.878 +02:00 [INF] Route matched with {action = "GetById", controller = "Beverages"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetById(Int32) on controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi).
+2024-09-25 15:55:25.879 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-09-25 15:55:25.879 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-09-25 15:55:25.879 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-09-25 15:55:25.879 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-09-25 15:55:25.879 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-09-25 15:55:25.879 +02:00 [DBG] Executing controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:55:25.880 +02:00 [INF] Entity Framework Core 6.0.33 initialized 'BeverageStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.33' with options: None
+2024-09-25 15:55:25.880 +02:00 [DBG] Executed controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:55:25.880 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-09-25 15:55:25.880 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-09-25 15:55:25.880 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-09-25 15:55:25.880 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-09-25 15:55:25.880 +02:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-09-25 15:55:25.880 +02:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-09-25 15:55:25.880 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-25 15:55:25.880 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-09-25 15:55:25.881 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:25.881 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:25.881 +02:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+WHERE [b].[Id] = @__id_0
+2024-09-25 15:55:25.881 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+WHERE [b].[Id] = @__id_0
+2024-09-25 15:55:25.881 +02:00 [DBG] A data reader was disposed.
+2024-09-25 15:55:25.881 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:25.881 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:25.882 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-09-25 15:55:25.882 +02:00 [DBG] No information found on request to perform content negotiation.
+2024-09-25 15:55:25.882 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-09-25 15:55:25.882 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-09-25 15:55:25.882 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-09-25 15:55:25.882 +02:00 [INF] Executing OkObjectResult, writing value of type 'DTOs.Beverage.BeverageDto'.
+2024-09-25 15:55:25.882 +02:00 [INF] Executed action BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi) in 3.1328ms
+2024-09-25 15:55:25.882 +02:00 [INF] Executed endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)'
+2024-09-25 15:55:25.882 +02:00 [DBG] 'BeverageStoreDbContext' disposed.
+2024-09-25 15:55:25.882 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/api/Beverages/28 - - - 200 - application/json;+charset=utf-8 4.3516ms
+2024-09-25 15:55:30.358 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/api/Beverages/29 - -
+2024-09-25 15:55:30.358 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Beverages/29'
+2024-09-25 15:55:30.359 +02:00 [DBG] Endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)' with route pattern 'api/Beverages/{id:int}' is valid for the request path '/api/Beverages/29'
+2024-09-25 15:55:30.359 +02:00 [DBG] Request matched endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)'
+2024-09-25 15:55:30.359 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-09-25 15:55:30.359 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-09-25 15:55:30.359 +02:00 [INF] Executing endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)'
+2024-09-25 15:55:30.359 +02:00 [INF] Route matched with {action = "GetById", controller = "Beverages"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetById(Int32) on controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi).
+2024-09-25 15:55:30.359 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-09-25 15:55:30.359 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-09-25 15:55:30.359 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-09-25 15:55:30.359 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-09-25 15:55:30.359 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-09-25 15:55:30.359 +02:00 [DBG] Executing controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:55:30.360 +02:00 [INF] Entity Framework Core 6.0.33 initialized 'BeverageStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.33' with options: None
+2024-09-25 15:55:30.360 +02:00 [DBG] Executed controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:55:30.360 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-09-25 15:55:30.360 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-09-25 15:55:30.360 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-09-25 15:55:30.360 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-09-25 15:55:30.360 +02:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-09-25 15:55:30.360 +02:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-09-25 15:55:30.361 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-25 15:55:30.361 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-09-25 15:55:30.361 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:30.361 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:30.361 +02:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+WHERE [b].[Id] = @__id_0
+2024-09-25 15:55:30.361 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+WHERE [b].[Id] = @__id_0
+2024-09-25 15:55:30.361 +02:00 [DBG] A data reader was disposed.
+2024-09-25 15:55:30.362 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:30.362 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:30.362 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-09-25 15:55:30.362 +02:00 [DBG] No information found on request to perform content negotiation.
+2024-09-25 15:55:30.362 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-09-25 15:55:30.362 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-09-25 15:55:30.362 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-09-25 15:55:30.362 +02:00 [INF] Executing OkObjectResult, writing value of type 'DTOs.Beverage.BeverageDto'.
+2024-09-25 15:55:30.362 +02:00 [INF] Executed action BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi) in 2.9216ms
+2024-09-25 15:55:30.362 +02:00 [INF] Executed endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)'
+2024-09-25 15:55:30.362 +02:00 [DBG] 'BeverageStoreDbContext' disposed.
+2024-09-25 15:55:30.362 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/api/Beverages/29 - - - 200 - application/json;+charset=utf-8 4.3913ms
+2024-09-25 15:55:35.069 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/api/Beverages/30 - -
+2024-09-25 15:55:35.069 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Beverages/30'
+2024-09-25 15:55:35.069 +02:00 [DBG] Endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)' with route pattern 'api/Beverages/{id:int}' is valid for the request path '/api/Beverages/30'
+2024-09-25 15:55:35.069 +02:00 [DBG] Request matched endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)'
+2024-09-25 15:55:35.069 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-09-25 15:55:35.069 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-09-25 15:55:35.069 +02:00 [INF] Executing endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)'
+2024-09-25 15:55:35.070 +02:00 [INF] Route matched with {action = "GetById", controller = "Beverages"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetById(Int32) on controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi).
+2024-09-25 15:55:35.070 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-09-25 15:55:35.070 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-09-25 15:55:35.070 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-09-25 15:55:35.070 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-09-25 15:55:35.070 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-09-25 15:55:35.070 +02:00 [DBG] Executing controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:55:35.071 +02:00 [INF] Entity Framework Core 6.0.33 initialized 'BeverageStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.33' with options: None
+2024-09-25 15:55:35.071 +02:00 [DBG] Executed controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:55:35.071 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-09-25 15:55:35.071 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-09-25 15:55:35.071 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-09-25 15:55:35.071 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-09-25 15:55:35.072 +02:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-09-25 15:55:35.072 +02:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-09-25 15:55:35.072 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-25 15:55:35.072 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-09-25 15:55:35.072 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:35.072 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:35.073 +02:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+WHERE [b].[Id] = @__id_0
+2024-09-25 15:55:35.073 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+WHERE [b].[Id] = @__id_0
+2024-09-25 15:55:35.073 +02:00 [DBG] A data reader was disposed.
+2024-09-25 15:55:35.073 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:35.073 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:35.074 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-09-25 15:55:35.074 +02:00 [DBG] No information found on request to perform content negotiation.
+2024-09-25 15:55:35.074 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-09-25 15:55:35.074 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-09-25 15:55:35.074 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-09-25 15:55:35.074 +02:00 [INF] Executing OkObjectResult, writing value of type 'DTOs.Beverage.BeverageDto'.
+2024-09-25 15:55:35.074 +02:00 [INF] Executed action BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi) in 4.1312ms
+2024-09-25 15:55:35.074 +02:00 [INF] Executed endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)'
+2024-09-25 15:55:35.075 +02:00 [DBG] 'BeverageStoreDbContext' disposed.
+2024-09-25 15:55:35.075 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/api/Beverages/30 - - - 200 - application/json;+charset=utf-8 6.0637ms
+2024-09-25 15:55:38.566 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/api/Beverages/31 - -
+2024-09-25 15:55:38.566 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Beverages/31'
+2024-09-25 15:55:38.566 +02:00 [DBG] Endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)' with route pattern 'api/Beverages/{id:int}' is valid for the request path '/api/Beverages/31'
+2024-09-25 15:55:38.566 +02:00 [DBG] Request matched endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)'
+2024-09-25 15:55:38.566 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-09-25 15:55:38.566 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-09-25 15:55:38.566 +02:00 [INF] Executing endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)'
+2024-09-25 15:55:38.566 +02:00 [INF] Route matched with {action = "GetById", controller = "Beverages"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetById(Int32) on controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi).
+2024-09-25 15:55:38.566 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-09-25 15:55:38.566 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-09-25 15:55:38.566 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-09-25 15:55:38.567 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-09-25 15:55:38.567 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-09-25 15:55:38.567 +02:00 [DBG] Executing controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:55:38.568 +02:00 [INF] Entity Framework Core 6.0.33 initialized 'BeverageStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.33' with options: None
+2024-09-25 15:55:38.568 +02:00 [DBG] Executed controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:55:38.568 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-09-25 15:55:38.568 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-09-25 15:55:38.568 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-09-25 15:55:38.568 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-09-25 15:55:38.568 +02:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-09-25 15:55:38.568 +02:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-09-25 15:55:38.569 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-25 15:55:38.569 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-09-25 15:55:38.569 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:38.569 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:38.569 +02:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+WHERE [b].[Id] = @__id_0
+2024-09-25 15:55:38.570 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+WHERE [b].[Id] = @__id_0
+2024-09-25 15:55:38.570 +02:00 [DBG] A data reader was disposed.
+2024-09-25 15:55:38.570 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:38.570 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:55:38.570 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-09-25 15:55:38.570 +02:00 [DBG] No information found on request to perform content negotiation.
+2024-09-25 15:55:38.570 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-09-25 15:55:38.570 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-09-25 15:55:38.571 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-09-25 15:55:38.571 +02:00 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2024-09-25 15:55:38.571 +02:00 [INF] Executed action BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi) in 4.143ms
+2024-09-25 15:55:38.571 +02:00 [INF] Executed endpoint 'BeverageStoreApi.Controllers.BeveragesController.GetById (BeverageStoreApi)'
+2024-09-25 15:55:38.571 +02:00 [DBG] 'BeverageStoreDbContext' disposed.
+2024-09-25 15:55:38.571 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/api/Beverages/31 - - - 404 - text/plain;+charset=utf-8 5.6113ms
+2024-09-25 15:56:48.659 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7162/api/Users/register application/json 263
+2024-09-25 15:56:48.660 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Users/register'
+2024-09-25 15:56:48.660 +02:00 [DBG] Endpoint 'BeverageStoreApi.Controllers.UsersController.Register (BeverageStoreApi)' with route pattern 'api/Users/register' is valid for the request path '/api/Users/register'
+2024-09-25 15:56:48.660 +02:00 [DBG] Request matched endpoint 'BeverageStoreApi.Controllers.UsersController.Register (BeverageStoreApi)'
+2024-09-25 15:56:48.660 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-09-25 15:56:48.660 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-09-25 15:56:48.660 +02:00 [INF] Executing endpoint 'BeverageStoreApi.Controllers.UsersController.Register (BeverageStoreApi)'
+2024-09-25 15:56:48.662 +02:00 [INF] Route matched with {action = "Register", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Register(DTOs.User.UserCreateDto) on controller BeverageStoreApi.Controllers.UsersController (BeverageStoreApi).
+2024-09-25 15:56:48.662 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-09-25 15:56:48.662 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-09-25 15:56:48.662 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-09-25 15:56:48.662 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-09-25 15:56:48.662 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-09-25 15:56:48.663 +02:00 [DBG] Executing controller factory for controller BeverageStoreApi.Controllers.UsersController (BeverageStoreApi)
+2024-09-25 15:56:48.664 +02:00 [INF] Entity Framework Core 6.0.33 initialized 'BeverageStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.33' with options: None
+2024-09-25 15:56:48.664 +02:00 [DBG] Executed controller factory for controller BeverageStoreApi.Controllers.UsersController (BeverageStoreApi)
+2024-09-25 15:56:48.665 +02:00 [DBG] Attempting to bind parameter 'model' of type 'DTOs.User.UserCreateDto' ...
+2024-09-25 15:56:48.666 +02:00 [DBG] Attempting to bind parameter 'model' of type 'DTOs.User.UserCreateDto' using the name '' in request data ...
+2024-09-25 15:56:48.667 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-09-25 15:56:48.681 +02:00 [DBG] Connection id "0HN6TD64HE2LO", Request id "0HN6TD64HE2LO:00000033": started reading request body.
+2024-09-25 15:56:48.682 +02:00 [DBG] Connection id "0HN6TD64HE2LO", Request id "0HN6TD64HE2LO:00000033": done reading request body.
+2024-09-25 15:56:48.714 +02:00 [DBG] JSON input formatter succeeded, deserializing to type 'DTOs.User.UserCreateDto'
+2024-09-25 15:56:48.715 +02:00 [DBG] Done attempting to bind parameter 'model' of type 'DTOs.User.UserCreateDto'.
+2024-09-25 15:56:48.715 +02:00 [DBG] Done attempting to bind parameter 'model' of type 'DTOs.User.UserCreateDto'.
+2024-09-25 15:56:48.715 +02:00 [DBG] Attempting to validate the bound parameter 'model' of type 'DTOs.User.UserCreateDto' ...
+2024-09-25 15:56:48.727 +02:00 [DBG] Done attempting to validate the bound parameter 'model' of type 'DTOs.User.UserCreateDto'.
+2024-09-25 15:56:48.791 +02:00 [DBG] Compiling query expression: 
+'DbSet<User>()
+    .Any(x => x.Email == __email_0)'
+2024-09-25 15:56:48.803 +02:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<bool>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> 0
+        SELECT EXISTS (
+            SELECT 1
+            FROM Users AS u
+            WHERE u.Email == @__email_0)), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+    Data_Access.BeverageStoreDbContext, 
+    False, 
+    False, 
+    True
+)
+    .Single()'
+2024-09-25 15:56:48.817 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-25 15:56:48.817 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-09-25 15:56:48.818 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:56:48.819 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:56:48.819 +02:00 [DBG] Executing DbCommand [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-09-25 15:56:48.822 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-09-25 15:56:48.826 +02:00 [DBG] A data reader was disposed.
+2024-09-25 15:56:48.826 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:56:48.827 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:56:48.868 +02:00 [DBG] 'BeverageStoreDbContext' generated a temporary value for the property 'Id.User'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-09-25 15:56:48.931 +02:00 [DBG] Context 'BeverageStoreDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-09-25 15:56:48.937 +02:00 [DBG] SaveChanges starting for 'BeverageStoreDbContext'.
+2024-09-25 15:56:48.940 +02:00 [DBG] DetectChanges starting for 'BeverageStoreDbContext'.
+2024-09-25 15:56:48.953 +02:00 [DBG] DetectChanges completed for 'BeverageStoreDbContext'.
+2024-09-25 15:56:48.964 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:56:48.965 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:56:48.967 +02:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2024-09-25 15:56:48.981 +02:00 [DBG] Began transaction with isolation level 'ReadCommitted'.
+2024-09-25 15:56:49.043 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-25 15:56:49.043 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-09-25 15:56:49.044 +02:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 50), @p2='?' (Size = 50), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [FirstName], [LastName], [Password])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-09-25 15:56:49.047 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Size = 50), @p2='?' (Size = 50), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Users] ([Email], [FirstName], [LastName], [Password])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Users]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-09-25 15:56:49.068 +02:00 [DBG] The foreign key property 'User.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2024-09-25 15:56:49.075 +02:00 [DBG] A data reader was disposed.
+2024-09-25 15:56:49.080 +02:00 [DBG] Committing transaction.
+2024-09-25 15:56:49.086 +02:00 [DBG] Committed transaction.
+2024-09-25 15:56:49.087 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:56:49.087 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:56:49.090 +02:00 [DBG] Disposing transaction.
+2024-09-25 15:56:49.104 +02:00 [DBG] An entity of type 'User' tracked by 'BeverageStoreDbContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-09-25 15:56:49.106 +02:00 [DBG] SaveChanges completed for 'BeverageStoreDbContext' with 1 entities written to the database.
+2024-09-25 15:56:49.106 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-09-25 15:56:49.106 +02:00 [DBG] No information found on request to perform content negotiation.
+2024-09-25 15:56:49.107 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-09-25 15:56:49.107 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-09-25 15:56:49.107 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-09-25 15:56:49.107 +02:00 [INF] Executing CreatedAtActionResult, writing value of type 'DTOs.User.UserCreateDto'.
+2024-09-25 15:56:49.127 +02:00 [DBG] Found the endpoints ["BeverageStoreApi.Controllers.UsersController.Register (BeverageStoreApi)"] for address Microsoft.AspNetCore.Routing.RouteValuesAddress
+2024-09-25 15:56:49.138 +02:00 [DBG] Successfully processed template api/Users/register for BeverageStoreApi.Controllers.UsersController.Register (BeverageStoreApi) resulting in /api/Users/register and 
+2024-09-25 15:56:49.139 +02:00 [DBG] Link generation succeeded for endpoints ["BeverageStoreApi.Controllers.UsersController.Register (BeverageStoreApi)"] with result /api/Users/register
+2024-09-25 15:56:49.141 +02:00 [INF] Executed action BeverageStoreApi.Controllers.UsersController.Register (BeverageStoreApi) in 478.0542ms
+2024-09-25 15:56:49.141 +02:00 [INF] Executed endpoint 'BeverageStoreApi.Controllers.UsersController.Register (BeverageStoreApi)'
+2024-09-25 15:56:49.141 +02:00 [DBG] 'BeverageStoreDbContext' disposed.
+2024-09-25 15:56:49.142 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7162/api/Users/register application/json 263 - 201 - application/json;+charset=utf-8 482.4180ms
+2024-09-25 15:57:10.043 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7162/api/Users/login application/json 213
+2024-09-25 15:57:10.044 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Users/login'
+2024-09-25 15:57:10.044 +02:00 [DBG] Endpoint 'BeverageStoreApi.Controllers.UsersController.Login (BeverageStoreApi)' with route pattern 'api/Users/login' is valid for the request path '/api/Users/login'
+2024-09-25 15:57:10.044 +02:00 [DBG] Request matched endpoint 'BeverageStoreApi.Controllers.UsersController.Login (BeverageStoreApi)'
+2024-09-25 15:57:10.045 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-09-25 15:57:10.045 +02:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2024-09-25 15:57:10.045 +02:00 [INF] Executing endpoint 'BeverageStoreApi.Controllers.UsersController.Login (BeverageStoreApi)'
+2024-09-25 15:57:10.046 +02:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(DTOs.User.UserLoginDto) on controller BeverageStoreApi.Controllers.UsersController (BeverageStoreApi).
+2024-09-25 15:57:10.046 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-09-25 15:57:10.046 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-09-25 15:57:10.046 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-09-25 15:57:10.046 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-09-25 15:57:10.046 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-09-25 15:57:10.047 +02:00 [DBG] Executing controller factory for controller BeverageStoreApi.Controllers.UsersController (BeverageStoreApi)
+2024-09-25 15:57:10.047 +02:00 [INF] Entity Framework Core 6.0.33 initialized 'BeverageStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.33' with options: None
+2024-09-25 15:57:10.047 +02:00 [DBG] Executed controller factory for controller BeverageStoreApi.Controllers.UsersController (BeverageStoreApi)
+2024-09-25 15:57:10.047 +02:00 [DBG] Attempting to bind parameter 'model' of type 'DTOs.User.UserLoginDto' ...
+2024-09-25 15:57:10.047 +02:00 [DBG] Attempting to bind parameter 'model' of type 'DTOs.User.UserLoginDto' using the name '' in request data ...
+2024-09-25 15:57:10.048 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-09-25 15:57:10.048 +02:00 [DBG] Connection id "0HN6TD64HE2LO", Request id "0HN6TD64HE2LO:00000035": started reading request body.
+2024-09-25 15:57:10.048 +02:00 [DBG] Connection id "0HN6TD64HE2LO", Request id "0HN6TD64HE2LO:00000035": done reading request body.
+2024-09-25 15:57:10.049 +02:00 [DBG] JSON input formatter succeeded, deserializing to type 'DTOs.User.UserLoginDto'
+2024-09-25 15:57:10.049 +02:00 [DBG] Done attempting to bind parameter 'model' of type 'DTOs.User.UserLoginDto'.
+2024-09-25 15:57:10.049 +02:00 [DBG] Done attempting to bind parameter 'model' of type 'DTOs.User.UserLoginDto'.
+2024-09-25 15:57:10.049 +02:00 [DBG] Attempting to validate the bound parameter 'model' of type 'DTOs.User.UserLoginDto' ...
+2024-09-25 15:57:10.052 +02:00 [DBG] Done attempting to validate the bound parameter 'model' of type 'DTOs.User.UserLoginDto'.
+2024-09-25 15:57:10.053 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-25 15:57:10.054 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-09-25 15:57:10.054 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:57:10.054 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:57:10.054 +02:00 [DBG] Executing DbCommand [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-09-25 15:57:10.055 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]
+        WHERE [u].[Email] = @__email_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-09-25 15:57:10.055 +02:00 [DBG] A data reader was disposed.
+2024-09-25 15:57:10.055 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:57:10.055 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:57:10.057 +02:00 [DBG] Compiling query expression: 
+'DbSet<User>()
+    .FirstOrDefault(x => x.Email == __email_0 && x.Password == __password_1)'
+2024-09-25 15:57:10.062 +02:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<User>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: User.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: User.Email (string) Required, 1], [Property: User.FirstName (string) Required MaxLength(50), 2], [Property: User.LastName (string) Required MaxLength(50), 3], [Property: User.Password (string) Required, 4] }
+        SELECT TOP(1) u.Id, u.Email, u.FirstName, u.LastName, u.Password
+        FROM Users AS u
+        WHERE (u.Email == @__email_0) && (u.Password == @__password_1)), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, User>, 
+    Data_Access.BeverageStoreDbContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()'
+2024-09-25 15:57:10.065 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-25 15:57:10.065 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-09-25 15:57:10.065 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:57:10.065 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:57:10.066 +02:00 [DBG] Executing DbCommand [Parameters=[@__email_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE ([u].[Email] = @__email_0) AND ([u].[Password] = @__password_1)
+2024-09-25 15:57:10.068 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[@__email_0='?' (Size = 4000), @__password_1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[Email], [u].[FirstName], [u].[LastName], [u].[Password]
+FROM [Users] AS [u]
+WHERE ([u].[Email] = @__email_0) AND ([u].[Password] = @__password_1)
+2024-09-25 15:57:10.072 +02:00 [DBG] Context 'BeverageStoreDbContext' started tracking 'User' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-09-25 15:57:10.073 +02:00 [DBG] A data reader was disposed.
+2024-09-25 15:57:10.073 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:57:10.073 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:57:10.449 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-09-25 15:57:10.449 +02:00 [DBG] No information found on request to perform content negotiation.
+2024-09-25 15:57:10.449 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-09-25 15:57:10.449 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-09-25 15:57:10.449 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-09-25 15:57:10.449 +02:00 [INF] Executing OkObjectResult, writing value of type 'DTOs.User.UserLoginResponseDto'.
+2024-09-25 15:57:10.450 +02:00 [INF] Executed action BeverageStoreApi.Controllers.UsersController.Login (BeverageStoreApi) in 403.446ms
+2024-09-25 15:57:10.450 +02:00 [INF] Executed endpoint 'BeverageStoreApi.Controllers.UsersController.Login (BeverageStoreApi)'
+2024-09-25 15:57:10.450 +02:00 [DBG] 'BeverageStoreDbContext' disposed.
+2024-09-25 15:57:10.450 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7162/api/Users/login application/json 213 - 200 - application/json;+charset=utf-8 408.9842ms
+2024-09-25 15:57:50.247 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7162/api/Beverages/create application/json 94
+2024-09-25 15:57:50.247 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Beverages/create'
+2024-09-25 15:57:50.247 +02:00 [DBG] Endpoint 'BeverageStoreApi.Controllers.BeveragesController.CreateBeverage (BeverageStoreApi)' with route pattern 'api/Beverages/create' is valid for the request path '/api/Beverages/create'
+2024-09-25 15:57:50.248 +02:00 [DBG] Request matched endpoint 'BeverageStoreApi.Controllers.BeveragesController.CreateBeverage (BeverageStoreApi)'
+2024-09-25 15:57:50.248 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-09-25 15:57:50.376 +02:00 [DBG] Successfully validated the token.
+2024-09-25 15:57:50.378 +02:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-09-25 15:57:50.389 +02:00 [DBG] Authorization was successful.
+2024-09-25 15:57:50.390 +02:00 [INF] Executing endpoint 'BeverageStoreApi.Controllers.BeveragesController.CreateBeverage (BeverageStoreApi)'
+2024-09-25 15:57:50.391 +02:00 [INF] Route matched with {action = "CreateBeverage", controller = "Beverages"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBeverage(DTOs.Beverage.BeverageCreateDto) on controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi).
+2024-09-25 15:57:50.391 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-09-25 15:57:50.391 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-09-25 15:57:50.392 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-09-25 15:57:50.392 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-09-25 15:57:50.392 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-09-25 15:57:50.392 +02:00 [DBG] Executing controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:57:50.392 +02:00 [INF] Entity Framework Core 6.0.33 initialized 'BeverageStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.33' with options: None
+2024-09-25 15:57:50.393 +02:00 [DBG] Executed controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:57:50.393 +02:00 [DBG] Attempting to bind parameter 'model' of type 'DTOs.Beverage.BeverageCreateDto' ...
+2024-09-25 15:57:50.393 +02:00 [DBG] Attempting to bind parameter 'model' of type 'DTOs.Beverage.BeverageCreateDto' using the name '' in request data ...
+2024-09-25 15:57:50.393 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-09-25 15:57:50.393 +02:00 [DBG] Connection id "0HN6TD64HE2LO", Request id "0HN6TD64HE2LO:00000037": started reading request body.
+2024-09-25 15:57:50.394 +02:00 [DBG] Connection id "0HN6TD64HE2LO", Request id "0HN6TD64HE2LO:00000037": done reading request body.
+2024-09-25 15:57:50.404 +02:00 [DBG] JSON input formatter succeeded, deserializing to type 'DTOs.Beverage.BeverageCreateDto'
+2024-09-25 15:57:50.404 +02:00 [DBG] Done attempting to bind parameter 'model' of type 'DTOs.Beverage.BeverageCreateDto'.
+2024-09-25 15:57:50.404 +02:00 [DBG] Done attempting to bind parameter 'model' of type 'DTOs.Beverage.BeverageCreateDto'.
+2024-09-25 15:57:50.404 +02:00 [DBG] Attempting to validate the bound parameter 'model' of type 'DTOs.Beverage.BeverageCreateDto' ...
+2024-09-25 15:57:50.412 +02:00 [DBG] Done attempting to validate the bound parameter 'model' of type 'DTOs.Beverage.BeverageCreateDto'.
+2024-09-25 15:57:50.415 +02:00 [DBG] Compiling query expression: 
+'DbSet<Beverage>()
+    .Any(x => x.Name == __name_0)'
+2024-09-25 15:57:50.417 +02:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<bool>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> 0
+        SELECT EXISTS (
+            SELECT 1
+            FROM Beverages AS b
+            WHERE b.Name == @__name_0)), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+    Data_Access.BeverageStoreDbContext, 
+    False, 
+    False, 
+    True
+)
+    .Single()'
+2024-09-25 15:57:50.417 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-25 15:57:50.417 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-09-25 15:57:50.417 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:57:50.417 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:57:50.417 +02:00 [DBG] Executing DbCommand [Parameters=[@__name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Beverages] AS [b]
+        WHERE [b].[Name] = @__name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-09-25 15:57:50.420 +02:00 [INF] Executed DbCommand (2ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Beverages] AS [b]
+        WHERE [b].[Name] = @__name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-09-25 15:57:50.420 +02:00 [DBG] A data reader was disposed.
+2024-09-25 15:57:50.420 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:57:50.420 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:57:50.420 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-09-25 15:57:50.420 +02:00 [DBG] No information found on request to perform content negotiation.
+2024-09-25 15:57:50.420 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-09-25 15:57:50.420 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-09-25 15:57:50.420 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter' and content type 'text/plain' to write the response.
+2024-09-25 15:57:50.420 +02:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-09-25 15:57:50.421 +02:00 [INF] Executed action BeverageStoreApi.Controllers.BeveragesController.CreateBeverage (BeverageStoreApi) in 28.9088ms
+2024-09-25 15:57:50.421 +02:00 [INF] Executed endpoint 'BeverageStoreApi.Controllers.BeveragesController.CreateBeverage (BeverageStoreApi)'
+2024-09-25 15:57:50.421 +02:00 [DBG] 'BeverageStoreDbContext' disposed.
+2024-09-25 15:57:50.421 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7162/api/Beverages/create application/json 94 - 400 - text/plain;+charset=utf-8 173.9144ms
+2024-09-25 15:58:09.197 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/api/Beverages/filterByNameAndType?name=Orange - -
+2024-09-25 15:58:09.197 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Beverages/filterByNameAndType'
+2024-09-25 15:58:09.197 +02:00 [DBG] Endpoint 'BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi)' with route pattern 'api/Beverages/filterByNameAndType' is valid for the request path '/api/Beverages/filterByNameAndType'
+2024-09-25 15:58:09.197 +02:00 [DBG] Request matched endpoint 'BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi)'
+2024-09-25 15:58:09.197 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-09-25 15:58:09.198 +02:00 [DBG] Successfully validated the token.
+2024-09-25 15:58:09.198 +02:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-09-25 15:58:09.198 +02:00 [INF] Executing endpoint 'BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi)'
+2024-09-25 15:58:09.203 +02:00 [INF] Route matched with {action = "FilterByNameAndType", controller = "Beverages"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult FilterByNameAndType(System.String, System.Nullable`1[Domain_Models.Enums.BeverageType]) on controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi).
+2024-09-25 15:58:09.204 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-09-25 15:58:09.204 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-09-25 15:58:09.204 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-09-25 15:58:09.204 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-09-25 15:58:09.204 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-09-25 15:58:09.204 +02:00 [DBG] Executing controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:58:09.205 +02:00 [INF] Entity Framework Core 6.0.33 initialized 'BeverageStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.33' with options: None
+2024-09-25 15:58:09.205 +02:00 [DBG] Executed controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:58:09.213 +02:00 [DBG] Attempting to bind parameter 'name' of type 'System.String' ...
+2024-09-25 15:58:09.215 +02:00 [DBG] Attempting to bind parameter 'name' of type 'System.String' using the name 'name' in request data ...
+2024-09-25 15:58:09.216 +02:00 [DBG] Done attempting to bind parameter 'name' of type 'System.String'.
+2024-09-25 15:58:09.216 +02:00 [DBG] Done attempting to bind parameter 'name' of type 'System.String'.
+2024-09-25 15:58:09.216 +02:00 [DBG] Attempting to validate the bound parameter 'name' of type 'System.String' ...
+2024-09-25 15:58:09.216 +02:00 [DBG] Done attempting to validate the bound parameter 'name' of type 'System.String'.
+2024-09-25 15:58:09.216 +02:00 [DBG] Attempting to bind parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]' ...
+2024-09-25 15:58:09.217 +02:00 [DBG] Attempting to bind parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]' using the name '' in request data ...
+2024-09-25 15:58:09.218 +02:00 [DBG] Could not find a value in the request with name '' for binding parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]'.
+2024-09-25 15:58:09.218 +02:00 [DBG] Done attempting to bind parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]'.
+2024-09-25 15:58:09.218 +02:00 [DBG] Done attempting to bind parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]'.
+2024-09-25 15:58:09.218 +02:00 [DBG] Attempting to validate the bound parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]' ...
+2024-09-25 15:58:09.218 +02:00 [DBG] Done attempting to validate the bound parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]'.
+2024-09-25 15:58:09.220 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-25 15:58:09.220 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-09-25 15:58:09.220 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:09.220 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:09.221 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+2024-09-25 15:58:09.221 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+2024-09-25 15:58:09.221 +02:00 [DBG] A data reader was disposed.
+2024-09-25 15:58:09.222 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:09.222 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:09.222 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-09-25 15:58:09.222 +02:00 [DBG] No information found on request to perform content negotiation.
+2024-09-25 15:58:09.222 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-09-25 15:58:09.223 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-09-25 15:58:09.223 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-09-25 15:58:09.223 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DTOs.Beverage.BeverageDto, DTOs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-25 15:58:09.223 +02:00 [INF] Executed action BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi) in 18.9181ms
+2024-09-25 15:58:09.223 +02:00 [INF] Executed endpoint 'BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi)'
+2024-09-25 15:58:09.223 +02:00 [DBG] 'BeverageStoreDbContext' disposed.
+2024-09-25 15:58:09.223 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/api/Beverages/filterByNameAndType?name=Orange - - - 200 - application/json;+charset=utf-8 26.1877ms
+2024-09-25 15:58:22.256 +02:00 [INF] Request starting HTTP/2 POST https://localhost:7162/api/Beverages/create application/json 93
+2024-09-25 15:58:22.256 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Beverages/create'
+2024-09-25 15:58:22.256 +02:00 [DBG] Endpoint 'BeverageStoreApi.Controllers.BeveragesController.CreateBeverage (BeverageStoreApi)' with route pattern 'api/Beverages/create' is valid for the request path '/api/Beverages/create'
+2024-09-25 15:58:22.256 +02:00 [DBG] Request matched endpoint 'BeverageStoreApi.Controllers.BeveragesController.CreateBeverage (BeverageStoreApi)'
+2024-09-25 15:58:22.256 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-09-25 15:58:22.256 +02:00 [DBG] Successfully validated the token.
+2024-09-25 15:58:22.256 +02:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-09-25 15:58:22.257 +02:00 [DBG] Authorization was successful.
+2024-09-25 15:58:22.257 +02:00 [INF] Executing endpoint 'BeverageStoreApi.Controllers.BeveragesController.CreateBeverage (BeverageStoreApi)'
+2024-09-25 15:58:22.257 +02:00 [INF] Route matched with {action = "CreateBeverage", controller = "Beverages"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult CreateBeverage(DTOs.Beverage.BeverageCreateDto) on controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi).
+2024-09-25 15:58:22.257 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-09-25 15:58:22.257 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-09-25 15:58:22.257 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-09-25 15:58:22.257 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-09-25 15:58:22.257 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-09-25 15:58:22.257 +02:00 [DBG] Executing controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:58:22.258 +02:00 [INF] Entity Framework Core 6.0.33 initialized 'BeverageStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.33' with options: None
+2024-09-25 15:58:22.258 +02:00 [DBG] Executed controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:58:22.258 +02:00 [DBG] Attempting to bind parameter 'model' of type 'DTOs.Beverage.BeverageCreateDto' ...
+2024-09-25 15:58:22.258 +02:00 [DBG] Attempting to bind parameter 'model' of type 'DTOs.Beverage.BeverageCreateDto' using the name '' in request data ...
+2024-09-25 15:58:22.258 +02:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-09-25 15:58:22.258 +02:00 [DBG] Connection id "0HN6TD64HE2LO", Request id "0HN6TD64HE2LO:0000003B": started reading request body.
+2024-09-25 15:58:22.258 +02:00 [DBG] Connection id "0HN6TD64HE2LO", Request id "0HN6TD64HE2LO:0000003B": done reading request body.
+2024-09-25 15:58:22.258 +02:00 [DBG] JSON input formatter succeeded, deserializing to type 'DTOs.Beverage.BeverageCreateDto'
+2024-09-25 15:58:22.259 +02:00 [DBG] Done attempting to bind parameter 'model' of type 'DTOs.Beverage.BeverageCreateDto'.
+2024-09-25 15:58:22.259 +02:00 [DBG] Done attempting to bind parameter 'model' of type 'DTOs.Beverage.BeverageCreateDto'.
+2024-09-25 15:58:22.259 +02:00 [DBG] Attempting to validate the bound parameter 'model' of type 'DTOs.Beverage.BeverageCreateDto' ...
+2024-09-25 15:58:22.259 +02:00 [DBG] Done attempting to validate the bound parameter 'model' of type 'DTOs.Beverage.BeverageCreateDto'.
+2024-09-25 15:58:22.259 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-25 15:58:22.259 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-09-25 15:58:22.259 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:22.260 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:22.260 +02:00 [DBG] Executing DbCommand [Parameters=[@__name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Beverages] AS [b]
+        WHERE [b].[Name] = @__name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-09-25 15:58:22.260 +02:00 [INF] Executed DbCommand (1ms) [Parameters=[@__name_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Beverages] AS [b]
+        WHERE [b].[Name] = @__name_0) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-09-25 15:58:22.260 +02:00 [DBG] A data reader was disposed.
+2024-09-25 15:58:22.260 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:22.261 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:22.264 +02:00 [DBG] 'BeverageStoreDbContext' generated a temporary value for the property 'Id.Beverage'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-09-25 15:58:22.287 +02:00 [DBG] Context 'BeverageStoreDbContext' started tracking 'Beverage' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-09-25 15:58:22.287 +02:00 [DBG] SaveChanges starting for 'BeverageStoreDbContext'.
+2024-09-25 15:58:22.287 +02:00 [DBG] DetectChanges starting for 'BeverageStoreDbContext'.
+2024-09-25 15:58:22.301 +02:00 [DBG] DetectChanges completed for 'BeverageStoreDbContext'.
+2024-09-25 15:58:22.301 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:22.302 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:22.302 +02:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2024-09-25 15:58:22.302 +02:00 [DBG] Began transaction with isolation level 'ReadCommitted'.
+2024-09-25 15:58:22.303 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-25 15:58:22.303 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-09-25 15:58:22.308 +02:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (Size = 4000), @p1='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Beverages] ([Name], [Price], [Quantity], [Type])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Beverages]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-09-25 15:58:22.319 +02:00 [INF] Executed DbCommand (11ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Beverages] ([Name], [Price], [Quantity], [Type])
+VALUES (@p0, @p1, @p2, @p3);
+SELECT [Id]
+FROM [Beverages]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+2024-09-25 15:58:22.321 +02:00 [DBG] The foreign key property 'Beverage.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2024-09-25 15:58:22.321 +02:00 [DBG] A data reader was disposed.
+2024-09-25 15:58:22.321 +02:00 [DBG] Committing transaction.
+2024-09-25 15:58:22.321 +02:00 [DBG] Committed transaction.
+2024-09-25 15:58:22.321 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:22.322 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:22.322 +02:00 [DBG] Disposing transaction.
+2024-09-25 15:58:22.324 +02:00 [DBG] An entity of type 'Beverage' tracked by 'BeverageStoreDbContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-09-25 15:58:22.325 +02:00 [DBG] SaveChanges completed for 'BeverageStoreDbContext' with 1 entities written to the database.
+2024-09-25 15:58:22.325 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-09-25 15:58:22.325 +02:00 [DBG] No information found on request to perform content negotiation.
+2024-09-25 15:58:22.325 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-09-25 15:58:22.325 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-09-25 15:58:22.325 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-09-25 15:58:22.325 +02:00 [INF] Executing CreatedAtActionResult, writing value of type 'DTOs.Beverage.BeverageCreateDto'.
+2024-09-25 15:58:22.325 +02:00 [DBG] Found the endpoints ["BeverageStoreApi.Controllers.BeveragesController.CreateBeverage (BeverageStoreApi)"] for address Microsoft.AspNetCore.Routing.RouteValuesAddress
+2024-09-25 15:58:22.326 +02:00 [DBG] Successfully processed template api/Beverages/create for BeverageStoreApi.Controllers.BeveragesController.CreateBeverage (BeverageStoreApi) resulting in /api/Beverages/create and 
+2024-09-25 15:58:22.326 +02:00 [DBG] Link generation succeeded for endpoints ["BeverageStoreApi.Controllers.BeveragesController.CreateBeverage (BeverageStoreApi)"] with result /api/Beverages/create
+2024-09-25 15:58:22.328 +02:00 [INF] Executed action BeverageStoreApi.Controllers.BeveragesController.CreateBeverage (BeverageStoreApi) in 70.3705ms
+2024-09-25 15:58:22.328 +02:00 [INF] Executed endpoint 'BeverageStoreApi.Controllers.BeveragesController.CreateBeverage (BeverageStoreApi)'
+2024-09-25 15:58:22.328 +02:00 [DBG] 'BeverageStoreDbContext' disposed.
+2024-09-25 15:58:22.328 +02:00 [INF] Request finished HTTP/2 POST https://localhost:7162/api/Beverages/create application/json 93 - 201 - application/json;+charset=utf-8 72.7444ms
+2024-09-25 15:58:37.409 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/api/Beverages/filterByNameAndType?name=O - -
+2024-09-25 15:58:37.409 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Beverages/filterByNameAndType'
+2024-09-25 15:58:37.409 +02:00 [DBG] Endpoint 'BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi)' with route pattern 'api/Beverages/filterByNameAndType' is valid for the request path '/api/Beverages/filterByNameAndType'
+2024-09-25 15:58:37.409 +02:00 [DBG] Request matched endpoint 'BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi)'
+2024-09-25 15:58:37.409 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-09-25 15:58:37.410 +02:00 [DBG] Successfully validated the token.
+2024-09-25 15:58:37.410 +02:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-09-25 15:58:37.410 +02:00 [INF] Executing endpoint 'BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi)'
+2024-09-25 15:58:37.410 +02:00 [INF] Route matched with {action = "FilterByNameAndType", controller = "Beverages"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult FilterByNameAndType(System.String, System.Nullable`1[Domain_Models.Enums.BeverageType]) on controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi).
+2024-09-25 15:58:37.410 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-09-25 15:58:37.410 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-09-25 15:58:37.410 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-09-25 15:58:37.410 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-09-25 15:58:37.410 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-09-25 15:58:37.410 +02:00 [DBG] Executing controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:58:37.411 +02:00 [INF] Entity Framework Core 6.0.33 initialized 'BeverageStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.33' with options: None
+2024-09-25 15:58:37.411 +02:00 [DBG] Executed controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:58:37.411 +02:00 [DBG] Attempting to bind parameter 'name' of type 'System.String' ...
+2024-09-25 15:58:37.411 +02:00 [DBG] Attempting to bind parameter 'name' of type 'System.String' using the name 'name' in request data ...
+2024-09-25 15:58:37.412 +02:00 [DBG] Done attempting to bind parameter 'name' of type 'System.String'.
+2024-09-25 15:58:37.412 +02:00 [DBG] Done attempting to bind parameter 'name' of type 'System.String'.
+2024-09-25 15:58:37.412 +02:00 [DBG] Attempting to validate the bound parameter 'name' of type 'System.String' ...
+2024-09-25 15:58:37.412 +02:00 [DBG] Done attempting to validate the bound parameter 'name' of type 'System.String'.
+2024-09-25 15:58:37.412 +02:00 [DBG] Attempting to bind parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]' ...
+2024-09-25 15:58:37.412 +02:00 [DBG] Attempting to bind parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]' using the name '' in request data ...
+2024-09-25 15:58:37.412 +02:00 [DBG] Could not find a value in the request with name '' for binding parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]'.
+2024-09-25 15:58:37.412 +02:00 [DBG] Done attempting to bind parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]'.
+2024-09-25 15:58:37.412 +02:00 [DBG] Done attempting to bind parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]'.
+2024-09-25 15:58:37.412 +02:00 [DBG] Attempting to validate the bound parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]' ...
+2024-09-25 15:58:37.412 +02:00 [DBG] Done attempting to validate the bound parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]'.
+2024-09-25 15:58:37.412 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-25 15:58:37.412 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-09-25 15:58:37.413 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:37.413 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:37.413 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+2024-09-25 15:58:37.413 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+2024-09-25 15:58:37.413 +02:00 [DBG] A data reader was disposed.
+2024-09-25 15:58:37.413 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:37.414 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:37.414 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-09-25 15:58:37.414 +02:00 [DBG] No information found on request to perform content negotiation.
+2024-09-25 15:58:37.414 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-09-25 15:58:37.414 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-09-25 15:58:37.414 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-09-25 15:58:37.414 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DTOs.Beverage.BeverageDto, DTOs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-25 15:58:37.414 +02:00 [INF] Executed action BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi) in 3.687ms
+2024-09-25 15:58:37.414 +02:00 [INF] Executed endpoint 'BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi)'
+2024-09-25 15:58:37.414 +02:00 [DBG] 'BeverageStoreDbContext' disposed.
+2024-09-25 15:58:37.414 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/api/Beverages/filterByNameAndType?name=O - - - 200 - application/json;+charset=utf-8 5.5709ms
+2024-09-25 15:58:45.255 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/api/Beverages/filterByNameAndType?name=O&type=1 - -
+2024-09-25 15:58:45.255 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Beverages/filterByNameAndType'
+2024-09-25 15:58:45.255 +02:00 [DBG] Endpoint 'BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi)' with route pattern 'api/Beverages/filterByNameAndType' is valid for the request path '/api/Beverages/filterByNameAndType'
+2024-09-25 15:58:45.256 +02:00 [DBG] Request matched endpoint 'BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi)'
+2024-09-25 15:58:45.256 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-09-25 15:58:45.256 +02:00 [DBG] Successfully validated the token.
+2024-09-25 15:58:45.256 +02:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-09-25 15:58:45.256 +02:00 [INF] Executing endpoint 'BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi)'
+2024-09-25 15:58:45.256 +02:00 [INF] Route matched with {action = "FilterByNameAndType", controller = "Beverages"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult FilterByNameAndType(System.String, System.Nullable`1[Domain_Models.Enums.BeverageType]) on controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi).
+2024-09-25 15:58:45.256 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-09-25 15:58:45.256 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-09-25 15:58:45.256 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-09-25 15:58:45.256 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-09-25 15:58:45.256 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-09-25 15:58:45.256 +02:00 [DBG] Executing controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:58:45.257 +02:00 [INF] Entity Framework Core 6.0.33 initialized 'BeverageStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.33' with options: None
+2024-09-25 15:58:45.257 +02:00 [DBG] Executed controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:58:45.257 +02:00 [DBG] Attempting to bind parameter 'name' of type 'System.String' ...
+2024-09-25 15:58:45.257 +02:00 [DBG] Attempting to bind parameter 'name' of type 'System.String' using the name 'name' in request data ...
+2024-09-25 15:58:45.257 +02:00 [DBG] Done attempting to bind parameter 'name' of type 'System.String'.
+2024-09-25 15:58:45.257 +02:00 [DBG] Done attempting to bind parameter 'name' of type 'System.String'.
+2024-09-25 15:58:45.257 +02:00 [DBG] Attempting to validate the bound parameter 'name' of type 'System.String' ...
+2024-09-25 15:58:45.257 +02:00 [DBG] Done attempting to validate the bound parameter 'name' of type 'System.String'.
+2024-09-25 15:58:45.257 +02:00 [DBG] Attempting to bind parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]' ...
+2024-09-25 15:58:45.258 +02:00 [DBG] Attempting to bind parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]' using the name 'type' in request data ...
+2024-09-25 15:58:45.258 +02:00 [DBG] Done attempting to bind parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]'.
+2024-09-25 15:58:45.258 +02:00 [DBG] Done attempting to bind parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]'.
+2024-09-25 15:58:45.258 +02:00 [DBG] Attempting to validate the bound parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]' ...
+2024-09-25 15:58:45.258 +02:00 [DBG] Done attempting to validate the bound parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]'.
+2024-09-25 15:58:45.259 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-25 15:58:45.259 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-09-25 15:58:45.259 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:45.259 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:45.259 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+2024-09-25 15:58:45.260 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+2024-09-25 15:58:45.260 +02:00 [DBG] A data reader was disposed.
+2024-09-25 15:58:45.260 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:45.260 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:45.260 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-09-25 15:58:45.260 +02:00 [DBG] No information found on request to perform content negotiation.
+2024-09-25 15:58:45.260 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-09-25 15:58:45.260 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-09-25 15:58:45.260 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-09-25 15:58:45.260 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DTOs.Beverage.BeverageDto, DTOs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-25 15:58:45.261 +02:00 [INF] Executed action BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi) in 4.219ms
+2024-09-25 15:58:45.261 +02:00 [INF] Executed endpoint 'BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi)'
+2024-09-25 15:58:45.261 +02:00 [DBG] 'BeverageStoreDbContext' disposed.
+2024-09-25 15:58:45.261 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/api/Beverages/filterByNameAndType?name=O&type=1 - - - 200 - application/json;+charset=utf-8 5.9734ms
+2024-09-25 15:58:48.820 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/api/Beverages/filterByNameAndType?name=O&type=2 - -
+2024-09-25 15:58:48.820 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Beverages/filterByNameAndType'
+2024-09-25 15:58:48.820 +02:00 [DBG] Endpoint 'BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi)' with route pattern 'api/Beverages/filterByNameAndType' is valid for the request path '/api/Beverages/filterByNameAndType'
+2024-09-25 15:58:48.820 +02:00 [DBG] Request matched endpoint 'BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi)'
+2024-09-25 15:58:48.820 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-09-25 15:58:48.821 +02:00 [DBG] Successfully validated the token.
+2024-09-25 15:58:48.821 +02:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-09-25 15:58:48.821 +02:00 [INF] Executing endpoint 'BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi)'
+2024-09-25 15:58:48.821 +02:00 [INF] Route matched with {action = "FilterByNameAndType", controller = "Beverages"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult FilterByNameAndType(System.String, System.Nullable`1[Domain_Models.Enums.BeverageType]) on controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi).
+2024-09-25 15:58:48.821 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-09-25 15:58:48.821 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-09-25 15:58:48.821 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-09-25 15:58:48.821 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-09-25 15:58:48.821 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-09-25 15:58:48.821 +02:00 [DBG] Executing controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:58:48.822 +02:00 [INF] Entity Framework Core 6.0.33 initialized 'BeverageStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.33' with options: None
+2024-09-25 15:58:48.822 +02:00 [DBG] Executed controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:58:48.822 +02:00 [DBG] Attempting to bind parameter 'name' of type 'System.String' ...
+2024-09-25 15:58:48.823 +02:00 [DBG] Attempting to bind parameter 'name' of type 'System.String' using the name 'name' in request data ...
+2024-09-25 15:58:48.823 +02:00 [DBG] Done attempting to bind parameter 'name' of type 'System.String'.
+2024-09-25 15:58:48.823 +02:00 [DBG] Done attempting to bind parameter 'name' of type 'System.String'.
+2024-09-25 15:58:48.823 +02:00 [DBG] Attempting to validate the bound parameter 'name' of type 'System.String' ...
+2024-09-25 15:58:48.823 +02:00 [DBG] Done attempting to validate the bound parameter 'name' of type 'System.String'.
+2024-09-25 15:58:48.823 +02:00 [DBG] Attempting to bind parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]' ...
+2024-09-25 15:58:48.823 +02:00 [DBG] Attempting to bind parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]' using the name 'type' in request data ...
+2024-09-25 15:58:48.823 +02:00 [DBG] Done attempting to bind parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]'.
+2024-09-25 15:58:48.823 +02:00 [DBG] Done attempting to bind parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]'.
+2024-09-25 15:58:48.823 +02:00 [DBG] Attempting to validate the bound parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]' ...
+2024-09-25 15:58:48.823 +02:00 [DBG] Done attempting to validate the bound parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]'.
+2024-09-25 15:58:48.824 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-25 15:58:48.824 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-09-25 15:58:48.824 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:48.824 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:48.824 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+2024-09-25 15:58:48.824 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+2024-09-25 15:58:48.825 +02:00 [DBG] A data reader was disposed.
+2024-09-25 15:58:48.825 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:48.825 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:48.825 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-09-25 15:58:48.825 +02:00 [DBG] No information found on request to perform content negotiation.
+2024-09-25 15:58:48.825 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-09-25 15:58:48.825 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-09-25 15:58:48.825 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-09-25 15:58:48.825 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DTOs.Beverage.BeverageDto, DTOs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-25 15:58:48.826 +02:00 [INF] Executed action BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi) in 4.2235ms
+2024-09-25 15:58:48.826 +02:00 [INF] Executed endpoint 'BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi)'
+2024-09-25 15:58:48.826 +02:00 [DBG] 'BeverageStoreDbContext' disposed.
+2024-09-25 15:58:48.826 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/api/Beverages/filterByNameAndType?name=O&type=2 - - - 200 - application/json;+charset=utf-8 6.3331ms
+2024-09-25 15:58:54.690 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/api/Beverages/filterByNameAndType?name=O&type=3 - -
+2024-09-25 15:58:54.690 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Beverages/filterByNameAndType'
+2024-09-25 15:58:54.691 +02:00 [DBG] Endpoint 'BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi)' with route pattern 'api/Beverages/filterByNameAndType' is valid for the request path '/api/Beverages/filterByNameAndType'
+2024-09-25 15:58:54.691 +02:00 [DBG] Request matched endpoint 'BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi)'
+2024-09-25 15:58:54.691 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-09-25 15:58:54.691 +02:00 [DBG] Successfully validated the token.
+2024-09-25 15:58:54.691 +02:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-09-25 15:58:54.691 +02:00 [INF] Executing endpoint 'BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi)'
+2024-09-25 15:58:54.691 +02:00 [INF] Route matched with {action = "FilterByNameAndType", controller = "Beverages"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult FilterByNameAndType(System.String, System.Nullable`1[Domain_Models.Enums.BeverageType]) on controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi).
+2024-09-25 15:58:54.691 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-09-25 15:58:54.691 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-09-25 15:58:54.691 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-09-25 15:58:54.691 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-09-25 15:58:54.692 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-09-25 15:58:54.692 +02:00 [DBG] Executing controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:58:54.692 +02:00 [INF] Entity Framework Core 6.0.33 initialized 'BeverageStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.33' with options: None
+2024-09-25 15:58:54.693 +02:00 [DBG] Executed controller factory for controller BeverageStoreApi.Controllers.BeveragesController (BeverageStoreApi)
+2024-09-25 15:58:54.693 +02:00 [DBG] Attempting to bind parameter 'name' of type 'System.String' ...
+2024-09-25 15:58:54.693 +02:00 [DBG] Attempting to bind parameter 'name' of type 'System.String' using the name 'name' in request data ...
+2024-09-25 15:58:54.693 +02:00 [DBG] Done attempting to bind parameter 'name' of type 'System.String'.
+2024-09-25 15:58:54.693 +02:00 [DBG] Done attempting to bind parameter 'name' of type 'System.String'.
+2024-09-25 15:58:54.693 +02:00 [DBG] Attempting to validate the bound parameter 'name' of type 'System.String' ...
+2024-09-25 15:58:54.693 +02:00 [DBG] Done attempting to validate the bound parameter 'name' of type 'System.String'.
+2024-09-25 15:58:54.693 +02:00 [DBG] Attempting to bind parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]' ...
+2024-09-25 15:58:54.693 +02:00 [DBG] Attempting to bind parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]' using the name 'type' in request data ...
+2024-09-25 15:58:54.693 +02:00 [DBG] Done attempting to bind parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]'.
+2024-09-25 15:58:54.693 +02:00 [DBG] Done attempting to bind parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]'.
+2024-09-25 15:58:54.693 +02:00 [DBG] Attempting to validate the bound parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]' ...
+2024-09-25 15:58:54.693 +02:00 [DBG] Done attempting to validate the bound parameter 'type' of type 'System.Nullable`1[Domain_Models.Enums.BeverageType]'.
+2024-09-25 15:58:54.693 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-25 15:58:54.694 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-09-25 15:58:54.694 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:54.694 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:54.694 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+2024-09-25 15:58:54.694 +02:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [b].[Id], [b].[Name], [b].[Price], [b].[Quantity], [b].[Type]
+FROM [Beverages] AS [b]
+2024-09-25 15:58:54.695 +02:00 [DBG] A data reader was disposed.
+2024-09-25 15:58:54.695 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:54.695 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:58:54.695 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-09-25 15:58:54.695 +02:00 [DBG] No information found on request to perform content negotiation.
+2024-09-25 15:58:54.695 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-09-25 15:58:54.695 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-09-25 15:58:54.695 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-09-25 15:58:54.695 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DTOs.Beverage.BeverageDto, DTOs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-25 15:58:54.695 +02:00 [INF] Executed action BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi) in 3.5969ms
+2024-09-25 15:58:54.695 +02:00 [INF] Executed endpoint 'BeverageStoreApi.Controllers.BeveragesController.FilterByNameAndType (BeverageStoreApi)'
+2024-09-25 15:58:54.695 +02:00 [DBG] 'BeverageStoreDbContext' disposed.
+2024-09-25 15:58:54.695 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/api/Beverages/filterByNameAndType?name=O&type=3 - - - 200 - application/json;+charset=utf-8 5.3677ms
+2024-09-25 15:59:09.914 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/api/Orders - -
+2024-09-25 15:59:09.914 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Orders'
+2024-09-25 15:59:09.914 +02:00 [DBG] Endpoint 'BeverageStoreApi.Controllers.OrdersController.GetAll (BeverageStoreApi)' with route pattern 'api/Orders' is valid for the request path '/api/Orders'
+2024-09-25 15:59:09.914 +02:00 [DBG] Request matched endpoint 'BeverageStoreApi.Controllers.OrdersController.GetAll (BeverageStoreApi)'
+2024-09-25 15:59:09.914 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-09-25 15:59:09.914 +02:00 [DBG] Successfully validated the token.
+2024-09-25 15:59:09.914 +02:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-09-25 15:59:09.914 +02:00 [INF] Executing endpoint 'BeverageStoreApi.Controllers.OrdersController.GetAll (BeverageStoreApi)'
+2024-09-25 15:59:09.915 +02:00 [INF] Route matched with {action = "GetAll", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAll() on controller BeverageStoreApi.Controllers.OrdersController (BeverageStoreApi).
+2024-09-25 15:59:09.915 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-09-25 15:59:09.915 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-09-25 15:59:09.916 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-09-25 15:59:09.916 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-09-25 15:59:09.916 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-09-25 15:59:09.916 +02:00 [DBG] Executing controller factory for controller BeverageStoreApi.Controllers.OrdersController (BeverageStoreApi)
+2024-09-25 15:59:09.916 +02:00 [INF] Entity Framework Core 6.0.33 initialized 'BeverageStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.33' with options: None
+2024-09-25 15:59:09.917 +02:00 [DBG] Executed controller factory for controller BeverageStoreApi.Controllers.OrdersController (BeverageStoreApi)
+2024-09-25 15:59:09.920 +02:00 [DBG] Compiling query expression: 
+'DbSet<Order>()
+    .AsNoTracking()
+    .Include(x => x.OrderItems)
+    .ThenInclude(x => x.Beverage)'
+2024-09-25 15:59:09.939 +02:00 [DBG] Including navigation: 'Order.OrderItems'.
+2024-09-25 15:59:09.949 +02:00 [DBG] Including navigation: 'OrderItem.Beverage'.
+2024-09-25 15:59:10.077 +02:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Order>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Client Projections:
+            0 -> Dictionary<IProperty, int> { [Property: Order.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Order.UserId (int) Required FK Index, 1] }
+            1 -> 0
+            2 -> Dictionary<IProperty, int> { [Property: OrderItem.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 2], [Property: OrderItem.BeverageId (int) Required FK Index, 3], [Property: OrderItem.OrderId (int) Required FK Index, 4], [Property: OrderItem.Quantity (int) Required, 5] }
+            3 -> Dictionary<IProperty, int> { [Property: Beverage.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 6], [Property: Beverage.Name (string) Required, 7], [Property: Beverage.Price (decimal) Required, 8], [Property: Beverage.Quantity (int) Required, 9], [Property: Beverage.Type (BeverageType) Required, 10] }
+            4 -> 2
+            5 -> 6
+        SELECT o.Id, o.UserId, t.Id, t.BeverageId, t.OrderId, t.Quantity, t.Id0, t.Name, t.Price, t.Quantity0, t.Type
+        FROM Orders AS o
+        LEFT JOIN 
+        (
+            SELECT o0.Id, o0.BeverageId, o0.OrderId, o0.Quantity, b.Id AS Id0, b.Name, b.Price, b.Quantity AS Quantity0, b.Type
+            FROM OrderItems AS o0
+            INNER JOIN Beverages AS b ON o0.BeverageId == b.Id
+        ) AS t ON o.Id == t.OrderId
+        ORDER BY o.Id ASC, t.Id ASC), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Order>, 
+    Data_Access.BeverageStoreDbContext, 
+    False, 
+    False, 
+    True
+)'
+2024-09-25 15:59:10.080 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-25 15:59:10.080 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-09-25 15:59:10.080 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:59:10.080 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:59:10.080 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[UserId], [t].[Id], [t].[BeverageId], [t].[OrderId], [t].[Quantity], [t].[Id0], [t].[Name], [t].[Price], [t].[Quantity0], [t].[Type]
+FROM [Orders] AS [o]
+LEFT JOIN (
+    SELECT [o0].[Id], [o0].[BeverageId], [o0].[OrderId], [o0].[Quantity], [b].[Id] AS [Id0], [b].[Name], [b].[Price], [b].[Quantity] AS [Quantity0], [b].[Type]
+    FROM [OrderItems] AS [o0]
+    INNER JOIN [Beverages] AS [b] ON [o0].[BeverageId] = [b].[Id]
+) AS [t] ON [o].[Id] = [t].[OrderId]
+ORDER BY [o].[Id], [t].[Id]
+2024-09-25 15:59:10.086 +02:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [o].[Id], [o].[UserId], [t].[Id], [t].[BeverageId], [t].[OrderId], [t].[Quantity], [t].[Id0], [t].[Name], [t].[Price], [t].[Quantity0], [t].[Type]
+FROM [Orders] AS [o]
+LEFT JOIN (
+    SELECT [o0].[Id], [o0].[BeverageId], [o0].[OrderId], [o0].[Quantity], [b].[Id] AS [Id0], [b].[Name], [b].[Price], [b].[Quantity] AS [Quantity0], [b].[Type]
+    FROM [OrderItems] AS [o0]
+    INNER JOIN [Beverages] AS [b] ON [o0].[BeverageId] = [b].[Id]
+) AS [t] ON [o].[Id] = [t].[OrderId]
+ORDER BY [o].[Id], [t].[Id]
+2024-09-25 15:59:10.097 +02:00 [DBG] A data reader was disposed.
+2024-09-25 15:59:10.097 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:59:10.097 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:59:10.099 +02:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-09-25 15:59:10.099 +02:00 [DBG] No information found on request to perform content negotiation.
+2024-09-25 15:59:10.099 +02:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-09-25 15:59:10.099 +02:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-09-25 15:59:10.099 +02:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-09-25 15:59:10.100 +02:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[DTOs.Order.OrderDto, DTOs, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-09-25 15:59:10.102 +02:00 [INF] Executed action BeverageStoreApi.Controllers.OrdersController.GetAll (BeverageStoreApi) in 186.6977ms
+2024-09-25 15:59:10.103 +02:00 [INF] Executed endpoint 'BeverageStoreApi.Controllers.OrdersController.GetAll (BeverageStoreApi)'
+2024-09-25 15:59:10.103 +02:00 [DBG] 'BeverageStoreDbContext' disposed.
+2024-09-25 15:59:10.103 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/api/Orders - - - 200 - application/json;+charset=utf-8 189.0532ms
+2024-09-25 15:59:39.109 +02:00 [INF] Request starting HTTP/2 GET https://localhost:7162/api/Orders/6 - -
+2024-09-25 15:59:39.109 +02:00 [DBG] 1 candidate(s) found for the request path '/api/Orders/6'
+2024-09-25 15:59:39.109 +02:00 [DBG] Endpoint 'BeverageStoreApi.Controllers.OrdersController.GetById (BeverageStoreApi)' with route pattern 'api/Orders/{id:int}' is valid for the request path '/api/Orders/6'
+2024-09-25 15:59:39.109 +02:00 [DBG] Request matched endpoint 'BeverageStoreApi.Controllers.OrdersController.GetById (BeverageStoreApi)'
+2024-09-25 15:59:39.109 +02:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-09-25 15:59:39.109 +02:00 [DBG] Successfully validated the token.
+2024-09-25 15:59:39.109 +02:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2024-09-25 15:59:39.109 +02:00 [INF] Executing endpoint 'BeverageStoreApi.Controllers.OrdersController.GetById (BeverageStoreApi)'
+2024-09-25 15:59:39.111 +02:00 [INF] Route matched with {action = "GetById", controller = "Orders"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetById(Int32) on controller BeverageStoreApi.Controllers.OrdersController (BeverageStoreApi).
+2024-09-25 15:59:39.111 +02:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-09-25 15:59:39.111 +02:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-09-25 15:59:39.111 +02:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2024-09-25 15:59:39.111 +02:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-09-25 15:59:39.111 +02:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2024-09-25 15:59:39.111 +02:00 [DBG] Executing controller factory for controller BeverageStoreApi.Controllers.OrdersController (BeverageStoreApi)
+2024-09-25 15:59:39.112 +02:00 [INF] Entity Framework Core 6.0.33 initialized 'BeverageStoreDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.33' with options: None
+2024-09-25 15:59:39.112 +02:00 [DBG] Executed controller factory for controller BeverageStoreApi.Controllers.OrdersController (BeverageStoreApi)
+2024-09-25 15:59:39.112 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' ...
+2024-09-25 15:59:39.112 +02:00 [DBG] Attempting to bind parameter 'id' of type 'System.Int32' using the name 'id' in request data ...
+2024-09-25 15:59:39.112 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-09-25 15:59:39.112 +02:00 [DBG] Done attempting to bind parameter 'id' of type 'System.Int32'.
+2024-09-25 15:59:39.112 +02:00 [DBG] Attempting to validate the bound parameter 'id' of type 'System.Int32' ...
+2024-09-25 15:59:39.112 +02:00 [DBG] Done attempting to validate the bound parameter 'id' of type 'System.Int32'.
+2024-09-25 15:59:39.114 +02:00 [DBG] Compiling query expression: 
+'DbSet<Order>()
+    .AsNoTracking()
+    .Include(x => x.OrderItems)
+    .ThenInclude(x => x.Beverage)
+    .FirstOrDefault(x => x.Id == __id_0)'
+2024-09-25 15:59:39.115 +02:00 [DBG] Including navigation: 'Order.OrderItems'.
+2024-09-25 15:59:39.116 +02:00 [DBG] Including navigation: 'OrderItem.Beverage'.
+2024-09-25 15:59:39.132 +02:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Order>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Client Projections:
+            0 -> Dictionary<IProperty, int> { [Property: Order.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Order.UserId (int) Required FK Index, 1] }
+            1 -> 0
+            2 -> Dictionary<IProperty, int> { [Property: OrderItem.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 2], [Property: OrderItem.BeverageId (int) Required FK Index, 3], [Property: OrderItem.OrderId (int) Required FK Index, 4], [Property: OrderItem.Quantity (int) Required, 5] }
+            3 -> Dictionary<IProperty, int> { [Property: Beverage.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 6], [Property: Beverage.Name (string) Required, 7], [Property: Beverage.Price (decimal) Required, 8], [Property: Beverage.Quantity (int) Required, 9], [Property: Beverage.Type (BeverageType) Required, 10] }
+            4 -> 2
+            5 -> 6
+        SELECT t.Id, t.UserId, t0.Id, t0.BeverageId, t0.OrderId, t0.Quantity, t0.Id0, t0.Name, t0.Price, t0.Quantity0, t0.Type
+        FROM 
+        (
+            SELECT TOP(1) o.Id, o.UserId
+            FROM Orders AS o
+            WHERE o.Id == @__id_0
+        ) AS t
+        LEFT JOIN 
+        (
+            SELECT o0.Id, o0.BeverageId, o0.OrderId, o0.Quantity, b.Id AS Id0, b.Name, b.Price, b.Quantity AS Quantity0, b.Type
+            FROM OrderItems AS o0
+            INNER JOIN Beverages AS b ON o0.BeverageId == b.Id
+        ) AS t0 ON t.Id == t0.OrderId
+        ORDER BY t.Id ASC, t0.Id ASC), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Order>, 
+    Data_Access.BeverageStoreDbContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()'
+2024-09-25 15:59:39.133 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-09-25 15:59:39.133 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-09-25 15:59:39.133 +02:00 [DBG] Opening connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:59:39.133 +02:00 [DBG] Opened connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:59:39.133 +02:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[UserId], [t0].[Id], [t0].[BeverageId], [t0].[OrderId], [t0].[Quantity], [t0].[Id0], [t0].[Name], [t0].[Price], [t0].[Quantity0], [t0].[Type]
+FROM (
+    SELECT TOP(1) [o].[Id], [o].[UserId]
+    FROM [Orders] AS [o]
+    WHERE [o].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [o0].[Id], [o0].[BeverageId], [o0].[OrderId], [o0].[Quantity], [b].[Id] AS [Id0], [b].[Name], [b].[Price], [b].[Quantity] AS [Quantity0], [b].[Type]
+    FROM [OrderItems] AS [o0]
+    INNER JOIN [Beverages] AS [b] ON [o0].[BeverageId] = [b].[Id]
+) AS [t0] ON [t].[Id] = [t0].[OrderId]
+ORDER BY [t].[Id], [t0].[Id]
+2024-09-25 15:59:39.138 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [t].[Id], [t].[UserId], [t0].[Id], [t0].[BeverageId], [t0].[OrderId], [t0].[Quantity], [t0].[Id0], [t0].[Name], [t0].[Price], [t0].[Quantity0], [t0].[Type]
+FROM (
+    SELECT TOP(1) [o].[Id], [o].[UserId]
+    FROM [Orders] AS [o]
+    WHERE [o].[Id] = @__id_0
+) AS [t]
+LEFT JOIN (
+    SELECT [o0].[Id], [o0].[BeverageId], [o0].[OrderId], [o0].[Quantity], [b].[Id] AS [Id0], [b].[Name], [b].[Price], [b].[Quantity] AS [Quantity0], [b].[Type]
+    FROM [OrderItems] AS [o0]
+    INNER JOIN [Beverages] AS [b] ON [o0].[BeverageId] = [b].[Id]
+) AS [t0] ON [t].[Id] = [t0].[OrderId]
+ORDER BY [t].[Id], [t0].[Id]
+2024-09-25 15:59:39.138 +02:00 [DBG] A data reader was disposed.
+2024-09-25 15:59:39.138 +02:00 [DBG] Closing connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:59:39.138 +02:00 [DBG] Closed connection to database 'BeverageStoreApi' on server '.'.
+2024-09-25 15:59:39.207 +02:00 [ERR] An error occured while attempting to fetch an order with id: [6]
+BeverageStore.Shared.Exceptions.OrderExceptions.OrderNotFoundException: Order wasn't found with the specified id!
+   at BeverageStoreApi.Controllers.OrdersController.GetById(Int32 id) in C:\Users\Sasho\Desktop\School\ASP.NET-WEB-API\homework\BeverageStore\BeverageStoreApi\Controllers\OrdersController.cs:line 36
+2024-09-25 16:00:06.610 +02:00 [INF] Executed action BeverageStoreApi.Controllers.OrdersController.GetById (BeverageStoreApi) in 27498.9656ms
+2024-09-25 16:00:06.629 +02:00 [INF] Executed endpoint 'BeverageStoreApi.Controllers.OrdersController.GetById (BeverageStoreApi)'
+2024-09-25 16:00:06.630 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidCastException: Unable to cast object of type 'DTOs.Response.ExceptionResultDto' to type 'Microsoft.AspNetCore.Mvc.IActionResult'.
+   at BeverageStoreApi.Controllers.OrdersController.GetById(Int32 id) in C:\Users\Sasho\Desktop\School\ASP.NET-WEB-API\homework\BeverageStore\BeverageStoreApi\Controllers\OrdersController.cs:line 43
+   at lambda_method165(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-09-25 16:00:06.657 +02:00 [DBG] 'BeverageStoreDbContext' disposed.
+2024-09-25 16:00:06.657 +02:00 [INF] Request finished HTTP/2 GET https://localhost:7162/api/Orders/6 - - - 500 - text/plain;+charset=utf-8 27548.7125ms

@@ -40,7 +40,7 @@ namespace BeverageStoreApi.Controllers
             {
                 
                 Log.Error(ex, $"An error occured while attempting to fetch an order with id: [{id}]");
-                return (IActionResult)new ExceptionResultDto() { ErrorMessage = ex.Message };
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
 
@@ -65,7 +65,7 @@ namespace BeverageStoreApi.Controllers
             } catch(Exception ex)
             {
                 Log.Error(ex, $"The order wasn't created successfully containing: [{orderCreateDto.UserId}] [{orderCreateDto.orderItems}]\n");
-                return (IActionResult)new ExceptionResultDto() { ErrorMessage = ex.Message };
+                return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
 
